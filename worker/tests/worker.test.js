@@ -12,7 +12,7 @@ async function token({prefix='pilot/',methods=['GET','PUT'],exp=Math.floor(Date.
 }
 function setup(){
  const data=new Map();
- const env={SIGNING_SECRET:secret,MEDIA:{
+ const env={SIGNING_SECRET:secret,ISSUER_SECRET:'issuer-secret-long-enough',MEDIA:{
   async put(key,body,opts){const bytes=new Uint8Array(await new Response(body).arrayBuffer());data.set(key,{bytes,contentType:opts.httpMetadata.contentType});return {etag:'test-etag'};},
   async get(key){const o=data.get(key);return o?{body:o.bytes,httpMetadata:{contentType:o.contentType}}:null;}
  }};
@@ -29,3 +29,18 @@ test('private upload/download roundtrip',async()=>{const {call}=setup();const t=
 test('missing object returns 404',async()=>{const {call}=setup();assert.equal((await call('/objects/pilot/missing','GET',await token())).status,404);});
 
 test('token prefix must end in slash and never match sibling keys',async()=>{const {call}=setup();assert.equal((await call('/objects/pilotx/a','GET',await token({prefix:'pilot'}))).status,401);assert.equal((await call('/objects/pilot/a','GET',await token({prefix:'pilot'}))).status,401);assert.equal((await call('/objects/pilot/a','GET',await token({prefix:'pilot/'}))).status,404);});
+
+test('issuer requires credential and validates scope',async()=>{
+ const {call,env}=setup();
+ assert.equal((await call('/mint','POST',undefined,JSON.stringify({prefix:'pilot/',methods:['GET']}),{'content-type':'application/json'})).status,401);
+ const invoke=(body,pass='issuer-secret-long-enough')=>worker.fetch(new Request('https://example.test/mint',{method:'POST',headers:{'x-issuer-secret':pass,'content-type':'application/json'},body:JSON.stringify(body)}),env);
+ assert.equal((await invoke({prefix:'pilot',methods:['GET']})).status,400);
+ assert.equal((await invoke({prefix:'pilot/',methods:['DELETE']})).status,400);
+ assert.equal((await invoke({prefix:'pilot/',methods:['GET'],ttl:901})).status,400);
+ assert.equal((await invoke({prefix:'pilot/',methods:['GET']},'wrong')).status,401);
+ const r=await invoke({prefix:'pilot/',methods:['GET','PUT'],ttl:60});
+ assert.equal(r.status,200);
+ const issued=await r.json();
+ assert.equal((await call('/objects/pilot/a','GET',issued.token)).status,404);
+ assert.equal((await call('/objects/other/a','GET',issued.token)).status,401);
+});
