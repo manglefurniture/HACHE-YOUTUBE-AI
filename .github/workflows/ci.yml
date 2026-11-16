@@ -14,7 +14,10 @@ jobs:
         with:
           node-version: '22'
       - name: Syntax
-        run: node --check worker/src/index.js
+        run: |
+          node --check worker/src/index.js
+          node --check worker/scripts/issue-gpu-token.mjs
+          node --check worker/scripts/gpu-r2-transfer.mjs
       - name: Unit tests
         working-directory: worker
         run: npm test
