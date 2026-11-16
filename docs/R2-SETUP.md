@@ -4,16 +4,16 @@ Bucket: `hache-ai-youtube-media`. No cambiar `hache-ai-models`.
 
 ## Seguridad
 - Bucket privado, sin dominio r2.dev ni dominio público.
-- Configurar `API_TOKEN` como **Worker secret** en Cloudflare, nunca en GitHub ni en `wrangler.jsonc`.
-- El token inicial es de prototipo: no entregar a GPU Spot ni a terceros. Antes de usar GPU externa, sustituir por URLs firmadas de corta duración y permisos por prefijo/operación.
-- `/health` no revela información sensible; `/objects/<key>` requiere Bearer token.
-- PUT limitado a 20 MiB. Videos grandes requieren multipart directo a R2 y credenciales limitadas.
+- Configurar `SIGNING_SECRET` como secreto del Worker, nunca en GitHub ni en wrangler.
+- Los tokens HMAC-SHA256 caducan en un máximo de 3600 segundos y restringen prefijo y métodos. Ver `docs/SECURITY.md`.
+- No proporcionar SIGNING_SECRET a una GPU Spot: solo tokens emitidos por un entorno de confianza.
+- PUT limitado a 20 MiB reales. Videos grandes necesitan multipart directo con firma temporal.
 
-## Verificación pendiente de despliegue
-1. Crear secreto API_TOKEN fuera de GitHub.
-2. Ejecutar pruebas del Worker localmente y revisar CI.
-3. Desplegar únicamente tras aprobación de checks y merge.
-4. Confirmar 401 sin token, 400 con clave inválida, PUT/GET privado con archivo pequeño.
-5. Comprobar que r2.dev sigue deshabilitado.
+## Verificación pendiente
+1. Crear SIGNING_SECRET fuera de GitHub y configurar un emisor confiable.
+2. Ejecutar CI y revisar resultados y comentarios automáticos.
+3. Merge solo con checks y revisión satisfactorios.
+4. Desplegar y probar 401 sin token, PUT/GET con token limitado y expiración.
+5. Verificar privacidad del bucket y ausencia de exposición pública.
 
-No se ha realizado una prueba real de transferencia ni despliegue desde este PR.
+No se ha realizado una transferencia real ni despliegue desde este PR.
