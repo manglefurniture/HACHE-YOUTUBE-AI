@@ -1,0 +1,25 @@
+name: CI
+on:
+  push:
+    branches: [main, feat/private-r2-worker]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  worker-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax
+        run: node --check worker/src/index.js
+      - name: Unit tests
+        working-directory: worker
+        run: npm test
+      - name: Check tracked secrets
+        run: |
+          if git grep -nE '(-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----|sk-[A-Za-z0-9]{24,})' -- ':!*.md'; then
+            echo 'Potential secret detected'; exit 1
+          fi

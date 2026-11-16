@@ -1,0 +1,6 @@
+{
+  "name": "hache-youtube-media-api",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-16",
+  "r2_buckets": [{ "binding": "MEDIA", "bucket_name": "hache-ai-youtube-media" }]
+}
