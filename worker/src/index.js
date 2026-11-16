@@ -1,6 +1,5 @@
 const LIMIT = 20 * 1024 * 1024;
 const json = (value, status = 200) => new Response(JSON.stringify(value), {status, headers: {'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff'}});
-const encode = bytes => btoa(String.fromCharCode(...bytes)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
 const decode = value => Uint8Array.from(atob(value.replace(/-/g,'+').replace(/_/g,'/')+'='.repeat((4-value.length%4)%4)), c=>c.charCodeAt(0));
 async function authorize(request, env, key) {
  const bearer = request.headers.get('authorization') || '';
@@ -13,9 +12,9 @@ async function authorize(request, env, key) {
   const claims = JSON.parse(new TextDecoder().decode(decode(parts[0])));
   const now = Math.floor(Date.now()/1000);
   return Number.isInteger(claims.exp) && claims.exp > now && claims.exp <= now+3600 &&
-   typeof claims.prefix === 'string' && claims.prefix.length >= 1 && claims.prefix.length <= 200 &&
+   typeof claims.prefix === 'string' && claims.prefix.length >= 1 && claims.prefix.length <= 200 && claims.prefix.endsWith('/') &&
    /^[a-zA-Z0-9_./-]+$/.test(claims.prefix) && !claims.prefix.includes('..') &&
-   key.startsWith(claims.prefix) && Array.isArray(claims.methods) &&
+   key.startsWith(claims.prefix) && key.length > claims.prefix.length && Array.isArray(claims.methods) &&
    claims.methods.includes(request.method) && claims.methods.every(x=>x==='GET'||x==='PUT');
  } catch {return false;}
 }
