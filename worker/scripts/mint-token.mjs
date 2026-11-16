@@ -3,7 +3,7 @@ const secret=process.env.SIGNING_SECRET;
 const [prefix,methodsText='GET',ttlText='300']=process.argv.slice(2);
 const ttl=Number(ttlText);
 const methods=methodsText.split(',');
-if(!secret||secret.length<32||!prefix||prefix.includes('..')||prefix.startsWith('/')||!(/^[a-zA-Z0-9_./-]+$/).test(prefix)||!Number.isInteger(ttl)||ttl<1||ttl>3600||methods.some(x=>!['GET','PUT'].includes(x))){
+if(!secret||secret.length<32||!prefix||!prefix.endsWith('/')||prefix.includes('..')||prefix.startsWith('/')||!(/^[a-zA-Z0-9_./-]+$/).test(prefix)||!Number.isInteger(ttl)||ttl<1||ttl>3600||methods.some(x=>!['GET','PUT'].includes(x))){
  console.error('Usage: SIGNING_SECRET=<32+ characters> node scripts/mint-token.mjs <prefix/> <GET|PUT|GET,PUT> [ttl_seconds<=3600]');
  process.exit(1);
 }
