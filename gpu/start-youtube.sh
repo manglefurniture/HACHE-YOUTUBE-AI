@@ -6,7 +6,7 @@ BASE=/workspace/models
 INPUT=/workspace/hache-youtube/input
 OUTPUT=/workspace/hache-youtube/output
 WORKFLOWS=/workspace/hache-youtube/workflows
-mkdir -p "$INPUT" "$OUTPUT" "$WORKFLOWS" "$BASE/checkpoints" "$BASE/loras" "$BASE/diffusion_models" "$BASE/text_encoders" "$BASE/vae"
+mkdir -p "$INPUT" "$OUTPUT" "$WORKFLOWS"
 cat > /tmp/hache-youtube-extra-model-paths.yaml <<'YAML'
 hache_youtube:
   base_path: /workspace/models
