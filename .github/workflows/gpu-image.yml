@@ -1,0 +1,57 @@
+name: Build and publish YouTube GPU image
+
+on:
+  pull_request:
+    paths:
+      - 'gpu/**'
+      - '.dockerignore'
+      - '.github/workflows/gpu-image.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'gpu/**'
+      - '.dockerignore'
+      - '.github/workflows/gpu-image.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Validate image configuration
+        run: |
+          test -s gpu/Dockerfile
+          test -s .dockerignore
+          grep -q '^FROM ghcr.io/manglefurniture/lucia-gpu:clore-' gpu/Dockerfile
+          ! grep -iE '(lucia_lora|lucia_ref_01|ISSUER_SECRET|SIGNING_SECRET)' gpu/Dockerfile
+      - name: Login to GHCR (main only)
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and optionally publish
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: gpu/Dockerfile
+          platforms: linux/amd64
+          pull: true
+          push: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
+          tags: |
+            ghcr.io/manglefurniture/hache-youtube-ai-gpu:sha-${{ github.sha }}
+            ghcr.io/manglefurniture/hache-youtube-ai-gpu:latest
+          labels: |
+            org.opencontainers.image.revision=${{ github.sha }}
+            org.opencontainers.image.source=https://github.com/manglefurniture/HACHE-YOUTUBE-AI
