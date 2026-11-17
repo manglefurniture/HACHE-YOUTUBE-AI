@@ -1,0 +1,19 @@
+name: GPU shared model verifier
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile
+        run: python -m compileall -q gpu
+      - name: Unit tests
+        run: python -m unittest discover -s gpu -p 'test_*.py' -v
