@@ -3,3 +3,4 @@
 !gpu/Dockerfile
 !gpu/README.md
 !gpu/verify-shared-models.py
+!gpu/start-youtube.sh
