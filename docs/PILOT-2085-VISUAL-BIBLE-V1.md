@@ -1,12 +1,12 @@
 # Biblia visual V1 — Año 2085: El último trabajador humano
 
-**Estado:** propuesta para revisión visual, no aprobada como diseño definitivo.
+**Estado:** dirección visual y cuatro conceptos (Mara, Leo, ciudad y plaza) aprobados por el usuario el 18 de noviembre de 2026. Pendiente: imágenes maestras separadas y prueba de consistencia para animación.
 **Fuente:** guion `PILOT-2085-FULL-SCRIPT-V1.md` y visión `CHANNEL-VISION.md`.
 **Formato:** documental cinematográfico 16:9, 1920×1080 o superior, 24 fps como objetivo de montaje.
 **Principio:** 2085 debe parecer una evolución reconocible de nuestras ciudades, no fantasía de neón.
 
 ## Referencia conceptual inicial
-Se generó una lámina de cuatro paneles con Mara, Leo, ciudad y plaza en esta conversación. **No está incorporada todavía al repositorio como activo binario**. Las características siguientes son una propuesta y deberán aprobarse antes de fijar referencias maestras.
+Se generó una lámina de cuatro paneles con Mara, Leo, ciudad y plaza en esta conversación y el usuario aprobó los cuatro conceptos. **La lámina no está incorporada todavía al repositorio como activo binario**. Esta aprobación fija la dirección visual; las imágenes maestras separadas aún deben producirse y comprobarse.
 
 ## Mara — protagonista
 - Mujer de aproximadamente 60 años; pelo gris entrecano, ligeramente ondulado, recogido de forma imperfecta.
@@ -61,8 +61,9 @@ Se generó una lámina de cuatro paneles con Mara, Leo, ciudad y plaza en esta c
 `Cinematic photorealistic speculative fiction set in 2085, plausible sustainable coastal city, grounded near-future industrial design, natural human faces, authentic weathered textures, soft available light, restrained color grading, realistic camera optics, lived-in public spaces, no cyberpunk, no fantasy vehicles, no exaggerated holograms, 16:9`
 
 ## Aprobaciones pendientes
-- Aspecto de Mara y Leo.
-- Ciudad y plaza como entornos maestros.
+- [x] Concepto visual de Mara y Leo aprobado.
+- [x] Concepto visual de ciudad y plaza aprobado.
+- [ ] Imágenes maestras separadas, continuidad y pruebas de animación.
 - Paleta y tipografía del canal (no inferir marca definitiva desde esta biblia).
 - Modelo de animación tras prueba controlada de consistencia, tiempo y costo.
 - Materiales audiovisuales finales antes de publicar.
