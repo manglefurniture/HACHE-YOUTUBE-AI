@@ -67,16 +67,22 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--execute", action="store_true", help="Actually upload (default is dry-run)")
     p.add_argument("--only", choices=sorted(MODELS))
+    p.add_argument("--verify-key", help="Read one existing R2 object and verify its size and SHA-256")
     args = p.parse_args()
+    if args.verify_key and (args.execute or not args.only):
+        p.error("--verify-key requires --only and cannot be combined with --execute")
     bucket = os.environ.get("R2_BUCKET", "hache-ai-models")
     prefix = os.environ.get("R2_PREFIX", "shared/wan22/").strip("/") + "/"
     selected = {args.only: MODELS[args.only]} if args.only else MODELS
+    if args.verify_key:
+        validate_run_key(args.verify_key, prefix, args.only)
     # Each run uses a fresh immutable namespace: no other writer can own its keys.
     run_id = uuid.uuid4().hex if args.execute else "<generated-on-execute>"
-    for name, (repo, folder, sha) in selected.items():
-        url = f"https://huggingface.co/{repo}/resolve/main/{folder}/{name}"
-        print(f"{bucket}/{prefix}{run_id}/{name} <- {url} sha256={sha}", flush=True)
-    if not args.execute:
+    if not args.verify_key:
+        for name, (repo, folder, sha) in selected.items():
+            url = f"https://huggingface.co/{repo}/resolve/main/{folder}/{name}"
+            print(f"{bucket}/{prefix}{run_id}/{name} <- {url} sha256={sha}", flush=True)
+    if not args.execute and not args.verify_key:
         print("DRY RUN: no network transfer or R2 writes")
         return
     account = os.environ["R2_ACCOUNT_ID"]
