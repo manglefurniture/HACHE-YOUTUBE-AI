@@ -4,7 +4,7 @@
 Requires: pip install boto3
 Credentials: R2_ACCOUNT_ID, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 Optional: R2_BUCKET (default hache-ai-models), R2_PREFIX (default shared/wan22/)
-No VPS disk usage; bounded RAM; SHA-256 verification before completing multipart.
+No VPS disk usage; bounded RAM; SHA-256 verification before completing multipart and again after reading the object back from R2.
 Each execution writes into a fresh UUID prefix to avoid overwriting other uploads.
 """
 import argparse
@@ -29,6 +29,40 @@ MODELS = {
         "2fc39d31359a4b0a64f55876d8ff7fa8d780956ae2cb13463b0223e15148976b"),
 }
 
+def verify_r2_object(client, bucket, key, expected_sha256):
+    response = client.get_object(Bucket=bucket, Key=key)
+    expected_size = response["ContentLength"]
+    digest = hashlib.sha256()
+    total = 0
+    body = response["Body"]
+    try:
+        while True:
+            chunk = body.read(8 * 1024 * 1024)
+            if not chunk:
+                break
+            digest.update(chunk)
+            total += len(chunk)
+    finally:
+        body.close()
+    if total != expected_size:
+        raise RuntimeError(f"R2 readback size mismatch for {key}: expected {expected_size}, received {total}")
+    actual_sha256 = digest.hexdigest()
+    if actual_sha256 != expected_sha256:
+        raise RuntimeError(f"R2 readback SHA256 mismatch for {key}: {actual_sha256}")
+    return total
+
+
+def validate_run_key(key, prefix, model_name):
+    if not key.startswith(prefix):
+        raise ValueError("R2 key must be inside the configured model prefix")
+    pieces = key[len(prefix):].split("/")
+    if len(pieces) != 2 or pieces[1] != model_name:
+        raise ValueError("R2 key must identify exactly one run UUID and the selected model")
+    run_id = pieces[0]
+    if len(run_id) != 32 or any(char not in "0123456789abcdef" for char in run_id):
+        raise ValueError("R2 key must contain a 32-character lowercase run UUID")
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--execute", action="store_true", help="Actually upload (default is dry-run)")
@@ -50,6 +84,11 @@ def main():
     from botocore.config import Config
     client = boto3.client("s3", endpoint_url=f"https://{account}.r2.cloudflarestorage.com",
                           config=Config(signature_version="s3v4", retries={"max_attempts": 5, "mode": "standard"}))
+    if args.verify_key:
+        expected = MODELS[args.only][2]
+        total = verify_r2_object(client, bucket, args.verify_key, expected)
+        print(f"VERIFIED_R2 {args.verify_key} bytes={total} sha256={expected}", flush=True)
+        return
     for name, (repo, folder, expected) in selected.items():
         key = prefix + run_id + "/" + name
         url = f"https://huggingface.co/{repo}/resolve/main/{folder}/{name}"
@@ -92,6 +131,9 @@ def main():
             if head["ContentLength"] != total:
                 client.delete_object(Bucket=bucket, Key=key)
                 raise RuntimeError(f"R2 size mismatch for {key}")
+            readback_size = verify_r2_object(client, bucket, key, expected)
+            if readback_size != total:
+                raise RuntimeError(f"R2 readback size differs from uploaded stream for {key}")
             print(f"VERIFIED {key} bytes={total} sha256={expected}", flush=True)
         except BaseException:
             if upload_id is not None:
