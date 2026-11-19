@@ -2,7 +2,7 @@
 
 ## Estado y límites
 
-Este directorio prepara la **adaptación**, no afirma que exista una imagen Docker publicada o validada para YouTube. La imagen exacta utilizada en Clore.ai aún debe identificarse en el registro o la configuración de la instancia; no se debe inventar un nombre/tag ni iniciar alquileres para averiguarlo.
+La imagen derivada se construye mediante `.github/workflows/gpu-image.yml`. La auditoría de Clore #2458580 está en el PR #10 (borrador); una imagen publicada **no implica** que ComfyUI, los modelos o Wan funcionen en GPU.
 
 Fuente de verdad del bootstrap original: [lucia-gpu/bootstrap](https://github.com/manglefurniture/lucia-gpu/tree/main/bootstrap). Su script original requiere **activos privados de Lucía** y no debe ejecutarse sin cambios para YouTube.
 
@@ -25,11 +25,18 @@ Fuente de verdad del bootstrap original: [lucia-gpu/bootstrap](https://github.co
 Dentro de una GPU autorizada que **ya esté en ejecución**, sin modificarla:
 
 ```bash
-python3 gpu/verify-shared-models.py --models-dir /workspace/ComfyUI/models
-python3 gpu/verify-shared-models.py --models-dir /workspace/ComfyUI/models --hash
+python3 gpu/verify-shared-models.py --models-dir /workspace/models
+python3 gpu/verify-shared-models.py --models-dir /workspace/models --hash
 ```
 
 El primer comando verifica presencia; el segundo verifica SHA-256. Ambos son de solo lectura. El verificador utiliza hashes de modelos públicos referenciados por el bootstrap original y **no** exige archivos privados de Lucía. Un resultado correcto no demuestra por sí solo que Wan pueda generar video: faltan validar GPU/VRAM, nodos, workflow y ejecución.
+
+## Almacenamiento híbrido (comprobado el 19-11-2026)
+
+- VPS `/srv/lucia-models`: volumen de 14 GB, ~12 GB usados y ~2.2 GB libres; contiene Juggernaut XL, IP-Adapter/CLIP y activos privados de Lucía. **No es un endpoint público ni un volumen montado automáticamente en Clore**. No modificar, borrar ni copiar privados a YouTube.
+- R2 privado `hache-ai-models`: cuatro archivos Wan I2V/UMT5/VAE (35.58 GB) verificados por SHA-256 desde GitHub Actions. Están en `shared/wan22/<run-uuid>/<filename>`; no asumir una ruta plana.
+- GPU: usar un volumen `/workspace/models` con subcarpetas ComfyUI (`checkpoints`, `diffusion_models`, `text_encoders`, `vae`). Aprovisionar explícitamente solo los modelos necesarios desde R2; para Juggernaut u otros modelos existentes en VPS se necesita un mecanismo **autorizado** de transferencia sin exponer privados ni cargar el VPS de producción.
+- `HACHE_MODELS_DIR` permite personalizar el mount, con valor por defecto `/workspace/models`. El arranque falla claramente si el mount o ComfyUI faltan; no descarga modelos automáticamente y no demuestra inferencia.
 
 ## Próxima fase
 
