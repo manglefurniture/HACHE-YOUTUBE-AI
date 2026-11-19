@@ -14,13 +14,18 @@ on:
           - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
           - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
       operation:
-        description: "Dry run prints the destination; upload transfers one selected model"
+        description: "Preview, upload one model, or read back an existing R2 object to verify its hash"
         required: true
         type: choice
         default: dry-run
         options:
           - dry-run
           - upload
+          - verify-existing
+      object_key:
+        description: "Exact existing R2 key, required only for verify-existing"
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -36,6 +41,7 @@ jobs:
     env:
       MODEL: ${{ inputs.model }}
       OPERATION: ${{ inputs.operation }}
+      OBJECT_KEY: ${{ inputs.object_key }}
       R2_BUCKET: hache-ai-models
       R2_PREFIX: shared/wan22/
     steps:
@@ -56,9 +62,13 @@ jobs:
             *) echo "Unsupported model selection" >&2; exit 1 ;;
           esac
           case "$OPERATION" in
-            dry-run|upload) ;;
+            dry-run|upload|verify-existing) ;;
             *) echo "Unsupported operation" >&2; exit 1 ;;
           esac
+          if [[ "$OPERATION" == "verify-existing" && -z "$OBJECT_KEY" ]]; then
+            echo "An exact R2 object key is required for verification" >&2
+            exit 1
+          fi
           python -m pip install --disable-pip-version-check --no-input boto3==1.35.99
 
       - name: Preview selected transfer
@@ -74,3 +84,12 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: python scripts/ingest_wan_r2.py --execute --only "$MODEL"
+
+      - name: Read back and verify one existing R2 object
+        if: inputs.operation == 'verify-existing'
+        shell: bash
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: python scripts/ingest_wan_r2.py --verify-key "$OBJECT_KEY" --only "$MODEL"
