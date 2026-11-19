@@ -1,0 +1,31 @@
+name: Wan R2 ingest validation
+on:
+  pull_request:
+    paths:
+      - 'scripts/ingest_wan_r2.py'
+      - '.github/workflows/wan-r2-ingest.yml'
+  push:
+    paths:
+      - 'scripts/ingest_wan_r2.py'
+      - '.github/workflows/wan-r2-ingest.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax check
+        run: python -m py_compile scripts/ingest_wan_r2.py
+      - name: Dry run without credentials or writes
+        run: |
+          python scripts/ingest_wan_r2.py > /tmp/wan-dry-run.txt
+          grep -q 'DRY RUN: no network transfer or R2 writes' /tmp/wan-dry-run.txt
+          test "$(grep -c 'sha256=' /tmp/wan-dry-run.txt)" -eq 4
+      - name: CLI selection check
+        run: |
+          python scripts/ingest_wan_r2.py --only wan_2.1_vae.safetensors > /tmp/wan-only.txt
+          test "$(grep -c 'sha256=' /tmp/wan-only.txt)" -eq 1
