@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 
 MODELS = {
@@ -31,7 +32,7 @@ def verify(root, hash_files):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--models-dir", type=Path, default=Path("/workspace/ComfyUI/models"))
+    parser.add_argument("--models-dir", type=Path, default=Path(os.environ.get("HACHE_MODELS_DIR", "/workspace/models")))
     parser.add_argument("--hash", action="store_true", help="Hash large files; slower but validates integrity")
     args = parser.parse_args()
     results = verify(args.models_dir, args.hash)
