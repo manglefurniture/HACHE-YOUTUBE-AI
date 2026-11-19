@@ -41,4 +41,5 @@ jobs:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: python scripts/ingest_juggernaut_r2.py --model "${{ inputs.model }}"
+          MODEL: ${{ inputs.model }}
+        run: python scripts/ingest_juggernaut_r2.py --model "$MODEL"
