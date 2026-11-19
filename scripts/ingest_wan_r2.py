@@ -5,12 +5,14 @@ Requires: pip install boto3
 Credentials: R2_ACCOUNT_ID, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 Optional: R2_BUCKET (default hache-ai-models), R2_PREFIX (default shared/wan22/)
 No VPS disk usage; bounded RAM; SHA-256 verification before completing multipart.
+Each execution writes into a fresh UUID prefix to avoid overwriting other uploads.
 """
 import argparse
 import hashlib
 import os
 import sys
 import urllib.request
+import uuid
 
 MODELS = {
     "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors": (
@@ -35,9 +37,11 @@ def main():
     bucket = os.environ.get("R2_BUCKET", "hache-ai-models")
     prefix = os.environ.get("R2_PREFIX", "shared/wan22/").strip("/") + "/"
     selected = {args.only: MODELS[args.only]} if args.only else MODELS
+    # Each run uses a fresh immutable namespace: no other writer can own its keys.
+    run_id = uuid.uuid4().hex if args.execute else "<generated-on-execute>"
     for name, (repo, folder, sha) in selected.items():
         url = f"https://huggingface.co/{repo}/resolve/main/{folder}/{name}"
-        print(f"{bucket}/{prefix}{name} <- {url} sha256={sha}", flush=True)
+        print(f"{bucket}/{prefix}{run_id}/{name} <- {url} sha256={sha}", flush=True)
     if not args.execute:
         print("DRY RUN: no network transfer or R2 writes")
         return
@@ -47,14 +51,7 @@ def main():
     client = boto3.client("s3", endpoint_url=f"https://{account}.r2.cloudflarestorage.com",
                           config=Config(signature_version="s3v4", retries={"max_attempts": 5, "mode": "standard"}))
     for name, (repo, folder, expected) in selected.items():
-        key = prefix + name
-        try:
-            client.head_object(Bucket=bucket, Key=key)
-        except client.exceptions.ClientError as e:
-            if e.response["ResponseMetadata"]["HTTPStatusCode"] != 404:
-                raise
-        else:
-            raise RuntimeError(f"Refusing to overwrite existing object: {key}")
+        key = prefix + run_id + "/" + name
         url = f"https://huggingface.co/{repo}/resolve/main/{folder}/{name}"
         request = urllib.request.Request(url, headers={"User-Agent": "Hache-AI-model-ingest/1.0"})
         upload_id = None
@@ -93,6 +90,7 @@ def main():
             upload_id = None
             head = client.head_object(Bucket=bucket, Key=key)
             if head["ContentLength"] != total:
+                client.delete_object(Bucket=bucket, Key=key)
                 raise RuntimeError(f"R2 size mismatch for {key}")
             print(f"VERIFIED {key} bytes={total} sha256={expected}", flush=True)
         except BaseException:
