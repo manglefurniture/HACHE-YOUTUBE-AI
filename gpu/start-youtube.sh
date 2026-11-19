@@ -2,14 +2,26 @@
 set -Eeuo pipefail
 
 ROOT=/opt/ComfyUI
-BASE=/workspace/models
+BASE="${HACHE_MODELS_DIR:-/workspace/models}"
+if [[ ! -f "$ROOT/main.py" ]]; then
+  echo "ERROR: ComfyUI main.py missing: $ROOT/main.py" >&2
+  exit 1
+fi
+if [[ ! -d "$BASE" ]]; then
+  echo "ERROR: model mount missing: $BASE (provision models before starting)" >&2
+  exit 1
+fi
+if [[ ! -r "$BASE" ]]; then
+  echo "ERROR: model mount unreadable: $BASE" >&2
+  exit 1
+fi
 INPUT=/workspace/hache-youtube/input
 OUTPUT=/workspace/hache-youtube/output
 WORKFLOWS=/workspace/hache-youtube/workflows
 mkdir -p "$INPUT" "$OUTPUT" "$WORKFLOWS"
-cat > /tmp/hache-youtube-extra-model-paths.yaml <<'YAML'
+cat > /tmp/hache-youtube-extra-model-paths.yaml <<YAML
 hache_youtube:
-  base_path: /workspace/models
+  base_path: $BASE
   checkpoints: checkpoints
   loras: loras
   diffusion_models: diffusion_models
