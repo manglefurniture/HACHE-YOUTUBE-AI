@@ -15,5 +15,7 @@ jobs:
           python-version: '3.12'
       - name: Compile
         run: python -m compileall -q gpu
+      - name: Validate inventory
+        run: python -c "from pathlib import Path; import json; d=json.loads(Path('gpu/model-inventory.json').read_text()); assert d['bucket']=='hache-ai-models' and len(d['models'])==9 and len({m['key'] for m in d['models']})==9"
       - name: Unit tests
         run: python -m unittest discover -s gpu -p 'test_*.py' -v
