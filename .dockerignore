@@ -3,4 +3,6 @@
 !gpu/Dockerfile
 !gpu/README.md
 !gpu/verify-shared-models.py
+!gpu/provision_models.py
+!gpu/model-inventory.json
 !gpu/start-youtube.sh
