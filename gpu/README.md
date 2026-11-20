@@ -18,6 +18,8 @@ Fuente de verdad del bootstrap original: [lucia-gpu/bootstrap](https://github.co
 - Usar `/workspace/hache-youtube/` para entradas, salidas y workflows del canal, separados de `/workspace/lucia/`.
 - No publicar la API de ComfyUI en Internet sin autenticación y control de acceso; mantenerla local o mediante túnel seguro.
 - No incluir secretos de Cloudflare R2 en Dockerfile, imagen, logs o GitHub; usar credenciales efímeras y limitadas.
+- El arranque comprueba primero ComfyUI, el mount, una GPU NVIDIA y el espacio libre; después descarga solo las nueve keys públicas incluidas en `gpu/model-inventory.json` a `/workspace/models`, transmite en bloques, reintenta y verifica tamaño/SHA-256 antes de renombrar el archivo. Se necesitan al menos unos 46 GiB libres para el conjunto completo. R2 requiere credenciales de lectura de mínimo privilegio (`R2_ACCOUNT_ID`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`) montadas en runtime; el script las elimina del entorno antes de lanzar ComfyUI.
+- Si un archivo local ya coincide con el inventario, se conserva sin descargar duplicados; un archivo parcial nunca se considera listo. El healthcheck requiere que la API local de ComfyUI responda.
 - No descargar modelos pesados, construir imágenes remotas ni contratar GPU sin confirmar costos y disponibilidad.
 
 ## Inspección segura de un contenedor existente
@@ -46,4 +48,4 @@ El primer comando verifica presencia; el segundo verifica SHA-256. Ambos son de 
 4. Añadir workflows originales de escenas para el piloto y una prueba controlada de imagen y video.
 5. Conectar resultados al R2 privado existente y medir costo por escena.
 
-No se ha desplegado ni contratado ninguna GPU en esta fase.
+El runtime no incluye `buffalo_l`, modelos ni datos privados de Lucía. No se ha desplegado ni contratado ninguna GPU en esta fase.
