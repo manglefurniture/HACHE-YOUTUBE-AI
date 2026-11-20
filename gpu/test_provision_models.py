@@ -3,6 +3,7 @@ import io
 import tempfile
 import sys
 import unittest
+from collections import namedtuple
 from pathlib import Path
 from unittest.mock import patch
 
@@ -79,6 +80,25 @@ class ProvisionModelsTests(unittest.TestCase):
             destination.write_bytes(data)
             provision.download_one(client, "hache-ai-models", Path(temp), model)
             self.assertEqual(client.calls, 0)
+
+    def test_stale_partial_is_reclaimed_before_space_check(self):
+        model = {
+            "path": "checkpoints/example.bin",
+            "key": "shared/example/example.bin",
+            "bytes": 16,
+            "sha256": hashlib.sha256(b"expected-content").hexdigest(),
+        }
+        usage = namedtuple("Usage", "total used free")(100, 100, 0)
+        with tempfile.TemporaryDirectory() as temp:
+            partial = Path(temp) / "checkpoints" / "example.bin.part"
+            partial.parent.mkdir(parents=True)
+            partial.write_bytes(b"interrupted transfer")
+            with patch.object(provision, "load_inventory", return_value=("hache-ai-models", [model])), patch.object(
+                provision.shutil, "disk_usage", return_value=usage
+            ):
+                with self.assertRaisesRegex(RuntimeError, "Insufficient free space"):
+                    provision.provision(Path(temp), client=FakeR2(b"expected-content"))
+            self.assertFalse(partial.exists())
 
     def test_hash_mismatch_never_installs_file(self):
         data = b"wrong-content"

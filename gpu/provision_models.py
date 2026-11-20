@@ -104,6 +104,22 @@ def download_one(client, bucket, root, model):
     )
 
 
+def reclaim_stale_partials(root, models):
+    root = root.resolve()
+    for model in models:
+        destination = root.joinpath(*Path(model["path"]).parts)
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        if destination.is_symlink() or not destination.resolve().is_relative_to(root):
+            raise RuntimeError(f"Unsafe model destination: {model['path']}")
+        part = destination.with_name(destination.name + ".part")
+        if part.is_symlink():
+            part.unlink()
+        elif part.exists():
+            if not part.resolve().is_relative_to(root):
+                raise RuntimeError(f"Unsafe partial model path: {model['path']}")
+            part.unlink()
+
+
 def provision(root=None, client=None):
     bucket, models = load_inventory()
     root = Path(root or os.environ.get("HACHE_MODELS_DIR", "/workspace/models"))
@@ -114,6 +130,7 @@ def provision(root=None, client=None):
             print(f"MODEL_READY {model['path']}", flush=True)
         return
 
+    reclaim_stale_partials(root, missing)
     required_bytes = sum(model["bytes"] for model in missing)
     for model in missing:
         existing = root.joinpath(*Path(model["path"]).parts)
