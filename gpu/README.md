@@ -37,8 +37,8 @@ El primer comando verifica presencia; el segundo verifica SHA-256. Ambos son de 
 
 - VPS `/srv/lucia-models`: volumen de 14 GB, ~12 GB usados y ~2.2 GB libres; contiene Juggernaut XL, IP-Adapter/CLIP y activos privados de Lucía. **No es un endpoint público ni un volumen montado automáticamente en Clore**. No modificar, borrar ni copiar privados a YouTube.
 - R2 privado `hache-ai-models`: cuatro archivos Wan I2V/UMT5/VAE (35.58 GB) verificados por SHA-256 desde GitHub Actions. Están en `shared/wan22/<run-uuid>/<filename>`; no asumir una ruta plana.
-- GPU: usar un volumen `/workspace/models` con subcarpetas ComfyUI (`checkpoints`, `diffusion_models`, `text_encoders`, `vae`). Aprovisionar explícitamente solo los modelos necesarios desde R2; para Juggernaut u otros modelos existentes en VPS se necesita un mecanismo **autorizado** de transferencia sin exponer privados ni cargar el VPS de producción.
-- `HACHE_MODELS_DIR` permite personalizar el mount, con valor por defecto `/workspace/models`. El arranque falla claramente si el mount o ComfyUI faltan; no descarga modelos automáticamente y no demuestra inferencia.
+- GPU: montar el volumen en `/workspace/models`; el arranque aprovisiona la allowlist pública de nueve modelos desde las keys exactas de R2 y los coloca en las carpetas ComfyUI (`checkpoints`, `clip_vision`, `diffusion_models`, `ipadapter`, `loras`, `text_encoders`, `ultralytics`, `vae`). La ruta remota del VPS no se usa.
+- `HACHE_MODELS_DIR` permite personalizar el mount. El arranque falla claramente si ComfyUI, el mount, una GPU NVIDIA o el espacio libre requerido faltan. El healthcheck comprueba la API local de ComfyUI; no demuestra que un workflow de inferencia funcione.
 
 ## Próxima fase
 
