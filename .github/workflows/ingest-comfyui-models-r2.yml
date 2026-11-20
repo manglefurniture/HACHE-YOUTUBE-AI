@@ -1,0 +1,77 @@
+name: Ingest public ComfyUI models to R2
+
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "Download all eligible public helper models, or one selected model"
+        required: true
+        type: choice
+        default: all-public-comfyui
+        options:
+          - all-public-comfyui
+          - juggernaut
+          - clip_vision
+          - faceid_adapter
+          - faceid_lora
+          - face_detector
+      operation:
+        description: "Preview the pinned sources or upload and verify them in R2"
+        required: true
+        type: choice
+        default: dry-run
+        options:
+          - dry-run
+          - upload
+
+permissions:
+  contents: read
+
+concurrency:
+  group: comfyui-public-r2-ingest
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    env:
+      MODEL: ${{ inputs.model }}
+      OPERATION: ${{ inputs.operation }}
+      R2_BUCKET: hache-ai-models
+      R2_PREFIX: shared/comfyui-public/
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.12"
+
+      - name: Validate selection and install the S3 client
+        shell: bash
+        run: |
+          set -euo pipefail
+          case "$MODEL" in
+            all-public-comfyui|juggernaut|clip_vision|faceid_adapter|faceid_lora|face_detector) ;;
+            *) echo "Unsupported model selection" >&2; exit 1 ;;
+          esac
+          case "$OPERATION" in
+            dry-run|upload) ;;
+            *) echo "Unsupported operation" >&2; exit 1 ;;
+          esac
+          python -m pip install --disable-pip-version-check --no-input boto3==1.35.99
+
+      - name: Preview selected source files
+        if: inputs.operation == 'dry-run'
+        run: python scripts/ingest_comfyui_models_r2.py --only "$MODEL"
+
+      - name: Download pinned originals directly to R2 and verify readback
+        if: inputs.operation == 'upload'
+        shell: bash
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: python scripts/ingest_comfyui_models_r2.py --execute --only "$MODEL"
