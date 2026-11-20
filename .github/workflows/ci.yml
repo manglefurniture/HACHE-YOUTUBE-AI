@@ -26,3 +26,14 @@ jobs:
           if git grep -nE '(-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----|sk-[A-Za-z0-9]{24,})' -- ':!*.md'; then
             echo 'Potential secret detected'; exit 1
           fi
+  r2-model-ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check ingest script and preview the fixed allowlist
+        run: |
+          python -m py_compile scripts/ingest_comfyui_models_r2.py
+          python scripts/ingest_comfyui_models_r2.py --only all-public-comfyui
