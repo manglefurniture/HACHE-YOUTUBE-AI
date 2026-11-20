@@ -132,10 +132,6 @@ def provision(root=None, client=None):
 
     reclaim_stale_partials(root, missing)
     required_bytes = sum(model["bytes"] for model in missing)
-    for model in missing:
-        existing = root.joinpath(*Path(model["path"]).parts)
-        if existing.is_file():
-            required_bytes += existing.stat().st_size
     required_bytes += max(1024**3, required_bytes // 20)
     if shutil.disk_usage(root).free < required_bytes:
         raise RuntimeError("Insufficient free space in the model volume for safe provisioning")

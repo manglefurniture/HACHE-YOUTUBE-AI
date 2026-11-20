@@ -100,6 +100,25 @@ class ProvisionModelsTests(unittest.TestCase):
                     provision.provision(Path(temp), client=FakeR2(b"expected-content"))
             self.assertFalse(partial.exists())
 
+    def test_corrupt_local_model_can_be_repaired_without_double_counting(self):
+        data = b"expected-content"
+        model = {
+            "path": "checkpoints/example.bin",
+            "key": "shared/example/example.bin",
+            "bytes": len(data),
+            "sha256": hashlib.sha256(data).hexdigest(),
+        }
+        usage = namedtuple("Usage", "total used free")(10**12, 0, 1024**3 + len(data))
+        with tempfile.TemporaryDirectory() as temp:
+            destination = Path(temp) / model["path"]
+            destination.parent.mkdir(parents=True)
+            destination.write_bytes(b"corrupt-model-data-that-occupies-volume-space")
+            with patch.object(provision, "load_inventory", return_value=("hache-ai-models", [model])), patch.object(
+                provision.shutil, "disk_usage", return_value=usage
+            ):
+                provision.provision(Path(temp), client=FakeR2(data))
+            self.assertEqual(destination.read_bytes(), data)
+
     def test_hash_mismatch_never_installs_file(self):
         data = b"wrong-content"
         model = {
