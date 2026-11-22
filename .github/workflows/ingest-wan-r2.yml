@@ -1,0 +1,95 @@
+name: Ingest Wan model to R2
+
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "Single model to transfer"
+        required: true
+        type: choice
+        default: wan_2.1_vae.safetensors
+        options:
+          - wan_2.1_vae.safetensors
+          - umt5_xxl_fp8_e4m3fn_scaled.safetensors
+          - wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors
+          - wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors
+      operation:
+        description: "Preview, upload one model, or read back an existing R2 object to verify its hash"
+        required: true
+        type: choice
+        default: dry-run
+        options:
+          - dry-run
+          - upload
+          - verify-existing
+      object_key:
+        description: "Exact existing R2 key, required only for verify-existing"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wan22-r2-ingest
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      MODEL: ${{ inputs.model }}
+      OPERATION: ${{ inputs.operation }}
+      OBJECT_KEY: ${{ inputs.object_key }}
+      R2_BUCKET: hache-ai-models
+      R2_PREFIX: shared/wan22/
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.12"
+
+      - name: Validate selection and install the S3 client
+        shell: bash
+        run: |
+          set -euo pipefail
+          case "$MODEL" in
+            wan_2.1_vae.safetensors|umt5_xxl_fp8_e4m3fn_scaled.safetensors|wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors|wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors) ;;
+            *) echo "Unsupported model selection" >&2; exit 1 ;;
+          esac
+          case "$OPERATION" in
+            dry-run|upload|verify-existing) ;;
+            *) echo "Unsupported operation" >&2; exit 1 ;;
+          esac
+          if [[ "$OPERATION" == "verify-existing" && -z "$OBJECT_KEY" ]]; then
+            echo "An exact R2 object key is required for verification" >&2
+            exit 1
+          fi
+          python -m pip install --disable-pip-version-check --no-input boto3==1.35.99
+
+      - name: Preview selected transfer
+        if: inputs.operation == 'dry-run'
+        shell: bash
+        run: python scripts/ingest_wan_r2.py --only "$MODEL"
+
+      - name: Transfer and verify one selected model
+        if: inputs.operation == 'upload'
+        shell: bash
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: python scripts/ingest_wan_r2.py --execute --only "$MODEL"
+
+      - name: Read back and verify one existing R2 object
+        if: inputs.operation == 'verify-existing'
+        shell: bash
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: python scripts/ingest_wan_r2.py --verify-key "$OBJECT_KEY" --only "$MODEL"

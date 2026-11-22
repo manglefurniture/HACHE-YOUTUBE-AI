@@ -1,8 +1,10 @@
 import importlib.util
+import sys
 import tempfile
 import unittest
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 spec = importlib.util.spec_from_file_location("verify_shared_models", Path(__file__).with_name("verify-shared-models.py"))
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
