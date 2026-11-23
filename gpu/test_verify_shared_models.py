@@ -26,5 +26,16 @@ class VerifyModelsTests(unittest.TestCase):
             self.assertTrue(all(v == "present_unverified" for v in module.verify(root, False).values()))
             self.assertTrue(all(v == "hash_mismatch" for v in module.verify(root, True).values()))
 
+    def test_image_only_verification_skips_unneeded_video_models(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            image = root / "checkpoints/juggernautXL_ragnarok.safetensors"
+            image.parent.mkdir(parents=True)
+            image.write_bytes(b"not-original-model")
+            results = module.verify(root, False, only="juggernaut")
+            self.assertEqual(results, {"checkpoints/juggernautXL_ragnarok.safetensors": "present_unverified"})
+            self.assertEqual(module.verify(root, True, only="juggernaut")[image.relative_to(root).as_posix()], "hash_mismatch")
+            self.assertEqual(len(module.verify(root, False)), 9)
+
 if __name__ == "__main__":
     unittest.main()
