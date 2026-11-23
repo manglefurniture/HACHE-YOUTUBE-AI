@@ -9,7 +9,7 @@ mkdir -p "$TMP/bin" "$TMP/run" "$TMP/home"
 cat > "$TMP/bin/keygen" <<'MOCK'
 #!/usr/bin/env bash
 case "$1" in
-  -l) grep -q '^ssh-ed25519 ' "$2" ;;
+  -l) [[ "$2" == '-f' ]] && grep -q '^ssh-ed25519 ' "$3" ;;
   -A) touch "$MOCK_HOST_KEYS" ;;
   *) exit 2 ;;
 esac
