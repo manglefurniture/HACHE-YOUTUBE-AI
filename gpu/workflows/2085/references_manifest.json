@@ -1,0 +1,29 @@
+{
+    "project":  "HACHE-YOUTUBE-AI",
+    "date_local":  "2026-11-22",
+    "generation":  "ComfyUI 0.46.0 / Juggernaut XL Ragnarok / Clore RTX 5090",
+    "format":  "1344x768",
+    "city":  {
+                 "filename":  "ciudad_v3_ref.png",
+                 "sha256":  "471966b3ec158fb56ab324421318327dfee614228bb555a2a6357d6cd7b2100f",
+                 "seed":  20852029,
+                 "steps":  30,
+                 "cfg":  7.2,
+                 "denoise":  1,
+                 "status":  "user-approved-reference",
+                 "workflow":  "ciudad_v3_api_workflow.json",
+                 "r2_key":  "refs/2085/ciudad_v3_ref.png"
+             },
+    "plaza":  {
+                  "filename":  "plaza_central_ref_provisional.png",
+                  "sha256":  "b6b4b4273cb5e99d0962f6b07cf1ab8a5c74c09fbd994cf8814e6c0d7a5cb259",
+                  "seed":  20853016,
+                  "steps":  32,
+                  "cfg":  7.4,
+                  "denoise":  0.82,
+                  "status":  "provisional-needs-user-review",
+                  "workflow":  "plaza_central_api_workflow.json",
+                  "input_image":  "ciudad_v3_ref.png",
+                  "r2_key":  "refs/2085/plaza_central_ref_provisional.png"
+              }
+}
