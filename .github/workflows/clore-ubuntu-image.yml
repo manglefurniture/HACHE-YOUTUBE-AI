@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'clore/ubuntu.Dockerfile'
+      - 'clore/ubuntu.Dockerfile.dockerignore'
       - 'scripts/clore-ubuntu-onstart.sh'
       - 'scripts/test_clore_ubuntu_onstart.sh'
       - '.github/workflows/clore-ubuntu-image.yml'
@@ -12,6 +13,7 @@ on:
     branches: [main]
     paths:
       - 'clore/ubuntu.Dockerfile'
+      - 'clore/ubuntu.Dockerfile.dockerignore'
       - 'scripts/clore-ubuntu-onstart.sh'
       - 'scripts/test_clore_ubuntu_onstart.sh'
       - '.github/workflows/clore-ubuntu-image.yml'
@@ -32,6 +34,7 @@ jobs:
           bash scripts/test_clore_ubuntu_onstart.sh
           grep -Fq 'FROM nvidia/cuda:13.0.2-cudnn-runtime-ubuntu24.04' clore/ubuntu.Dockerfile
           grep -Fq 'COPY scripts/clore-ubuntu-onstart.sh /root/onstart.sh' clore/ubuntu.Dockerfile
+          grep -Fxq '!scripts/clore-ubuntu-onstart.sh' clore/ubuntu.Dockerfile.dockerignore
           grep -Fq 'torch==2.13.0 torchvision==0.28.0' clore/ubuntu.Dockerfile
           grep -Fq 'torch.version.cuda.startswith("13.")' clore/ubuntu.Dockerfile
           ! grep -iE 'apt-get[[:space:]]+(upgrade|dist-upgrade)|systemctl|sshd -D|ssh-keygen -A' scripts/clore-ubuntu-onstart.sh

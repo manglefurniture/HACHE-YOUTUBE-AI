@@ -1,0 +1,9 @@
+# Independent context for the Ubuntu Clore image; do not broaden root .dockerignore.
+*
+!clore/
+!clore/ubuntu.Dockerfile
+!scripts/
+!scripts/clore-ubuntu-onstart.sh
+!gpu/
+!gpu/provision_models.py
+!gpu/model-inventory.json
