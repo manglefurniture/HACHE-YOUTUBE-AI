@@ -1,5 +1,14 @@
 # Estado de pruebas visuales — 2085
 
+## Actualización — 22/11/2026: GPU real y referencias respaldadas
+
+La RTX 5090 de Clore ejecutó ComfyUI y Juggernaut XL con éxito. Se generó y aprobó como **referencia** una ciudad 2085 (V3) y se creó una plaza central mediante **img2img** a partir de esa ciudad (versión F, todavía **provisional**). Ambas imágenes están respaldadas como PNG en el bucket **privado** `hache-ai-youtube-media`; workflows, parámetros, SHA-256 locales y claves R2 están documentados en [Pruebas visuales de GPU: ciudad y plaza](PILOT-2085-GPU-VISUAL-REFERENCES-2026-11-22.md). La plaza todavía necesita un árbol central reconocible y materiales envejecidos; no existe prueba de video Wan ni escena final aprobada.
+
+**Nota:** el siguiente registro de 18/11 se conserva como fotografía histórica del estado de aquella fecha; la frase final "Sin GPU alquilada" no describe la actualización anterior.
+
+---
+
+
 **Fecha:** 2026-11-18. **Estado:** referencias individuales y animática preliminar creadas en conversación, pendientes de incorporación al repositorio y validación técnica de video generativo.
 
 ## Imágenes maestras preliminares
