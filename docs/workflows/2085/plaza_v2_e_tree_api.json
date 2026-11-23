@@ -1,0 +1,109 @@
+{
+  "3": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 20853025,
+      "steps": 44,
+      "cfg": 8,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "11",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "juggernautXL_ragnarok.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "A very old huge healthy majestic shade tree dominates the masked section of this already built 2085 civic chess plaza. Thick ancient trunk and exposed buttress roots growing through repaired stone paving around x=730, wide low horizontal twisting boughs, dense realistic green foliage crown reaching across the whole central midground as a broad organic overhead canopy, layered shadows falling toward the existing public chess tables. The tree is the focal natural monument of this old beloved gathering place, NOT a decorative sapling and NOT a tower, the broad crown is fully legible against sky. Keep all unmasked existing futuristic ribbed silver towers, golden sunset, curved white glass terrace, chess players and benches EXACTLY intact. Grounded photographic realism, impeccable spatial geometry, old bark with natural patina, very natural lighting, 35 mm lens, 16:9 scene.",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "another building or architectural structure instead of a tree, slender pole, rooftop pavilion, additional chess table, futuristic kiosk, floating sculpture, small shrub, palm tree, bare leafless oak, no foliage, cropped tree trunk on extreme edge, tree only as distant background, unnatural perfect spherical tree canopy, giant mushroom, new road or cars, modern corporate landscaped garden, disrupted background skyline, changed futuristic towers, distorted architecture, dead branch, malformed person, extra fingers, illustration, cartoon, text, watermark",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "HACHE_2085_PLAZA_V2E_TREE",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "plaza_v2c_candidate.png"
+    }
+  },
+  "11": {
+    "class_type": "VAEEncodeForInpaint",
+    "inputs": {
+      "pixels": [
+        "10",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ],
+      "mask": [
+        "12",
+        0
+      ],
+      "grow_mask_by": 6
+    }
+  },
+  "12": {
+    "class_type": "LoadImageMask",
+    "inputs": {
+      "image": "plaza_v2d_tree_mask.png",
+      "channel": "red"
+    }
+  }
+}
