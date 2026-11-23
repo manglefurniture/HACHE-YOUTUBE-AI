@@ -1,0 +1,131 @@
+{
+  "project": "HACHE-YOUTUBE-AI",
+  "pilot": "Año 2085: El último trabajador humano",
+  "date_local": "2026-11-22",
+  "engine": {
+    "comfyui": "0.46.0",
+    "gpu": "NVIDIA RTX 5090",
+    "checkpoint": "juggernautXL_ragnarok.safetensors",
+    "dimensions": [
+      1344,
+      768
+    ],
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras"
+  },
+  "r2_bucket": "hache-ai-youtube-media",
+  "r2_private": true,
+  "approved_city_r2_key": "refs/2085/ciudad_v3_ref.png",
+  "provisional_plaza_f_r2_key": "refs/2085/plaza_central_ref_provisional.png",
+  "masks": [
+    {
+      "key": "refs/2085/masks/plaza_city_v3_inpaint_mask.png",
+      "filename": "plaza_city_v3_inpaint_mask.png",
+      "bytes": 24094,
+      "md5_etag": "49245dfdb53fa69abd69bddf31fdb4a1",
+      "sha256": "d5ee1583c1de326600daaf043a4d45b79a459066982a8311401b85660ae8eec7",
+      "generator": "scripts/build_2085_plaza_mask.py"
+    },
+    {
+      "key": "refs/2085/masks/plaza_v2d_tree_mask.png",
+      "filename": "plaza_v2d_tree_mask.png",
+      "bytes": 29573,
+      "md5_etag": "02f10a513e3afdae75d63817396d4609",
+      "sha256": "27516cdaba46a3443ae7d80acbe78fc573fb3746baf09df6cc3219ced93c081b",
+      "generator": "scripts/build_2085_plaza_tree_mask.py"
+    }
+  ],
+  "candidates": [
+    {
+      "key": "a",
+      "seed": 20853021,
+      "steps": 36,
+      "cfg": 7,
+      "denoise": 0.77,
+      "input": "plaza_central_ref_provisional.png",
+      "workflow": "plaza_v2_a_api.json",
+      "prompt_id": "cc724916-3d9b-4b79-bfb5-32a10b9d50de",
+      "filename": "HACHE_2085_PLAZA_V2A_AGE_TREE_00001_.png",
+      "r2_key": "refs/2085/candidates/plaza_v2a_candidate.png",
+      "bytes": 1523264,
+      "etag": "42db58c9430498e9eeebabf8609b8aa4",
+      "sha256": "54af78baed115333a4a23724d4572ad5f059378f4fe2e5cd829055d5745dc629",
+      "status": "rejected_visual_drift"
+    },
+    {
+      "key": "b",
+      "seed": 20853022,
+      "steps": 38,
+      "cfg": 7,
+      "denoise": 0.86,
+      "input": "plaza_central_ref_provisional.png",
+      "workflow": "plaza_v2_b_api.json",
+      "prompt_id": "d9564e34-8c92-4cbf-9e12-1f728b98683c",
+      "filename": "HACHE_2085_PLAZA_V2B_HERITAGE_00001_.png",
+      "r2_key": "refs/2085/candidates/plaza_v2b_candidate.png",
+      "bytes": 1623006,
+      "etag": "815378b1a06ca4ee639cd9936d45cf6a",
+      "sha256": "5b379e87598d05b51b69131480e2f72ec228c42b509d12efdd1e46bbae62cd18",
+      "status": "rejected_visual_drift"
+    },
+    {
+      "key": "c",
+      "seed": 20853023,
+      "steps": 40,
+      "cfg": 6.5,
+      "denoise": 1,
+      "input": "ciudad_v3_ref.png",
+      "mask": "plaza_city_v3_inpaint_mask.png",
+      "workflow": "plaza_v2_c_inpaint_api.json",
+      "prompt_id": "530bbd2d-7872-40b4-a132-03c52fd36cdd",
+      "filename": "HACHE_2085_PLAZA_V2C_CITY_INPAINT_00001_.png",
+      "r2_key": "refs/2085/candidates/plaza_v2c_candidate.png",
+      "bytes": 1413855,
+      "etag": "c650383da98bb480f746cff1d4fe38c4",
+      "sha256": "62fc2844cc07c4dd7bc00a4a0abf92c8e5267d7634093a05dd66cd2c7358e2e9",
+      "status": "intermediate_base_no_tree"
+    },
+    {
+      "key": "d",
+      "seed": 20853024,
+      "steps": 40,
+      "cfg": 7,
+      "denoise": 1,
+      "input": "plaza_v2c_candidate.png",
+      "mask": "plaza_v2d_tree_mask.png",
+      "workflow": "plaza_v2_d_tree_api.json",
+      "prompt_id": "4c47756d-3f28-4de8-8527-84f930a267c6",
+      "filename": "HACHE_2085_PLAZA_V2D_TREE_00001_.png",
+      "r2_key": "refs/2085/candidates/plaza_v2d_candidate.png",
+      "bytes": 1462846,
+      "etag": "be17c123b35c080b23c6c12df05a8428",
+      "sha256": "d6013d8d173bf0c28b21282e7545f6bbb5eccc6f877572c17e5d856217f26896",
+      "status": "provisional_tree_too_small"
+    },
+    {
+      "key": "e",
+      "seed": 20853025,
+      "steps": 44,
+      "cfg": 8,
+      "denoise": 1,
+      "input": "plaza_v2c_candidate.png",
+      "mask": "plaza_v2d_tree_mask.png",
+      "workflow": "plaza_v2_e_tree_api.json",
+      "prompt_id": "5234c6ae-73bf-460a-b36b-8b27acfa4a62",
+      "filename": "HACHE_2085_PLAZA_V2E_TREE_00001_.png",
+      "r2_key": "refs/2085/candidates/plaza_v2e_candidate.png",
+      "bytes": 1462388,
+      "etag": "11566791545fe704a94c1f762baca083",
+      "sha256": "2493598b47f503aedfe501225108cc50a449f199fbe6a4761d206f6ba88bbbcb",
+      "status": "best_provisional_not_approved"
+    }
+  ],
+  "contact_sheet": {
+    "r2_key": "refs/2085/candidates/comparativa_plaza_v2_gpu.jpg",
+    "bytes": 369631,
+    "md5_etag": "681a4ed451305e898aa4d403b7532021",
+    "local": "assets/2085/references/comparativa_plaza_v2_gpu.jpg"
+  },
+  "verification": "ComfyUI history success and dimensions for each prompt; R2 list found objects; bytes and R2 single-part ETag match locally computed size/MD5; SHA-256 values computed on local PNGs, not R2 readback",
+  "approval": "City V3 approved, none of Plaza V2A/B/C/D/E approved"
+}
