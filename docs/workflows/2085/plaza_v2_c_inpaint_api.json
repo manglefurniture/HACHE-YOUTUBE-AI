@@ -1,0 +1,109 @@
+{
+  "3": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 20853023,
+      "steps": 40,
+      "cfg": 6.5,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "11",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "juggernautXL_ragnarok.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Cinematic photorealistic year 2085, inpaint ONLY the masked lower civic park area to become the OLD CENTRAL PUBLIC SQUARE beneath the ORIGINAL futuristic ribbed towers, curved white glass terraces and golden-hour sky that MUST remain UNCHANGED beyond the mask. Old broad canopy living shade tree spreading organically across the center-right above a public chess square, a substantial old trunk fully inside image, visible bark and moss, deeply-rooted tree, sun-dappled patterned shadows across aged warm gray stone paving. This is a public square used by generations, not a corporate courtyard: repaired irregular paving stones, gently worn wooden benches, historic chess tables with two ordinary neighbors calmly playing chess, several residents naturally walking. Preserve coherent ground plane, quiet urban life, realistic human anatomy, plausible 2085 details, texture-rich architectural documentary photograph, 35 mm optics, no text, wide 16:9.",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "unchanged forest, empty dense green garden instead of plaza, generic clean corporate office courtyard, immaculate new patio, sweeping large lawn, unbroken modern concrete, resort pool, cars or parking, medieval European village, old-fashioned skyline, modified futuristic skyscrapers, deleted modern background towers, giant vehicle, flying car, overdecorated tree, tree isolated at extreme right edge, leafless dead tree, unreal orange sunset, cartoon, videogame, painting, CGI, fragmented figures, extra hands, bad chess board, nonsense text, watermark, title",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "HACHE_2085_PLAZA_V2C_CITY_INPAINT",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "ciudad_v3_ref.png"
+    }
+  },
+  "11": {
+    "class_type": "VAEEncodeForInpaint",
+    "inputs": {
+      "pixels": [
+        "10",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ],
+      "mask": [
+        "12",
+        0
+      ],
+      "grow_mask_by": 6
+    }
+  },
+  "12": {
+    "class_type": "LoadImageMask",
+    "inputs": {
+      "image": "plaza_city_v3_inpaint_mask.png",
+      "channel": "red"
+    }
+  }
+}
