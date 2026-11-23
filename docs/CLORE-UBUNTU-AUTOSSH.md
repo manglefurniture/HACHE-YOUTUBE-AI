@@ -30,8 +30,8 @@ No package or model downloads happen when the rental starts.
 ## How to rent
 
 1. Select the successful workflow-published image:
-   `ghcr.io/manglefurniture/hache-clore-comfyui-ubuntu:sha-<MERGE_COMMIT>`.
-   For exploratory use, `:latest` is supported; a commit tag is repeatable.
+   `ghcr.io/manglefurniture/hache-clore-comfyui:ubuntu-sha-<MERGE_COMMIT>`.
+   For exploratory use, `:ubuntu-latest` is supported; a commit tag is repeatable.
 2. **Enable SSH auto-install entrypoint** (unlike PR #28's Rocky derivative).
 3. Choose the existing public key **clore-prl-hache** in Clore's SSH key selector.
    Do NOT enter the private key anywhere in Clore. No manual `SSH_KEY`

@@ -63,8 +63,8 @@ jobs:
           pull: true
           push: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
           tags: |
-            ghcr.io/manglefurniture/hache-clore-comfyui-ubuntu:sha-${{ github.sha }}
-            ghcr.io/manglefurniture/hache-clore-comfyui-ubuntu:latest
+            ghcr.io/manglefurniture/hache-clore-comfyui:ubuntu-sha-${{ github.sha }}
+            ghcr.io/manglefurniture/hache-clore-comfyui:ubuntu-latest
           labels: |
             org.opencontainers.image.revision=${{ github.sha }}
             org.opencontainers.image.source=https://github.com/manglefurniture/HACHE-YOUTUBE-AI
