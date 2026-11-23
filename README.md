@@ -11,3 +11,7 @@ Ciencia real extrapolada hacia futuros posibles mediante historias originales de
 ## Próxima prueba GPU (sin alquiler automático)
 
 [Ruta alternativa con plantilla ComfyUI preinstalada en Clore](docs/CLORE-COMFYUI-TEMPLATE.md): comprobar primero GPU + API, descargar después solo Juggernaut XL desde R2 con validación SHA-256. La imagen GHCR actual se mantiene como respaldo; Wan 2.2 se valida en una fase posterior.
+
+## Recuperación de ComfyUI validada en RTX 5090
+
+[Runbook operativo de Clore (22/11/2026)](docs/CLORE-RTX5090-R2-RUNBOOK-2026-11-22.md): SSH con la clave de Hache, diagnóstico del entrypoint, arranque por IPv4, túnel privado y estado real de R2. El modelo Juggernaut XL está verificado como objeto en R2, pero su descarga y la generación SDXL aún están pendientes.
