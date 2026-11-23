@@ -1,5 +1,11 @@
 # Estado de pruebas visuales — 2085
 
+## Actualización — 22/11/2026: iteración de plaza V2A–V2E
+
+**Cinco imágenes reales más generadas en RTX 5090**, en ComfyUI con Juggernaut XL. Se probaron img2img (V2A/B) y edición selectiva con máscaras (V2C/D/E). La ciudad V3 continúa aprobada; **ninguna plaza V2 está aprobada**. V2E conserva la ciudad y el árbol, pero aún parece terraza, sin copa antigua suficientemente amplia. Se respaldaron las cinco imágenes, las máscaras y una comparativa en el bucket privado de medios R2; tamaños/ETag MD5 cotejados con archivos locales. Guía y hashes: [Resultados de Plaza V2](PILOT-2085-PLAZA-V2-GPU-RESULTS.md), [Manifiesto](workflows/2085/plaza_v2_results_manifest.json).
+
+---
+
 ## Actualización — 22/11/2026: GPU real y referencias respaldadas
 
 La RTX 5090 de Clore ejecutó ComfyUI y Juggernaut XL con éxito. Se generó y aprobó como **referencia** una ciudad 2085 (V3) y se creó una plaza central mediante **img2img** a partir de esa ciudad (versión F, todavía **provisional**). Ambas imágenes están respaldadas como PNG en el bucket **privado** `hache-ai-youtube-media`; workflows, parámetros, SHA-256 locales y claves R2 están documentados en [Pruebas visuales de GPU: ciudad y plaza](PILOT-2085-GPU-VISUAL-REFERENCES-2026-11-22.md). La plaza todavía necesita un árbol central reconocible y materiales envejecidos; no existe prueba de video Wan ni escena final aprobada.
