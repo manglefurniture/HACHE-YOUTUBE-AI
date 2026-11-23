@@ -1,0 +1,97 @@
+{
+  "3": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 20853031,
+      "steps": 38,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.83,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "11",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "juggernautXL_ragnarok.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Photorealistic cinematic architectural documentary photograph from PEDESTRIAN EYE LEVEL (camera height 1.6 m), year 2085, a spacious beloved HISTORIC PUBLIC CITY SQUARE at ground level among the advanced coastal city's sleek tall slender ribbed silver towers and flowing ivory glass buildings; coherent open public space spreading into the city, no elevated platform. Center-left ancient monumental living tropical shade tree, thick deeply furrowed wide trunk, exposed roots in an old masonry tree well, broad low irregular twisting branches reaching horizontally across frame, naturally uneven layered green foliage with sunlight piercing through, NOT a spherical topiary. Large continuous slightly uneven weathered limestone/cobblestone paving, patched repairs, cracks, embedded stone edging, public walking paths seamlessly connecting to the buildings at street level. A modest sturdy public wooden chess table near center-right, two older neighbors absorbed in a real chess game, other everyday pedestrians at natural size, benches made from aged stone and timber, long organic shadows. Golden-hour natural coastal sunlight matching the approved City V3 image; believable year-2085 sustainable urban skyline with tapered ribbed futuristic towers in the middle distance, realistic patinated materials, warm neutral color grade, deep spatial perspective and clear civic scale, 35mm lens, widescreen landscape photographic composition. Tree and people physically rooted on the same single flat public square, natural documentary realism, no letters.",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "rooftop, elevated terrace, roof garden, corporate office patio, skydeck, balcony, guard rail, glass railing, ledge overlooking a forest, high camera angle, aerial view, precipice, ornamental shrub, tiny sapling, clipped hedge, giant green ball, mushroom-shaped tree, palm tree, bonsai, tree with bare limbs, isolated park meadow, cars, road cutting across plaza, trains on water, luxury resort, spaceship, cyberpunk, glowing neon, medieval village, cartoon, illustration, plastic CGI, oversaturated colors, architecture merging into tree, multiple tree trunks fused, floating tables, distorted people, text, logos, watermark",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "HACHE_2085_PLAZA_V3G_GROUND_IMG2IMG",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "plaza_v2e_candidate.png"
+    }
+  },
+  "11": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "10",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    }
+  }
+}
