@@ -1,0 +1,109 @@
+{
+  "3": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 20853033,
+      "steps": 44,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "11",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "juggernautXL_ragnarok.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Eye-level architectural documentary photo, 2085 coastal future city, selectively inpaint ONLY the marked pixels to turn this artificial elevated rooftop terrace into a LARGE GROUND-LEVEL OPEN PUBLIC SQUARE used by residents: the entire foreground and middle ground are one SINGLE CONTINUOUS pedestrian stone plaza extending naturally toward the base of the existing futuristic ivory curved building and ribbed tapered silver towers, no edge drop, no glass balustrade and no elevated viewpoint. Gently weathered rectangular limestone paving with believable old repairs, subtle cracks, small public planters, worn real-wood benches, natural pedestrian pathways, scale-consistent people walking and sitting. An ENORMOUS HUNDRED-YEAR-OLD HEALTHY TROPICAL RAINTREE grows from this actual ground within the middle of the square, its immense rough-barked natural irregular trunk at center around x=755 and its wide branching horizontal sculptural limbs spreading a non-spherical canopy over the pedestrians, irregular translucent green leaves and delicately mottled shadows, natural exposed buttress roots in a repaired stone tree well. On the right side below the tree, a small believable real chess table with two elderly local neighbors playing, quiet community life. Grounded year-2085 architectural futurism preserved in the original unmasked skyline: distinctive tall rounded ribbed silver towers, warm golden low sunlight and the flowing white architecture of city V3. Accurate believable perspective at 1.65 m pedestrian eye-level, documentary 35mm photograph, cinematic coherent geometry, photorealism, no captions.",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "raised terrace, rooftop deck, balcony, railing, glass balustrade, hanging platform, elevated skydeck, lake of trees viewed from above, cliff edge, upper-floor patio, corporate leisure deck, antique European architecture, classical clocktower, medieval stone buildings, 2020 city, current-day European square, people standing on rooftop, ornate columns, perfectly clipped green umbrella, hedge, decorative bonsai, round sphere canopy, giant mushroom, no tree, multiple fused trunks, tiny tree, dead leafless branches, overgrown forest instead of city square, grass field, floating tree, mismatched stone geometry, split level pavement, cars, highway, floating train, neon cyberpunk, cartoon, game illustration, CGI, distorted hands, writing, watermark",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "HACHE_2085_PLAZA_V3I_GROUND_INPAINT",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "plaza_v2e_candidate.png"
+    }
+  },
+  "11": {
+    "class_type": "VAEEncodeForInpaint",
+    "inputs": {
+      "pixels": [
+        "10",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ],
+      "mask": [
+        "12",
+        0
+      ],
+      "grow_mask_by": 6
+    }
+  },
+  "12": {
+    "class_type": "LoadImageMask",
+    "inputs": {
+      "image": "plaza_v3ij_ground_mask.png",
+      "channel": "red"
+    }
+  }
+}
