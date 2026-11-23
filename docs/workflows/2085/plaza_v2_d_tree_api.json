@@ -1,0 +1,109 @@
+{
+  "3": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 20853024,
+      "steps": 40,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "11",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "juggernautXL_ragnarok.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "SELECTIVE INPAINT ONLY: introduce ONE magnificent living centuries-old shade tree in the old public chess plaza, near the chess table slightly left of center. This is first and foremost a massive mature tropical broadleaf tree: very large dense green natural canopy with sprawling horizontal branches covering the upper middle of image, thick textured bark trunk clearly visible inside frame around x=740, deeply rooted in old repaired stone pavers, irregular sprawling branches and dappled light. It physically grows through the existing elevated civic plaza, its canopy partially eclipses background buildings naturally, it feels beloved and old. Continue the EXACT unchanged futuristic glass ribbed 2085 skyline, white curving terrace, sunset light and existing chess players outside painted region. Documentary architectural photograph, plausible age, authentic foliage, dramatic beautiful ancient tree natural shadows, no other renovations.",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "another building or architectural structure instead of a tree, slender pole, rooftop pavilion, additional chess table, futuristic kiosk, floating sculpture, small shrub, palm tree, bare leafless oak, no foliage, cropped tree trunk on extreme edge, tree only as distant background, unnatural perfect spherical tree canopy, giant mushroom, new road or cars, modern corporate landscaped garden, disrupted background skyline, changed futuristic towers, distorted architecture, dead branch, malformed person, extra fingers, illustration, cartoon, text, watermark",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "HACHE_2085_PLAZA_V2D_TREE",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "plaza_v2c_candidate.png"
+    }
+  },
+  "11": {
+    "class_type": "VAEEncodeForInpaint",
+    "inputs": {
+      "pixels": [
+        "10",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ],
+      "mask": [
+        "12",
+        0
+      ],
+      "grow_mask_by": 6
+    }
+  },
+  "12": {
+    "class_type": "LoadImageMask",
+    "inputs": {
+      "image": "plaza_v2d_tree_mask.png",
+      "channel": "red"
+    }
+  }
+}
