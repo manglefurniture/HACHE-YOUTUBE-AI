@@ -1,0 +1,23 @@
+name: Clore ComfyUI startup
+on:
+  push:
+    paths:
+      - 'scripts/clore-comfyui-start.sh'
+      - 'scripts/test_clore_comfyui_start.sh'
+      - '.github/workflows/clore-comfyui-startup.yml'
+  pull_request:
+    paths:
+      - 'scripts/clore-comfyui-start.sh'
+      - 'scripts/test_clore_comfyui_start.sh'
+      - '.github/workflows/clore-comfyui-startup.yml'
+permissions:
+  contents: read
+jobs:
+  offline-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Shell syntax and mocked startup
+        run: |
+          bash -n scripts/clore-comfyui-start.sh scripts/test_clore_comfyui_start.sh
+          bash scripts/test_clore_comfyui_start.sh
