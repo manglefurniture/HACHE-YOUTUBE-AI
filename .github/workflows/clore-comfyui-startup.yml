@@ -3,12 +3,18 @@ on:
   push:
     paths:
       - 'scripts/clore-comfyui-start.sh'
+      - 'scripts/clore-entrypoint.sh'
       - 'scripts/test_clore_comfyui_start.sh'
+      - 'scripts/test_clore_entrypoint.sh'
+      - 'clore/**'
       - '.github/workflows/clore-comfyui-startup.yml'
   pull_request:
     paths:
       - 'scripts/clore-comfyui-start.sh'
+      - 'scripts/clore-entrypoint.sh'
       - 'scripts/test_clore_comfyui_start.sh'
+      - 'scripts/test_clore_entrypoint.sh'
+      - 'clore/**'
       - '.github/workflows/clore-comfyui-startup.yml'
 permissions:
   contents: read
@@ -20,4 +26,7 @@ jobs:
       - name: Shell syntax and mocked startup
         run: |
           bash -n scripts/clore-comfyui-start.sh scripts/test_clore_comfyui_start.sh
+          bash -n scripts/clore-entrypoint.sh scripts/test_clore_entrypoint.sh
           bash scripts/test_clore_comfyui_start.sh
+          bash scripts/test_clore_entrypoint.sh
+          ! grep -iE 'dnf[[:space:]]+(update|upgrade)|yum[[:space:]]+(update|upgrade)' clore/Dockerfile

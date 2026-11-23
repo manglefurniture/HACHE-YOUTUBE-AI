@@ -6,3 +6,8 @@
 !gpu/provision_models.py
 !gpu/model-inventory.json
 !gpu/start-youtube.sh
+!clore/
+!clore/Dockerfile
+!scripts/
+!scripts/clore-entrypoint.sh
+!scripts/clore-comfyui-start.sh

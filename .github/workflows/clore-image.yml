@@ -1,0 +1,48 @@
+name: Build Clore ComfyUI image
+
+on:
+  pull_request:
+    paths: ['clore/**', 'scripts/clore-*.sh', '.dockerignore', '.github/workflows/clore-image.yml']
+  push:
+    branches: [main]
+    paths: ['clore/**', 'scripts/clore-*.sh', '.dockerignore', '.github/workflows/clore-image.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - name: Validate build-time SSH installation
+        run: |
+          test -s clore/Dockerfile
+          test -s scripts/clore-entrypoint.sh
+          ! grep -iE 'dnf[[:space:]]+(update|upgrade)|yum[[:space:]]+(update|upgrade)' clore/Dockerfile
+      - name: Login to GHCR (main only)
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and optionally publish
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: clore/Dockerfile
+          platforms: linux/amd64
+          pull: true
+          push: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
+          tags: |
+            ghcr.io/manglefurniture/hache-clore-comfyui:sha-${{ github.sha }}
+            ghcr.io/manglefurniture/hache-clore-comfyui:latest
+          labels: |
+            org.opencontainers.image.revision=${{ github.sha }}
+            org.opencontainers.image.source=https://github.com/manglefurniture/HACHE-YOUTUBE-AI
