@@ -5,7 +5,9 @@ import {join,resolve} from "node:path";
 import {createHash} from "node:crypto";
 import {setTimeout as sleep} from "node:timers/promises";
 const api="http://127.0.0.1:18188";
-const base="https://raw.githubusercontent.com/manglefurniture/HACHE-YOUTUBE-AI/docs/2085-plaza-ground-level-v3-20261122/";
+// Guard against duplicating the already-submitted V3I job on tunnel recovery.
+if(process.env.HACHE_ACK_RESUBMIT!=="1") throw Error("V3I prompt was submitted before SSH dropped. Inspect /history/50d1ae10-6e40-4282-965e-bbb812443a5d and the queue before intentional resubmission; set HACHE_ACK_RESUBMIT=1 only if needed.");
+const base="https://raw.githubusercontent.com/manglefurniture/HACHE-YOUTUBE-AI/main/";
 const dir=join(resolve(process.argv[2]||process.cwd()),"assets","2085","references");
 await mkdir(dir,{recursive:true});
 const get=async(url)=>{let r=await fetch(url,{signal:AbortSignal.timeout(120000)}); if(!r.ok)throw Error("GET "+r.status+" "+url);return r;};
