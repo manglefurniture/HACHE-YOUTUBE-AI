@@ -35,7 +35,7 @@ grep -Fxq -- '--input-directory' "$TMP/args"
 grep -Fxq -- '--output-directory' "$TMP/args"
 [[ -s "$TMP/run/extra-model-paths.yaml" ]]
 [[ -d "$TMP/workspace/output" && -d "$TMP/models" ]]
-[[ ! -s "$TMP/aws" ]] || { echo 'FAIL: credential leaked to ComfyUI'; exit 1; }
+[[ "$(cat "$TMP/aws")" == "" ]] || { echo 'FAIL: credential leaked to ComfyUI'; exit 1; }
 
 rm -f "$TMP/args"
 touch "$TMP/no-gpu"
