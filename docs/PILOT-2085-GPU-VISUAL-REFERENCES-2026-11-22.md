@@ -17,8 +17,8 @@ Bucket **privado**: `hache-ai-youtube-media` (dominio `r2.dev` deshabilitado). L
 
 | Imagen | Archivo de workflow API | Seed | Steps | CFG | Denoise |
 | --- | --- | ---: | ---: | ---: | ---: |
-| Ciudad V3 | [`gpu/workflows/2085/ciudad_v3_api.json`](../gpu/workflows/2085/ciudad_v3_api.json) | `20852029` | 30 | 7.2 | 1.00 |
-| Plaza F | [`gpu/workflows/2085/plaza_central_provisional_api.json`](../gpu/workflows/2085/plaza_central_provisional_api.json) | `20853016` | 32 | 7.4 | 0.82 |
+| Ciudad V3 | [`gpu/workflows/2085/ciudad_v3_api.json`](workflows/2085/ciudad_v3_api.json) | `20852029` | 30 | 7.2 | 1.00 |
+| Plaza F | [`gpu/workflows/2085/plaza_central_provisional_api.json`](workflows/2085/plaza_central_provisional_api.json) | `20853016` | 32 | 7.4 | 0.82 |
 
 Ambos: `juggernautXL_ragnarok.safetensors` (Juggernaut XL Ragnarok), **1344 × 768**, `dpmpp_2m`, `karras`, 1 imagen por ejecución, ComfyUI **0.46.0** en **RTX 5090 32 GB**. Prompts positivos, negativos y conexiones se conservaron íntegros en los JSON (formato **API prompt**, no exportación visual del lienzo).
 
@@ -39,4 +39,4 @@ Ambos: `juggernautXL_ragnarok.safetensors` (Juggernaut XL Ragnarok), **1344 × 7
 3. Registrar calidad, seed, tiempo y VRAM de una prueba de movimiento; **Wan 2.2 sigue sin estar probado en generación de video**.
 4. Si la GPU alquilada deja de utilizarse, detener el alquiler para no prolongar el costo.
 
-Referencias: [Biblia visual](PILOT-2085-VISUAL-BIBLE-V1.md), [Estado anterior del piloto](PILOT-2085-VISUAL-TEST-STATUS.md), [Runbook real de Clore/R2](CLORE-RTX5090-R2-RUNBOOK-2026-11-22.md). La información verificable de las imágenes está en el [manifiesto](../gpu/workflows/2085/references_manifest.json).
+Referencias: [Biblia visual](PILOT-2085-VISUAL-BIBLE-V1.md), [Estado anterior del piloto](PILOT-2085-VISUAL-TEST-STATUS.md), [Runbook real de Clore/R2](CLORE-RTX5090-R2-RUNBOOK-2026-11-22.md). La información verificable de las imágenes está en el [manifiesto](workflows/2085/references_manifest.json).
