@@ -31,7 +31,7 @@ def main():
     mask.save(args.output)
     b = args.output.read_bytes()
     print(f"mask={args.output} dimensions={width}x{height} sha256={hashlib.sha256(b).hexdigest()}")
-    print(f"masked_fraction={sum(mask.convert('L').getdata())/(255*width*height):.3f}")
+    print(f"masked_fraction={sum(value * count for value, count in enumerate(mask.histogram()))/(255*width*height):.3f}")
 
 if __name__ == "__main__":
     main()
