@@ -16,7 +16,7 @@ esac
 MOCK
 cat > "$TMP/bin/sshd" <<'MOCK'
 #!/usr/bin/env bash
-printf '%s\n' "$*" > "$MOCK_SSHD_ARGS"
+printf '%s\n' "$*" >> "$MOCK_SSHD_ARGS"
 MOCK
 cat > "$TMP/start" <<'MOCK'
 #!/usr/bin/env bash

@@ -2,10 +2,10 @@ name: Build Clore ComfyUI image
 
 on:
   pull_request:
-    paths: ['clore/**', 'scripts/clore-*.sh', '.github/workflows/clore-image.yml']
+    paths: ['clore/**', 'scripts/clore-*.sh', '.dockerignore', '.github/workflows/clore-image.yml']
   push:
     branches: [main]
-    paths: ['clore/**', 'scripts/clore-*.sh', '.github/workflows/clore-image.yml']
+    paths: ['clore/**', 'scripts/clore-*.sh', '.dockerignore', '.github/workflows/clore-image.yml']
   workflow_dispatch:
 
 permissions:
