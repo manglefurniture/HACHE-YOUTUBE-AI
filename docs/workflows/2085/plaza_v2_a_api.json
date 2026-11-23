@@ -1,0 +1,97 @@
+{
+  "3": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 20853021,
+      "steps": 36,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.77,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "11",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "juggernautXL_ragnarok.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Cinematic photorealistic wide establishing photograph, year 2085, the same lived-in civic plaza and architectural language as input image. IMPROVE THIS EXISTING PLAZA, keep same late afternoon warm natural light and plausible modern-future off-white curving glass architecture. Ancient enormous broad-canopy shade tree is the heart and landmark of the PUBLIC SQUARE: thick weathered trunk visible around center left, dense old spreading branches extending across upper middle of frame, broken dappled shade on seating; tree roots integrated with worn stone. This is a centuries-old beloved community gathering place, NOT a new office atrium: wide old stone pedestrian paving fills foreground, irregular repairs, subtle cracks, timeworn benches, patched pavers, reused wooden chess tables, aged but cared-for urban furniture. Two or three authentic residents of different ages playing chess around a real wooden board, natural non-posed posture, quiet everyday life, few others in background. Retain glimpses of distinctive ribbed slender silver futuristic towers from the approved city and curved white building, not isolated corporate courtyard. Visually grounded architectural documentary photography, natural colors and textures, 35mm lens, composition open and human scale, continuous plaza geometry, landscape 16:9, no text.",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "corporate office courtyard, immaculate contemporary plaza, glossy new pristine paving, private luxury resort, large bright-green lawn, green grass dominating foreground, cropped tree trunk at extreme right, trunk without canopy, generic city skyline, solitary futuristic spire without ribbed towers, neoclassical buildings, European medieval square, floating train, impossible infrastructure, plastic greenery, cartoon, game render, cyberpunk, oversaturated neon, holograms, weird anatomy, extra fingers, text, signage, watermark, blurry chessboard",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "HACHE_2085_PLAZA_V2A_AGE_TREE",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "plaza_central_ref_provisional.png"
+    }
+  },
+  "11": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "10",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    }
+  }
+}

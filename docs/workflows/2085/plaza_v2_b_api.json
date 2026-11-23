@@ -1,0 +1,97 @@
+{
+  "3": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 20853022,
+      "steps": 38,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.86,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "11",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "juggernautXL_ragnarok.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "Photographic documentary still of the HISTORIC CENTRAL PUBLIC SQUARE in the same sustainable coastal 2085 city as the input. A magnificent old shady tree is the main feature, full broad irregular canopy over heart of square, big ancient trunk clearly inside composition left of center rather than cropped at right, shadow patterns from branches reaching across patchwork of OLD pale stone pavers. Mature imperfect civic environment that generations have repaired: timeworn flagstones, visible masonry patches and cracks, worn timber benches, layered public-life traces, vintage wooden chess tables under tree. In foreground two ordinary neighbors play chess, small intergenerational gathering nearby, practical discreet maintenance robot at distant edge. Skyline retains distinctive white organically curved glass terraces at left, elegant distant slim ribbed silver-glass towers in warm amber sunlight, future engineering without flamboyant science fiction. Feels loved and continuously inhabited, more historic town square than office plaza, no broad lawn, no new gleaming corporate paving, architectural lens 35mm, realistic people and tactile surfaces, high detail, horizontal 16:9, no text.",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "corporate office courtyard, immaculate contemporary plaza, glossy new pristine paving, private luxury resort, large bright-green lawn, green grass dominating foreground, cropped tree trunk at extreme right, trunk without canopy, generic city skyline, solitary futuristic spire without ribbed towers, neoclassical buildings, European medieval square, floating train, impossible infrastructure, plastic greenery, cartoon, game render, cyberpunk, oversaturated neon, holograms, weird anatomy, extra fingers, text, signage, watermark, blurry chessboard",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "HACHE_2085_PLAZA_V2B_HERITAGE",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "plaza_central_ref_provisional.png"
+    }
+  },
+  "11": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "10",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    }
+  }
+}
