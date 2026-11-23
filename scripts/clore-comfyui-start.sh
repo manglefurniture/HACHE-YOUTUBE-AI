@@ -3,12 +3,12 @@
 # Does not expose the UI, download models, alter SSH, or modify Hache production.
 set -Eeuo pipefail
 
-COMFY_DIR="\${HACHE_COMFY_DIR:-/root/ComfyUI}"
-BUNDLE_DIR="\${HACHE_COMFY_BUNDLE_DIR:-/default-comfyui-bundle/ComfyUI}"
-RUNTIME_DIR="\${HACHE_COMFY_RUNTIME_DIR:-/root/.cache/hache-youtube-start}"
-PYTHON_BIN="\${HACHE_COMFY_PYTHON:-python3.13}"
-PORT="\${HACHE_COMFY_PORT:-8188}"
-TIMEOUT="\${HACHE_COMFY_TIMEOUT:-120}"
+COMFY_DIR="${HACHE_COMFY_DIR:-/root/ComfyUI}"
+BUNDLE_DIR="${HACHE_COMFY_BUNDLE_DIR:-/default-comfyui-bundle/ComfyUI}"
+RUNTIME_DIR="${HACHE_COMFY_RUNTIME_DIR:-/root/.cache/hache-youtube-start}"
+PYTHON_BIN="${HACHE_COMFY_PYTHON:-python3.13}"
+PORT="${HACHE_COMFY_PORT:-8188}"
+TIMEOUT="${HACHE_COMFY_TIMEOUT:-120}"
 
 if [[ ! "$PORT" =~ ^[0-9]+$ ]] || (( PORT < 1024 || PORT > 65535 )); then
   echo 'ERROR: invalid ComfyUI port' >&2; exit 2
@@ -24,7 +24,7 @@ nvidia-smi -L >/dev/null 2>&1 || { echo 'ERROR: NVIDIA GPU unavailable' >&2; exi
 mkdir -p "$RUNTIME_DIR"
 LOG="$RUNTIME_DIR/comfyui.log"
 PID_FILE="$RUNTIME_DIR/comfyui.pid"
-API="http://127.0.0.1:\${PORT}/system_stats"
+API="http://127.0.0.1:${PORT}/system_stats"
 
 # Avoid simultaneous invocations on the same rental.
 exec 9>"$RUNTIME_DIR/start.lock"
@@ -63,7 +63,7 @@ if [[ -z "$pid" ]]; then
     cp -a -n "$BUNDLE_DIR/." "$COMFY_DIR/"
     [[ -f "$COMFY_DIR/main.py" ]] || { echo 'ERROR: failed to initialize ComfyUI' >&2; exit 1; }
   fi
-  export PYTHONPYCACHEPREFIX="\${PYTHONPYCACHEPREFIX:-/root/.cache/pycache}"
+  export PYTHONPYCACHEPREFIX="${PYTHONPYCACHEPREFIX:-/root/.cache/pycache}"
   export PIP_USER=true PIP_ROOT_USER_ACTION=ignore
   export PATH="$PATH:/root/.local/bin"
   echo "COMFYUI_LAUNCH 127.0.0.1:$PORT log=$LOG"
@@ -86,6 +86,6 @@ for (( elapsed=0; elapsed<TIMEOUT; elapsed++ )); do
   fi
   sleep 1
 done
-echo "ERROR: ComfyUI did not become healthy within \${TIMEOUT}s; log=$LOG" >&2
+echo "ERROR: ComfyUI did not become healthy within ${TIMEOUT}s; log=$LOG" >&2
 [[ -f "$LOG" ]] && tail -n 30 "$LOG" >&2
 exit 1

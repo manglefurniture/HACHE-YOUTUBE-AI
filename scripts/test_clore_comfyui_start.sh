@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Offline smoke tests for Clore bootstrap. No GPU, network, or download required.
 set -Eeuo pipefail
-HERE="$(cd -- "$(dirname -- "\${BASH_SOURCE[0]}")" && pwd)"
+HERE="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 TMP="$(mktemp -d)"
 cleanup() { if [[ -f "$TMP/run/comfyui.pid" ]]; then kill "$(cat "$TMP/run/comfyui.pid")" 2>/dev/null || true; fi; rm -rf "$TMP"; }
 trap cleanup EXIT
@@ -13,7 +13,7 @@ exit 0
 MOCK
 cat > "$TMP/bin/curl" <<'MOCK'
 #!/usr/bin/env bash
-[[ -f "\${MOCK_READY}" ]]
+[[ -f "${MOCK_READY}" ]]
 MOCK
 cat > "$TMP/bin/fake-python" <<'MOCK'
 #!/usr/bin/env bash
