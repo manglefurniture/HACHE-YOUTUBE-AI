@@ -1,0 +1,68 @@
+{
+  "project": "HACHE-YOUTUBE-AI",
+  "date_local": "2026-11-22",
+  "pilot": "Año 2085",
+  "engine": {
+    "comfyui": "0.46.0",
+    "gpu": "NVIDIA RTX 5090",
+    "checkpoint": "juggernautXL_ragnarok.safetensors",
+    "dimensions": [
+      1344,
+      768
+    ],
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras"
+  },
+  "source_r2_key": "refs/2085/candidates/plaza_v2e_candidate.png",
+  "local_directory": "C:\\Users\\hache\\Documents\\HACHE-YOUTUBE-AI\\assets\\2085\\references",
+  "results": [
+    {
+      "candidate": "V3G",
+      "method": "img2img from Plaza V2E",
+      "workflow": "plaza_v3_g_ground_img2img_api.json",
+      "seed": 20853031,
+      "denoise": 0.83,
+      "prompt_id": "5a1bc2c1-f726-4b52-b293-cffa2bf61475",
+      "local": "plaza_v3g_candidate.png",
+      "bytes": 1560696,
+      "sha256": "34cd2e1d8f97003ab5b1f2d0fe2b0199e551bdc603be42db41df3e49eb8bf9af",
+      "comfy_status": "success",
+      "creative_status": "rejected_lost_futurism"
+    },
+    {
+      "candidate": "V3H",
+      "method": "txt2img from scratch",
+      "workflow": "plaza_v3_h_ground_txt2img_api.json",
+      "seed": 20853032,
+      "denoise": 1,
+      "prompt_id": "c1611185-c45b-4b4a-bf9d-4413fcd73416",
+      "local": "plaza_v3h_candidate.png",
+      "bytes": 1824630,
+      "sha256": "e65862fa9235813287272d6f2d0ccf887b0e00c4c70a1bce83ecbee97c77a51b",
+      "comfy_status": "success",
+      "creative_status": "rejected_lost_futurism"
+    },
+    {
+      "candidate": "V3I",
+      "method": "masked inpaint from V2E",
+      "workflow": "plaza_v3_i_ground_inpaint_api.json",
+      "seed": 20853033,
+      "mask": "plaza_v3ij_ground_mask.png",
+      "mask_sha256": "294e2eda61a96282831599ed27378d8c5a212a771e5a7ff2a384e42389643ad7",
+      "prompt_id": "50d1ae10-6e40-4282-965e-bbb812443a5d",
+      "comfy_status": "unknown_ssh_tunnel_lost",
+      "creative_status": "unreviewed",
+      "local": null
+    },
+    {
+      "candidate": "V3J",
+      "method": "masked inpaint from V2E",
+      "workflow": "plaza_v3_j_ground_inpaint_api.json",
+      "seed": 20853034,
+      "comfy_status": "not_submitted",
+      "creative_status": "not_generated"
+    }
+  ],
+  "r2_backup_status": "not_uploaded_G_H_local_only",
+  "approval": "No Plaza V3 approved. City V3 remains the only approved reference. Plaza V2E best provisional."
+}
