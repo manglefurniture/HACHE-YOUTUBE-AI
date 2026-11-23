@@ -133,5 +133,45 @@ class ProvisionModelsTests(unittest.TestCase):
             self.assertFalse((Path(temp) / model["path"]).exists())
 
 
+    def test_image_only_selects_exact_juggernaut_without_wan(self):
+        _bucket, models = provision.load_inventory()
+        picked = provision.select_models(models, "juggernaut")
+        self.assertEqual(len(picked), 1)
+        self.assertEqual(picked[0]["path"], "checkpoints/juggernautXL_ragnarok.safetensors")
+        self.assertEqual(provision.select_models(models), models)
+
+    def test_unknown_or_missing_image_selection_fails_closed(self):
+        _bucket, models = provision.load_inventory()
+        with self.assertRaisesRegex(ValueError, "Unknown model selection"):
+            provision.select_models(models, "../../private")
+        with self.assertRaisesRegex(ValueError, "missing or duplicated"):
+            provision.select_models([m for m in models if "juggernautXL" not in m["path"]], "juggernaut")
+
+    def test_image_only_provision_downloads_one_without_other_models(self):
+        data = b"image-model-data"
+        model = {
+            "path": "checkpoints/juggernautXL_ragnarok.safetensors",
+            "key": "shared/comfyui-public/checkpoints/test/juggernautXL_ragnarok.safetensors",
+            "bytes": len(data),
+            "sha256": hashlib.sha256(data).hexdigest(),
+        }
+        other = {
+            "path": "diffusion_models/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+            "key": "shared/wan22/test/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+            "bytes": 2 * 1024**3,
+            "sha256": "0" * 64,
+        }
+        client = FakeR2(data)
+        usage = namedtuple("Usage", "total used free")(10**12, 0, 2 * 1024**3)
+        with tempfile.TemporaryDirectory() as temp:
+            with patch.object(provision, "load_inventory", return_value=("hache-ai-models", [other, model])), patch.object(
+                provision.shutil, "disk_usage", return_value=usage
+            ):
+                provision.provision(root=Path(temp), client=client, only="juggernaut")
+            self.assertEqual(client.calls, 1)
+            self.assertEqual((Path(temp) / model["path"]).read_bytes(), data)
+            self.assertFalse((Path(temp) / other["path"]).exists())
+
+
 if __name__ == "__main__":
     unittest.main()

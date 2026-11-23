@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Fetch the fixed, public-only model allowlist from private Cloudflare R2."""
+import argparse
 import hashlib
 import json
 import os
@@ -120,8 +121,21 @@ def reclaim_stale_partials(root, models):
             part.unlink()
 
 
-def provision(root=None, client=None):
-    bucket, models = load_inventory()
+def select_models(models, only="all"):
+    """Restrict optional template provisioning without changing the legacy all-model default."""
+    if only == "all":
+        return models
+    if only != "juggernaut":
+        raise ValueError("Unknown model selection")
+    selected = [m for m in models if m["path"] == "checkpoints/juggernautXL_ragnarok.safetensors"]
+    if len(selected) != 1:
+        raise ValueError("Juggernaut XL is missing or duplicated in inventory")
+    return selected
+
+
+def provision(root=None, client=None, only="all"):
+    bucket, inventory = load_inventory()
+    models = select_models(inventory, only)
     root = Path(root or os.environ.get("HACHE_MODELS_DIR", "/workspace/models"))
     root.mkdir(parents=True, exist_ok=True)
     missing = [m for m in models if not is_verified(root.joinpath(*Path(m["path"]).parts), m)]
@@ -159,8 +173,14 @@ def provision(root=None, client=None):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Provision verified public models from private R2")
+    parser.add_argument("--only", choices=("all", "juggernaut"), default="all",
+                        help="Default keeps original nine-model behavior; juggernaut is image-only")
+    parser.add_argument("--models-dir", type=Path, default=None,
+                        help="ComfyUI model directory (defaults to HACHE_MODELS_DIR)")
+    args = parser.parse_args()
     try:
-        provision()
+        provision(root=args.models_dir, only=args.only)
     except Exception as exc:
         # Avoid printing SDK request details that can contain sensitive configuration.
         print(f"ERROR: model provisioning failed ({type(exc).__name__})", file=sys.stderr)
