@@ -11,6 +11,10 @@
 
 **Importante:** los horarios de planos de esta tabla son **orientativos**, definidos antes de grabar. Antes de producir animaciones definitivas hay que sincronizar la línea de tiempo con los clips reales, incorporar los diálogos pendientes de Inés, Vera y Luma y comprobar duración por bloque. La aprobación de Axel no es aprobación del montaje completo.
 
+## Diálogos generados para personajes — 23/11/2026
+
+Se generaron **15 pistas**: Inés (6), Vera (5) y Luma (4), con tres voces diferenciadas. **Todavía no están aprobadas auditivamente**. Ver [casting, identificadores y duración por intervención](EP01-DIALOGOS-CASTING-Y-AUDIOS-V1.md). ElevenLabs confirmó **56.40 s de diálogos**; con los **338.40 s de Axel aprobado**, la duración total de locución y diálogos es **394.80 s (6:34.80)**, sin pausas ni efectos. Los tiempos nominales siguientes se deben recalcular durante la edición.
+
 ## Planos por escena
 
 | Plano | Escena | Tiempo editorial objetivo | Contenido visual | Técnica preferida | Audio / notas de continuidad |
