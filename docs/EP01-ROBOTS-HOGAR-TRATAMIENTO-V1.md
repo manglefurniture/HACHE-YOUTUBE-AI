@@ -46,11 +46,11 @@ No contar una rebelión de robots. Contar un dilema humano sobre utilidad, comod
 ## Evidencia real para documentar con fuentes
 
 1. **1X NEO, sitio oficial:** fabricante describe tareas domésticas y un «Expert Mode» en el que un experto guía tareas aún desconocidas. Una descripción comercial **no equivale** a evaluación independiente de autonomía. https://www.1x.tech/neo
-2. **CBS News, 11 de agosto de 2026:** reporta un piloto de servicio de limpieza residencial con robots humanoides de Tau Robotics en San Francisco. La implementación y asistencia humana deben narrarse con precisión, evitando dar a entender que todos sus movimientos son autónomos. https://www.cbsnews.com/news/tau-robotics-humanoid-ai-cleaning-robots-san-francisco/
+2. **ABC7 / ABC News, 31 de julio de 2026:** confirma un servicio de limpieza residencial de Tau Robotics a solicitantes seleccionados en San Francisco. Su director explica que los robots no son plenamente autónomos y requieren conducción humana remota asistida por IA. https://abcnews.com/Technology/san-francisco-company-offers-cleaning-service-using-humanoid-robots/story?id=135258956
 3. **USENIX SOUPS 2024:** estudio «Privacy Communication Patterns for Domestic Robots» analiza cómo comunicar estados de cámaras, micrófonos y conexión; es respaldo científico de la preocupación por permisos y visibilidad. https://www.usenix.org/conference/soups2024/presentation/windl
 4. **ACM/IEEE SenSys 2026:** estudio de 56 dispositivos del hogar inteligente sobre riesgos de compartir accesos y revocar permisos; sirve como contexto general, no como evidencia de fallos en un robot concreto. https://doi.org/10.1145/3774906.3802795
 
-**Pendiente:** contrastar guion final con textos originales y fechas de consulta, verificar el material disponible para reutilización y atribución, evitar estadísticas sin fuente. No afirmar que el futuro ficticio ocurrirá ni que las empresas citadas incurren en fallas no documentadas.
+**Verificación realizada (23/11/2026):** 1X NEO — información del fabricante; ABC News — servicio de Tau y asistencia remota; USENIX SOUPS 2024 — investigación sobre estados de sensores. En el guion completo las afirmaciones están etiquetadas. **Pendiente:** contrastar guion final con textos originales y fechas de consulta, verificar el material disponible para reutilización y atribución, evitar estadísticas sin fuente. No afirmar que el futuro ficticio ocurrirá ni que las empresas citadas incurren en fallas no documentadas.
 
 ## Identidad visual y estrategia de producción
 
