@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""One-time GPU provisioning of the 3 public Wan 2.2 assets pinned in GitHub."""
+"""GPU provisioning of four public Wan 2.2 I2V assets pinned in GitHub."""
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 import hashlib
@@ -16,7 +16,7 @@ FILES = [
     ("diffusion_models/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors", BASE22,
      14294742832, "5471a457b6ac404202a5fbe6c11595a3d5641fc766b00f38763f72303fffc21e"),
     ("text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors", BASE21,
-     6735906897, "c3355d30191f1f066b26d93fba017ae9809dce6c627dda5f6a66eaa651204f68")
+     6735906897, "c3355d30191f1f066b26d93fba017ae9809dce6c627dda5f6a66eaa651204f68"),
     ("vae/wan_2.1_vae.safetensors", BASE22,
      253815318, "2fc39d31359a4b0a64f55876d8ff7fa8d780956ae2cb13463b0223e15148976b"),
 ]
