@@ -65,3 +65,11 @@ Otras ideas en reserva:
 5. Implementar únicamente la infraestructura faltante y realizar una producción piloto con revisión humana.
 
 **Regla de proyecto:** ante dudas de alcance o nuevas propuestas técnicas, consultar este documento antes de implementar.
+
+## Validación creativa posterior — 23 de noviembre de 2026
+
+**Aprobado por el usuario:** el resultado de la primera prueba animada de **Wan 2.2 Image-to-Video** a partir de la ilustración retrofuturista **D (robot doméstico)**. Se acepta como referencia para seguir experimentando con una línea visual **editorial retrofuturista adulta**, inspirada en las ilustraciones científicas y de ciencia ficción de los años cincuenta y sesenta (paleta crema, verde azulado y naranja, textura de tinta/impresión).
+
+**Alcance de la aprobación:** se aprueba la **prueba visual y de movimiento** como punto de partida para nuevos experimentos, **no** se aprueba automáticamente una pieza final publicable ni se reemplazan las referencias cinematográficas ya aprobadas para «Año 2085». La convivencia o sustitución de ambos estilos se decidirá después de pruebas narrativas comparables. Persisten problemas por corregir en manos, manipulación de objetos y consistencia temporal.
+
+**Prueba comprobada:** RTX 4090 (Vast.ai), Wan 2.2 I2V FP8 de dos etapas, 640 × 384, 33 fotogramas, 16 fps, MP4 de 2.0625 s. Documentación técnica y rutas: [smoke test Wan 2.2](VAST-RTX4090-WAN22-I2V-SMOKE-2026-11-23.md). Próximo experimento: una escena más larga (aprox. 5 s) manteniendo estilo, personajes y acciones controladas, con revisión humana antes de publicar.
