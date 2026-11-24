@@ -1,6 +1,6 @@
 # EP01 — ¿Dejarías entrar un robot en tu casa? — Tratamiento editorial V1
 
-**Estado:** PROPUESTA para revisión humana; **no es guion definitivo ni aprobación para producción/publicación**.  
+**Estado (23/11/2026):** tratamiento aceptado como base para desarrollar EP01 mediante la indicación «Perfecto, avanza». Se creó el guion de locución V1 y el storyboard en este mismo PR. **Todavía no se ha aprobado el guion final para publicación ni producción audiovisual completa.**  
 **Fecha:** 23 de noviembre de 2026, Cancún.  
 **Proyecto:** HACHE-YOUTUBE-AI.  
 **Duración objetivo inicial:** 8–9 minutos, a ajustar al grabar la narración.  
@@ -64,9 +64,9 @@ No contar una rebelión de robots. Contar un dilema humano sobre utilidad, comod
 
 ## Próximas decisiones editoriales (sin GPU)
 
-1. Revisar y aprobar/corregir **tesis, personajes, conflicto y desenlace**.
-2. Convertir E01-S01–S09 a guion de locución íntegro con diálogos y rótulos, verificando fuentes.
-3. Medir duración real de voz y preparar un storyboard por planos, identificando activos reciclables.
+1. Tratamiento editorial aceptado como dirección; queda abierta la revisión de diálogos, hechos y duración del guion V1.
+2. **Completado:** convertir E01-S01–S09 a [guion íntegro](EP01-ROBOTS-HOGAR-GUION-V1.md), con [auditoría de fuentes](EP01-ROBOTS-HOGAR-FUENTES-V1.md).
+3. **Storyboard V1 completado:** [planos e inventario visual](EP01-ROBOTS-HOGAR-STORYBOARD-V1.md). Pendiente medir duración real de voz.
 4. Solo después, producir una secuencia de 30–60 segundos para revisar ritmo, calidad y presupuesto.
 5. Dejar `PILOT-2085-FULL-SCRIPT-V1.md` intacto y documentar su prioridad tras este episodio por separado.
 
