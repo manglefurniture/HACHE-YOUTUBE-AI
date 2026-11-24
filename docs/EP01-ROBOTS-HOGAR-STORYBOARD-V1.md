@@ -5,6 +5,12 @@
 **Formato:** 16:9 horizontal; composición segura para subtítulos; proyecto narrativo 8–9 minutos.  
 **Leyenda:** `I` = ilustración estática con movimiento de cámara en montaje; `W` = clip corto Wan 2.2 I2V; `G` = gráfico/diagrama vectorial editado; `T` = título/crédito en posproducción. Ninguna imagen sintética de 2042 debe parecer metraje real de las empresas citadas.
 
+## Estado de audio aprobado — 23/11/2026
+
+**Las nueve pistas del narrador Axel están aprobadas por el usuario.** Duración real sumada: **338.40 s (5:38.40)**. Ver [manifiesto de audios y generaciones](EP01-AXEL-NARRACION-APROBADA-2026-11-23.md).
+
+**Importante:** los horarios de planos de esta tabla son **orientativos**, definidos antes de grabar. Antes de producir animaciones definitivas hay que sincronizar la línea de tiempo con los clips reales, incorporar los diálogos pendientes de Inés, Vera y Luma y comprobar duración por bloque. La aprobación de Axel no es aprobación del montaje completo.
+
 ## Planos por escena
 
 | Plano | Escena | Tiempo editorial objetivo | Contenido visual | Técnica preferida | Audio / notas de continuidad |
