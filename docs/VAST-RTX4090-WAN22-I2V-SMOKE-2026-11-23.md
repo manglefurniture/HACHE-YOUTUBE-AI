@@ -1,6 +1,6 @@
 # Vast.ai RTX 4090 — Wan 2.2 image-to-video: verified smoke test (2026-11-23, Cancún)
 
-**Project:** HACHE-YOUTUBE-AI. **Scope:** rented Vast.ai test instance only; never the Hache Natación VPS. **Status:** one real MP4 generated, downloaded and visually inspected. This does not approve the final channel aesthetic or video production pipeline.
+**Project:** HACHE-YOUTUBE-AI. **Scope:** rented Vast.ai test instance only; never the Hache Natación VPS. **Status:** one real MP4 generated, downloaded and visually inspected. **Creative approval (23 November 2026):** user approved this video test as a reference to continue the retrofuturist illustrated animation experiments. Final publishing quality, the full channel aesthetic, and the automated video production pipeline remain unapproved.
 
 ## Runtime examined
 
