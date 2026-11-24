@@ -11,7 +11,7 @@
 
 ## Installed video models
 
-All four files downloaded directly from Comfy-Org's public Hugging Face repositories and **verified by SHA-256 against `gpu/model-inventory.json`**. R2 already retains the same model versions in `hache-ai-models`; no private R2 credentials were put on the rented GPU.
+All four files downloaded directly from Comfy-Org's public Hugging Face repositories and **verified by SHA-256 against `gpu/model-inventory.json`**. The repeatable installer is [`scripts/provision_wan22_public.py`](../scripts/provision_wan22_public.py); it resumes partial downloads, checks the pinned sizes and SHA-256, and requires at least 6 GB of free space after provisioning. R2 already retains the same model versions in `hache-ai-models`; no private R2 credentials were put on the rented GPU.
 
 | ComfyUI location (under `models/`) | Exact size (bytes) | SHA-256 |
 | --- | ---: | --- |
