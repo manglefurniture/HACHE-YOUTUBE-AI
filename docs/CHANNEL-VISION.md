@@ -1,6 +1,6 @@
 # Visión editorial y audiovisual — HACHE-YOUTUBE-AI
 
-**Estado:** dirección creativa aprobada (16 de noviembre de 2026).  
+**Estado:** dirección creativa aprobada (16 de noviembre de 2026); marca pública creada y lanzamiento Shorts-first en exploración (24 de noviembre de 2026).  
 **Alcance:** referencia obligatoria para guiones, identidad visual, elección de modelos y diseño del pipeline. No implica aprobación de presupuestos, publicación ni despliegue.
 
 ## Concepto central
@@ -17,6 +17,8 @@ No será un canal de noticias de gadgets ni una colección de predicciones sensa
 2. **Futuro de la humanidad:** sociedades, economía, ciudades, salud, longevidad y cambios culturales.
 3. **Universo y civilizaciones futuras:** exploración y colonización espacial, límites científicos y dilemas de nuevas sociedades.
 
+**Regla de producción para Shorts:** aplicar el [estándar editorial y de credibilidad aprobado](SHORTS-EDITORIAL-STANDARD.md), que incluye los cinco temas iniciales, trazabilidad científica, originalidad, transparencia sobre IA y puerta de revisión humana.
+
 ## Fórmula de cada historia
 
 1. **Ciencia comprobada:** presentar los conocimientos y capacidades actuales, con fuentes verificables.
@@ -31,10 +33,10 @@ Distinguir explícitamente **hechos**, **hipótesis** y **ficción especulativa*
 - **Shorts:** experimentar con animación estilizada, manteniendo coherencia temática.
 - **Lenguaje visual:** mezcla de recreaciones cinematográficas y recursos documentales/editoriales (mapas, diagramas, gráficos) cuando aporten claridad.
 - **Narración:** reflexiva, inteligente, intrigante y rigurosa; evitar exageraciones y afirmaciones científicas infundadas.
-- **Duración inicial orientativa:** 8–12 minutos por documental, con Shorts complementarios; ajustar según pruebas.
+- **Lanzamiento:** prioridad experimental a Shorts; el formato largo queda en reserva. Ver [estado de lanzamiento](CHANNEL-LAUNCH-2026-11-24.md).
 - **Revisión humana:** aprobar los materiales antes de publicarlos.
 
-**Pendiente de definir:** nombre público del canal, logotipo, paleta, tipografía, voz/narrador, música, plantilla de miniaturas, estilo preciso de personajes, ritmo de edición y manual visual. No dar estos puntos por aprobados.
+**Identidad pública registrada:** Crónicas del Mañana; logotipo CM, banner y paleta retrofuturista aplicados al canal. Axel está aprobado para la narración de EP01; su uso en Shorts es una propuesta. Pendientes: tipografía de producción, música, plantilla de miniaturas, estilo preciso de personajes, ritmo de edición y manual visual. Ver [estado de lanzamiento](CHANNEL-LAUNCH-2026-11-24.md).
 
 ## Piloto editorial recomendado (no producido)
 
@@ -57,6 +59,8 @@ Otras ideas en reserva:
 - **No adelantar infraestructura:** antes de nuevas funciones de GPU, transferencias grandes o despliegues, terminar guion piloto, referencias visuales y requisitos reales de producción.
 
 ## Orden de trabajo
+
+La secuencia original del piloto se conserva para formato largo. Para el lanzamiento experimental de Shorts, seguir el plan propuesto en [estado de lanzamiento](CHANNEL-LAUNCH-2026-11-24.md).
 
 1. Definir el guion y el tratamiento narrativo del piloto.
 2. Preparar referencias y biblia visual; decidir los elementos de marca pendientes.

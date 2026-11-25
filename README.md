@@ -4,9 +4,9 @@ Automated AI-powered YouTube documentary production pipeline.
 
 ## Dirección editorial aprobada
 
-Ciencia real extrapolada hacia futuros posibles mediante historias originales de ciencia ficción fundamentada, con inspiración temática en Isaac Asimov. Documentales largos con realismo cinematográfico y experimentación de animación estilizada en Shorts.
+Ciencia real extrapolada hacia futuros posibles mediante historias originales de ciencia ficción fundamentada, con inspiración temática en Isaac Asimov. Marca pública: [Crónicas del Mañana](https://www.youtube.com/@CronicasdelManana2085). Lanzamiento experimental Shorts-first, con el capítulo largo EP01 en reserva. Ver [estado de lanzamiento y próximos pasos](docs/CHANNEL-LAUNCH-2026-11-24.md).
 
-**Documento rector:** [Visión editorial y audiovisual](docs/CHANNEL-VISION.md). Consultarlo antes de elegir modelos, desarrollar guiones o ampliar la infraestructura.
+**Documentos rectores:** [Visión editorial y audiovisual](docs/CHANNEL-VISION.md) y [estándar de credibilidad, IA y monetización de Shorts](docs/SHORTS-EDITORIAL-STANDARD.md). Consultarlo antes de elegir modelos, desarrollar guiones o ampliar la infraestructura.
 
 ## Próxima prueba GPU (sin alquiler automático)
 
