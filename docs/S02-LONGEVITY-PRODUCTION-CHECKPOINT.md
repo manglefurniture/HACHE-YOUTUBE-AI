@@ -45,3 +45,13 @@ Aplicar [estándar editorial](SHORTS-EDITORIAL-STANDARD.md) y [visión](CHANNEL-
 Conceptos alternativos evaluados: B, Los años que no pudimos compartir (53/60); C, La generación que nunca llegó (51/60). A: 56/60; prioriza autonomía y propósito vital. Puntuaciones editoriales subjetivas.
 
 Siguiente: autorización de consumo de créditos, generación de narración, revisión y respaldo; storyboard según tiempos reales, masters, gráficos CPU, prompts Wan 2.2 y revisión. Estimación inicial de 4–6 planos Wan, no compromiso. No alquilar GPU; coordinar con S01 solo tras aprobación de masters. No publicar. Revisión de licencias, descripción y políticas YouTube pendiente. Carpetas independientes ya creadas en Drive y Documentos de laptop Hache; no incluir enlaces privados ni binarios aquí. 
+
+## Narración V1 aprobada — 25/11/2026
+
+Aprobación auditiva explícita del usuario: «Aprobada». No regenerar ni cambiar el guion.
+
+- Axel — Natural y Narrativo; voz `U7je2I3DMxe8ZOLb6vmd`; modelo `eleven_v4`; una toma.
+- [Flow S02](https://elevenlabs.io/app/flows/BRhFJq6K3qUBTIvEZBnV), generación `zD8XUdwH0hiCW2PSEjmC`; completada sin fallos; duración 52,88 s.
+- Consumo reportado: 909,156 créditos; US$0,1688.
+- Original respaldado en laptop Hache, archivo `S02_narracion_Axel_V1.mp3`, 864372 bytes, SHA-256 `672600b4862c8996e26a73f40dbdf1dc39387c9bdd57f9ed0afe107e11afe676`. Copia en Google Drive pendiente.
+- Próxima puerta: obtener marcas temporales reales de voz y preparar SRT y storyboard sincronizado. No generar otra toma ni incurrir en costes adicionales sin autorización.
