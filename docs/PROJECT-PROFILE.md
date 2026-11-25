@@ -1,6 +1,6 @@
 # HACHE-YOUTUBE-AI — perfil inicial
 
-- Objetivo: producción supervisada de documentales en español sobre misterios, historia y curiosidades.
+- Objetivo vigente: producción supervisada en español sobre ciencia, tecnología y futuros posibles; marca Crónicas del Mañana, lanzamiento Shorts-first experimental. Ver [estado de lanzamiento](CHANNEL-LAUNCH-2026-11-24.md).
 - Usuarios: operador/editor autorizado; audiencia final en YouTube.
 - Zona horaria: America/Cancun.
 - SEO_MODE: none (el panel interno no se indexa).
@@ -11,5 +11,5 @@
 - Infraestructura: Workers para transferencia pequeña; GPU externa para generación; no usar VPS productivo.
 - Riesgos: filtración de secretos, archivos públicos, costos, interrupciones Spot, material sin licencia.
 - Hache-Base: adoptar seguridad, pruebas, separación de secretos y trazabilidad; no clonar módulos PHP ni multisede.
-- Etapa: prototipo técnico, sin publicación automática ni GPU contratada.
+- Etapa: canal creado, pruebas técnicas de GPU externa realizadas; migración de instancia en curso según última captura del 24/11. Sin publicación automática; estado operativo del destino pendiente de validar.
 - Pendiente: permisos granulares, tokens de corta duración, multipart para archivos grandes, CI, aprobación humana.
