@@ -17,6 +17,8 @@ No será un canal de noticias de gadgets ni una colección de predicciones sensa
 2. **Futuro de la humanidad:** sociedades, economía, ciudades, salud, longevidad y cambios culturales.
 3. **Universo y civilizaciones futuras:** exploración y colonización espacial, límites científicos y dilemas de nuevas sociedades.
 
+**Regla de producción para Shorts:** aplicar el [estándar editorial y de credibilidad aprobado](SHORTS-EDITORIAL-STANDARD.md), que incluye los cinco temas iniciales, trazabilidad científica, originalidad, transparencia sobre IA y puerta de revisión humana.
+
 ## Fórmula de cada historia
 
 1. **Ciencia comprobada:** presentar los conocimientos y capacidades actuales, con fuentes verificables.
