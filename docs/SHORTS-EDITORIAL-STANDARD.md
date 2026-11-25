@@ -42,6 +42,14 @@ La aprobación es temática, no confirma afirmaciones científicas, orden de pub
 - Referencia de ritmo: cambio de plano cada 3–5 s; alrededor de 16 planos en 60 s para S01, sin convertirlo en plantilla rígida. Animar únicamente lo que aporte valor; número de clips depende del storyboard, coste y calidad. No alquilar GPU antes de completar y revisar recursos necesarios.
 - Primer caso: [S01 — checkpoint de producción y narración aprobada](S01-VISION-PRODUCTION-CHECKPOINT.md).
 
+## Sistema visual de subtítulos y gráficos aprobado (25/11/2026)
+
+- Subtítulos incorporados cinematográficos: sans serif semibold, crema/blanco roto, énfasis selectivo naranja de contraste suficiente, sombra y contorno discretos, sin caja negra dura ni karaoke. Máximo dos líneas, frases cortas y márgenes seguros para controles de Shorts; revisar contraste en cada plano, sin cubrir caras ni información científica. Añadir archivo SRT independiente en Studio, en español, con transcripción revisada.
+- Gráficos científicos: paleta de marca (crema #F2E5CB, verde petróleo #205352, naranja óxido #C35F30), tratamiento limpio y sobrio. Animar por capas en orden narrativo; usar color y aparición progresiva para explicar, no decorar. Mantener datos, fuentes, límites y señalización de esquemas conceptuales.
+- Mostrar aviso de ficción especulativa en la transición hacia 2045, no como cartel persistente durante la historia. Mantener aviso en descripción pública; identificar recreaciones clínicas sintéticas y evaluar declaración de contenido alterado/IA en YouTube Studio.
+- Primera implementación V4: Lato Semibold, base 39 px en lienzo 720×1280 (escalar proporcionalmente en exportación final), crema #F2E5CB y acento legible #F6B178, ajuste de tamaño a ancho seguro, sin cambios de ritmo de voz. Degradado inferior suave y sombra fina. Validar resultado en móvil antes de fijar como plantilla final.
+- No confundir aprobación de criterios con aprobación de vídeo final o autorización de publicación.
+
 ## Puerta de revisión previa a publicación
 
 Cada Short debe tener un manifiesto individual y un resultado verificable de revisión. Bloquear publicación si faltan fuentes esenciales, guion original, derechos, divulgación aplicable o aprobación humana. Conservar versiones de guion, fuentes, prompts, modelos, referencias audiovisuales, edición y exportaciones. Guardar binarios grandes en almacenamiento privado, nunca credenciales en GitHub.
