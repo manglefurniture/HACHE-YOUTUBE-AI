@@ -18,6 +18,8 @@ Zona horaria: America/Cancun. Repositorio técnico: HACHE-YOUTUBE-AI. Marca púb
 
 El usuario quiere explorar comenzar con **solo Shorts**. Mantener el concepto de ciencia, tecnología y futuros posibles, con historias originales y distinción clara entre hechos, extrapolaciones y ficción. El capítulo largo no se elimina ni se modifica.
 
+**Aprobado posteriormente el 24/11:** [estándar editorial de Shorts y cinco temas iniciales](SHORTS-EDITORIAL-STANDARD.md). La fórmula de cada vídeo debe integrar ciencia comprobada, extrapolación fundamentada y relato original. Este estándar prevalece sobre las ideas experimentales de contenido descritas a continuación.
+
 ### Propuesta experimental (no aprobada todavía como cadencia o presupuesto)
 
 - Vertical 9:16; exportación objetivo 1080 × 1920; duración inicial 40–60 s.
@@ -40,7 +42,7 @@ El usuario quiere explorar comenzar con **solo Shorts**. Mantener el concepto de
 
 1. Completar configuración de YouTube Studio y verificar funciones del canal.
 2. Verificar copia GPU, modelos, workflows y pruebas mínimas antes de generar contenido.
-3. Definir y aprobar guiones de los tres Shorts de prueba y medir la producción vertical.
+3. Investigar los cinco temas aprobados según el estándar editorial; definir y aprobar los guiones de prueba y medir la producción vertical.
 4. Respaldar activos y documentar decisiones; ajustar cadencia según resultados reales.
 5. Mantener EP01 en reserva, sin publicar ni regenerar narraciones aprobadas.
 
