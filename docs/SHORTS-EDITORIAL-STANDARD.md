@@ -34,6 +34,14 @@ La aprobación es temática, no confirma afirmaciones científicas, orden de pub
 - Revisar las políticas de monetización de canal y Shorts, derechos de autor, normas de comunidad y adecuación publicitaria antes de publicar. YouTube revisa el canal en conjunto; originalidad y valor son necesarios, pero no garantizan ingreso al programa.
 - Priorizar calidad sobre cantidad: un Short diario de calidad es una recomendación inicial, no una cadencia aprobada. No automatizar publicación sin autorización humana explícita.
 
+## Dirección visual y flujo de producción aprobados (25/11/2026)
+
+- Presente/ciencia real: lenguaje documental contemporáneo, colores naturales y material auténtico verificable cuando sea posible. Las imágenes realistas sintéticas se identifican como recreaciones, no evidencias. Los gráficos médicos se contrastan con fuentes primarias.
+- Futuro/ficción: ilustración retrofuturista adulta, crema, verde petróleo y naranja óxido; continuidad de personajes y entorno. Identificar en pantalla la transición a ficción especulativa y el año hipotético.
+- Flujo: argumento → guion → narración aprobada y respaldada → storyboard sincronizado plano a plano → imágenes maestras → animaciones seleccionadas → montaje y revisión. Generar imágenes aquí cuando sea adecuado, usar GPU externa principalmente para I2V Wan y resolver gráficos, títulos y movimientos simples en edición.
+- Referencia de ritmo: cambio de plano cada 3–5 s; alrededor de 16 planos en 60 s para S01, sin convertirlo en plantilla rígida. Animar únicamente lo que aporte valor; número de clips depende del storyboard, coste y calidad. No alquilar GPU antes de completar y revisar recursos necesarios.
+- Primer caso: [S01 — checkpoint de producción y narración aprobada](S01-VISION-PRODUCTION-CHECKPOINT.md).
+
 ## Puerta de revisión previa a publicación
 
 Cada Short debe tener un manifiesto individual y un resultado verificable de revisión. Bloquear publicación si faltan fuentes esenciales, guion original, derechos, divulgación aplicable o aprobación humana. Conservar versiones de guion, fuentes, prompts, modelos, referencias audiovisuales, edición y exportaciones. Guardar binarios grandes en almacenamiento privado, nunca credenciales en GitHub.
