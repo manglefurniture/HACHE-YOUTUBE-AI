@@ -1,0 +1,7 @@
+# S01 — V6 · subtítulos Inter Bold
+25/11/2026. Usuario aprobó Inter Bold 54 px tras comparar seis tamaños. V6 renderizado CPU desde las fuentes V5, sin modificar narrativa, gráficos, avisos ni cierre provisional.
+- Tamaño lógico 54 px (720×1280); nominal ASS 66 por calibración 1.22 para igualar la muestra raster. Márgenes 60/60, posición vertical conservada, dos líneas máximo; 13/21 bloques a 54 px, 8 a 41–52 px solo por longitud. Énfasis «nieta» añadido; crema #F6ECDC y naranja #C46837 sobre imágenes; petróleo #173D3F y óxido #C35F30 sobre gráficos.
+- 22 eventos ASS comprobados sobre fondo negro: x=62–656, centro ±6 px, y=889–1012. Revisión visual de 21 bloques y cuatro comparaciones V5/V6. UI real de YouTube Shorts pendiente.
+- MP4 H.264/AAC, 720×1280, 25 fps, 1315 cuadros, 52.60 s; decodificación sin errores. SHA-256 e91c81bd151bc4709398dc9b47d847dbca1708727ef3969e50396487e7d2a027. AAC copiado de V5, hash ADTS 0aed7c8b2be9aacf466514bef89cb9c459e7fb27d5359602958306fce179ac07 idéntico. SRT intacto.
+- Paquete incremental S01_preproduccion_V6.zip (10.652.531 bytes), SHA-256 de56fafc9da5a6cbd0c2331cdd6fd040bd14f36655bc5ca8d61e7d6ca513408d, incluye MP4, ASS, SRT, script CPU, QA, informe y hojas visuales. ZIP y hashes internos verificados. Conservar V5, masters y workflows Wan; no duplicados en V6. Carpeta: https://drive.google.com/drive/folders/1BqfTqpJLywOpkaCMpTMWyiucieOmX1Wb.
+- Pendientes: aprobación visual V6, máster P15, revisión P11, prueba Wan vertical y cierre profesional. No GPU, gastos, VPS ni publicación.
