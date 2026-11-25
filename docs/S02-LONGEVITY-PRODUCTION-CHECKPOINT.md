@@ -55,3 +55,31 @@ Aprobación auditiva explícita del usuario: «Aprobada». No regenerar ni cambi
 - Consumo reportado: 909,156 créditos; US$0,1688.
 - Original respaldado en laptop Hache, archivo `S02_narracion_Axel_V1.mp3`, 864372 bytes, SHA-256 `672600b4862c8996e26a73f40dbdf1dc39387c9bdd57f9ed0afe107e11afe676`. Copia en Google Drive pendiente.
 - Próxima puerta: obtener marcas temporales reales de voz y preparar SRT y storyboard sincronizado. No generar otra toma ni incurrir en costes adicionales sin autorización.
+
+## Sincronización — 25/11/2026
+
+Scribe v1: generación `kT2BzabyB2vUd8w92zlX`, 127 palabras, consumo informado 0 créditos. Transcripción coincide con guion aprobado; 27 cues, máximo dos líneas. [SRT independiente](S02-subtitulos-V1.srt). Copia SRT, storyboard y marcas JSON en laptop Hache.
+
+# S02 — storyboard sincronizado V1 (propuesta)
+Audio bloqueado: 52,88 s. Scribe detecta última palabra hasta 52,96 s; se limita el SRT al metraje informado (52,88 s), comprobar con el archivo durante montaje. Cortes propuestos según marcas reales. No representa imágenes maestras aprobadas.
+
+| Plano | Inicio–fin s | Visual y movimiento | Técnica |
+|---|---|---|---|
+| P01 | 0–2,56 | Retrato documental de mano anciana sobre calendario; titular 150 años | CPU zoom sutil; recreación IA si sintética |
+| P02 | 2,56–5,72 | Línea de vida 122 años 164 días frente a 150 hipotéticos; fuente Guinness | CPU capas |
+| P03 | 5,72–9,92 | Laboratorio actual y paso a esquema de células en tejido | CPU transición; recreación IA |
+| P04 | 9,92–14,44 | Ratón esquemático, células p16+ resaltadas y retiradas selectivamente; Baker 2016, no humano | CPU capas |
+| P05 | 14,44–18,52 | Progenitores celulares a tejido objetivo, ejemplo Parkinson; fase clínica temprana, no rejuvenecimiento | CPU gráfico progresivo |
+| P06 | 18,52–21,813 | Silueta humana con órganos, límites señalados: no hay rejuvenecimiento integral demostrado | CPU |
+| P07 | 21,813–27,60 | Dos barras conceptuales de vida y salud, sin escala de años; ampliar tramo saludable | CPU animación por capas |
+| P08 | 27,60–29,68 | Transición al futuro, año 2110 y aviso ficción especulativa | CPU |
+| P09 | 29,68–32,64 | Clara, mujer de 115 años con aspecto maduro y autónomo, apartamento retrofuturista | Wan movimiento sutil |
+| P10 | 32,64–34,96 | Escritorio con dos sobres; acercamiento | CPU o Wan si manos estables |
+| P11 | 34,96–38,00 | Carta contrato +30 años; rótulo añadido en edición | CPU |
+| P12 | 38,00–40,60 | Carta admisión conservatorio; rótulo añadido en edición | CPU |
+| P13 | 40,60–43,24 | Clara contempla piano cerrado y fotografías antiguas; recuerdo sin cambiar su identidad | Wan |
+| P14 | 43,24–45,20 | Clara toma decisión: mira hacia el conservatorio, leve sonrisa; no manipulación compleja | Wan |
+| P15 | 45,20–51,60 | Clara en conservatorio junto al piano; desplazamiento lento, reflexión y espacio para subtítulos | Wan o dos planos CPU |
+| P16 | 51,60–52,88 | Logo CM, cierre provisional reutilizable pendiente de aprobación | CPU |
+
+Clara: pelo plateado recogido, rostro maduro, abrigo verde petróleo, bufanda crema; misma identidad y vestuario en P09–P15 salvo necesidad narrativa. Futuro: ilustración editorial adulta retrofuturista, crema #F2E5CB, petróleo #205352 y óxido #C35F30. Vertical 9:16. No generar textos en modelos; añadir en edición. Subtítulos Inter Bold 54 px a 720×1280, 81 px a 1080×1920; centrado simétrico, dos líneas máximo, contraste por escena y palabras clave. Evitar cubrir rostros, gráficas, controles de Shorts. P09, P13, P14, P15 candidatos Wan; P10 opcional. Guion y audio intactos. SRT: 27 cues, texto exacto, sincronizados con Scribe; validar visualmente al montar.
