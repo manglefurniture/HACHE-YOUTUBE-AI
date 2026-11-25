@@ -23,3 +23,11 @@ Título: ¿Podremos recuperar la vista? El implante PRIMA y el futuro de la visi
 Descripción: explicar resultados limitados del estudio, la historia ficticia de Elena, enlaces primarios y nota de recreaciones IA. Marcar contenido alterado/sintético por recreaciones clínicas realistas; revalidar políticas. Música ambiental instrumental discreta, no seleccionada ni licenciada; verificar derechos antes de utilizar.
 
 Siguiente: recibir MP3 o incorporarlo al montaje; revisión con voz; terminar masters, P15 y continuidad de P11; confirmar derechos de figura si se quiere sustituir P04; Wan vertical y exportación 1080×1920 tras validación. No se contrató GPU ni se usó laptop o VPS.
+
+## Actualización: animatic V3 con voz aprobada
+
+El usuario adjuntó el MP3 descargado de Axel. Se conservó byte a byte como `S01_Axel_aprobado.mp3` (835951 bytes, SHA-256 `1637516b558e76bfe093ee0a5a886ea434b2dc7e0240fe7a829e2a9e768ecb22`). Duración PCM decodificada: 51,12 s; MP3 contenedor: 51,148 s. Las pausas son compatibles con las marcas Scribe previas. No se regeneró ni se cambió el ritmo de la voz.
+
+Resultado: `S01_animatic_con_voz_v3.mp4`, 52,60 s, H.264 720×1280 a 25 fps, AAC mono 44,1 kHz, 8621364 bytes, SHA-256 `5af68c05ae9ef0a5d2da2068f405152bc0af613e176b06517f1d56d75510b963`. Decodificación completa FFmpeg sin errores. Vídeo original copiado sin recodificar; audio normalizado en el montaje desde -35,93 LUFS hasta -17,74 LUFS, pico verdadero final -1,95 dBTP. El original no se modificó; sin música ni efectos. Se añadió silencio al final hasta 52,60 s.
+
+Respaldo confirmado de ambos archivos en biblioteca privada ChatGPT, carpeta Cronicas del Manana. No se verificó copia en laptop ni R2. No se utilizó GPU externa. No se publicó. La integración de voz queda resuelta; sigue pendiente la aprobación del montaje provisional, revisión de masters, música/efectos si procede, animaciones Wan y exportación final. La comprobación de pausas no sustituye la revisión audiovisual humana.
