@@ -83,3 +83,12 @@ Audio bloqueado: 52,88 s. Scribe detecta última palabra hasta 52,96 s; se limit
 | P16 | 51,60–52,88 | Logo CM, cierre provisional reutilizable pendiente de aprobación | CPU |
 
 Clara: pelo plateado recogido, rostro maduro, abrigo verde petróleo, bufanda crema; misma identidad y vestuario en P09–P15 salvo necesidad narrativa. Futuro: ilustración editorial adulta retrofuturista, crema #F2E5CB, petróleo #205352 y óxido #C35F30. Vertical 9:16. No generar textos en modelos; añadir en edición. Subtítulos Inter Bold 54 px a 720×1280, 81 px a 1080×1920; centrado simétrico, dos líneas máximo, contraste por escena y palabras clave. Evitar cubrir rostros, gráficas, controles de Shorts. P09, P13, P14, P15 candidatos Wan; P10 opcional. Guion y audio intactos. SRT: 27 cues, texto exacto, sincronizados con Scribe; validar visualmente al montar.
+
+## Montaje provisional V1 — 25/11/2026
+
+Usuario aprobó Clara A: cabello oscuro entrecano, gafas, abrigo naranja óxido y jersey crema; mirada hacia cartas, composición frontal, no repetir encuadre de Elena. El plano de Clara ante escritorio fue aprobado («Eso está súper!»). Queda como referencia de continuidad.
+
+- Montaje CPU: 16 planos, 720×1280, 24 fps, 1272 fotogramas, 53,00 s. Audio original verificado por SHA-256; archivo fuente 52,924 s, pista exportada 52,88 s. Inter Bold nominal 54 px, reducción solo para ancho seguro, máximo dos líneas y centrado simétrico. Gráficos progresivos; recreación IA identificada en laboratorio; aviso ficción en transición a 2110. Cierre tipográfico provisional; sin música.
+- P03 y P09 son imágenes individuales; P08, P13 y P15 usan recortes de previsualizaciones porque el generador devolvió mosaicos; P10–P12 cartas compuestas por edición y P14 encuadre alternativo de P09. No considerar estos recortes masters ni aprobar continuidad final. Sustituir por imágenes individuales antes de Wan y revisar símbolo de ADN de P09 (contrato laboral). No se usaron textos ni tiempos inventados de los mosaicos.
+- Archivo `S02_montaje_V1.mp4`: 5375383 bytes, SHA-256 `f97631b0eee4d8e2157d939f1f04d0e1a4b248a780dea82a65293be1bfbd865d`; decodificación sin errores. Paquete `S02_preproduccion_V1.zip` (13927138 bytes), MP3 original y hoja de revisión respaldados en Google Drive privado, junto a SRT y storyboard. Original MP3 también en laptop. Paquete completo en laptop pendiente. No incluir binarios ni enlaces privados aquí.
+- Pendiente de revisión del usuario; sin gastos adicionales, sin GPU, sin publicación y S01 intacto. No autoriza animación ni publicación.
