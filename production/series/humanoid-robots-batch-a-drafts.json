@@ -137,7 +137,7 @@
         "hook": "Ya existen robots experimentales capaces de preparar comida.",
         "fact": "Investigadores de Stanford enseñaron a un prototipo con ruedas y dos brazos a cocinar y enjuagar una sartén mediante demostraciones humanas. Pero dominar una tarea entrenada no significa resolver todos los imprevistos de una casa.",
         "transition": "Imaginemos el año 2045.",
-        "fiction": "Clara vuelve del trabajo y encuentra la cena preparada. Su robot ha dejado un vaso roto en el suelo: no sabe si es seguro recogerlo y pide ayuda. Ella confirma la acción. El robot continúa.",
+        "fiction": "Nora vuelve del trabajo y encuentra la cena preparada. Su robot ha dejado un vaso roto en el suelo: no sabe si es seguro recogerlo y pide ayuda. Ella confirma la acción. El robot continúa.",
         "closing": "¿Dejarías a un robot encargado de tu casa mientras trabajas? Cuéntanos en los comentarios."
       },
       "visuals": [
@@ -155,7 +155,26 @@
         50,
         60
       ],
-      "word_count": 96
+      "word_count": 96,
+      "visual_identity": {
+        "human": {
+          "id": "S04-H01",
+          "name": "Nora",
+          "age": 35,
+          "face": "rostro ovalado, nariz recta, pecas suaves",
+          "hair": "cabello castaño corto liso tipo bob",
+          "wardrobe": "delantal azul petróleo sobre ropa informal"
+        },
+        "robot": {
+          "id": "S04-R01",
+          "role": "robot doméstico",
+          "design": "cuerpo compacto crema, cabeza ovalada sin rostro humano, brazos articulados, panel ámbar"
+        },
+        "setting": "cocina familiar luminosa con ventanas amplias",
+        "composition": "plano medio lateral, luz natural cálida",
+        "reference_status": "pending",
+        "historical_visual_review": "pending"
+      }
     },
     {
       "id": "S05",
@@ -195,7 +214,26 @@
         50,
         60
       ],
-      "word_count": 103
+      "word_count": 103,
+      "visual_identity": {
+        "human": {
+          "id": "S05-H01",
+          "name": "Marina",
+          "age": 45,
+          "face": "rostro cuadrado, pómulos definidos, piel oscura",
+          "hair": "cabello negro corto rizado",
+          "wardrobe": "mono industrial verde oscuro y protección adecuada"
+        },
+        "robot": {
+          "id": "S05-R01",
+          "role": "robot industrial",
+          "design": "estructura alta angular de metal gris y naranja, manos de agarre, visor rectangular"
+        },
+        "setting": "fábrica con líneas de ensamblaje y puesto de supervisión",
+        "composition": "plano general industrial, luz fría direccional",
+        "reference_status": "pending",
+        "historical_visual_review": "pending"
+      }
     },
     {
       "id": "S06",
@@ -243,7 +281,26 @@
         50,
         60
       ],
-      "word_count": 99
+      "word_count": 99,
+      "visual_identity": {
+        "human": {
+          "id": "S06-H01",
+          "name": "Wei",
+          "age": 50,
+          "face": "rostro rectangular, mandíbula definida, gafas redondas",
+          "hair": "cabello negro con canas en sienes",
+          "wardrobe": "camisa de trabajo gris y chaleco de taller"
+        },
+        "robot": {
+          "id": "S06-R01",
+          "role": "robot modular de taller",
+          "design": "chasis de proporciones medias, módulos visibles, carcasa verde apagada, sensores circulares"
+        },
+        "setting": "taller chino con bancos, herramientas y máquinas especializadas",
+        "composition": "plano amplio oblicuo, iluminación de banco",
+        "reference_status": "pending",
+        "historical_visual_review": "pending"
+      }
     },
     {
       "id": "S07",
@@ -283,7 +340,26 @@
         50,
         60
       ],
-      "word_count": 119
+      "word_count": 119,
+      "visual_identity": {
+        "human": {
+          "id": "S07-H01",
+          "name": "Daniel",
+          "age": 28,
+          "face": "rostro alargado, barba corta",
+          "hair": "cabello negro ondulado de longitud media",
+          "wardrobe": "suéter borgoña y pantalón casual"
+        },
+        "robot": {
+          "id": "S07-R01",
+          "role": "robot de interacción social",
+          "design": "silueta esbelta, cabeza lisa con pantalla discreta, acabado azul oscuro, gestos mecánicos"
+        },
+        "setting": "apartamento urbano nocturno, sala íntima",
+        "composition": "plano cercano a la altura de ojos, iluminación nocturna suave",
+        "reference_status": "pending",
+        "historical_visual_review": "pending"
+      }
     },
     {
       "id": "S08",
@@ -323,7 +399,26 @@
         50,
         60
       ],
-      "word_count": 118
+      "word_count": 118,
+      "visual_identity": {
+        "human": {
+          "id": "S08-H01",
+          "name": "Inés",
+          "age": 75,
+          "face": "rostro redondo, arrugas naturales, cejas claras",
+          "hair": "cabello plateado recogido",
+          "wardrobe": "cárdigan mostaza y blusa clara"
+        },
+        "robot": {
+          "id": "S08-R01",
+          "role": "asistente de mayores",
+          "design": "silueta baja redondeada, carcasa verde salvia, indicadores luminosos simples y manos blandas conceptuales"
+        },
+        "setting": "casa tranquila con comedor y jardín visible",
+        "composition": "plano medio frontal, luz vespertina difusa",
+        "reference_status": "pending",
+        "historical_visual_review": "pending"
+      }
     }
   ],
   "editorial_structure": {
@@ -341,5 +436,24 @@
     "transition": "Marcar el paso a ficción especulativa y el año hipotético.",
     "fiction": "Historia original claramente imaginaria.",
     "closing": "Pregunta específica y natural que invite a comentar; antes del cierre oficial de marca, sin introducir nuevas afirmaciones."
+  },
+  "visual_diversity_policy": {
+    "scope": "batch A; extend registry to future batches before rendering",
+    "shared_only": [
+      "palette",
+      "retrofuturistic style",
+      "typography",
+      "Axel",
+      "official brand close"
+    ],
+    "rules": [
+      "Unique fictional character and robot IDs per episode; distinct faces, age, hair, clothing, silhouette, setting and compositions.",
+      "Keep a single approved reference per character/robot within an episode; do not reuse it in another episode.",
+      "Compare new reference sheets with prior episodes including S01–S03 before generating scenes; identical asset hashes block reuse; visual similarity review remains mandatory until an image comparator is implemented.",
+      "Present-day scientific recreations are distinct from fictional characters and explicitly labeled; use diagrams or licensed evidence.",
+      "Store reference assets privately with hashes; never use private Lucia assets."
+    ],
+    "preflight": "metadata validation only; actual image similarity and historical comparison not yet implemented",
+    "prior_catalog_review_required": true
   }
 }
