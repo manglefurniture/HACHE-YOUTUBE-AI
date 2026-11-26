@@ -1,0 +1,20 @@
+name: Shorts batch planner
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  planner-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m py_compile scripts/plan_shorts_batch.py
+      - run: python tests/test_plan_shorts_batch.py
+      - run: python scripts/plan_shorts_batch.py --check
+      - run: python scripts/plan_shorts_batch.py --batch A --check
+      - run: python scripts/plan_shorts_batch.py --batch B --check

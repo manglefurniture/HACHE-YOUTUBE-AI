@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "series_id": "humanoid-robots",
+  "title": "Humanos y máquinas",
+  "language": "es",
+  "episode_range": [
+    "S04",
+    "S13"
+  ],
+  "research": {
+    "vidiq": "reuse_existing_only",
+    "credit_budget": 0,
+    "source_snapshot_date": "2026-11-26",
+    "note": "La investigación previa del 26/11 indicó 36.996 búsquedas mensuales estimadas para robots humanoides y competencia 50/100; datos de vidIQ, no demanda individual de episodios. No repetir consultas para este bloque.",
+    "sources": {
+      "stanford": {
+        "url": "https://proceedings.mlr.press/v205/li23a.html",
+        "kind": "primary_research",
+        "scope": "Benchmark simulado de tareas humanas; no demuestra autonomía doméstica comercial."
+      },
+      "bmw": {
+        "url": "https://www.bmwgroup.com/en/news/general/2026/humanoid-robot-in-leipzig.html",
+        "kind": "company_primary",
+        "scope": "Pilotos industriales; no sustitución generalizada de empleos."
+      },
+      "figure": {
+        "url": "https://www.figure.ai/news/production-at-bmw",
+        "kind": "company_primary",
+        "scope": "Resultados declarados por proveedor; contrastar con BMW."
+      },
+      "unitree": {
+        "url": "https://www.unitree.com/g1/",
+        "kind": "manufacturer_primary",
+        "scope": "Ficha comercial de modelo concreto; no inferir capacidad general."
+      },
+      "deepmind": {
+        "url": "https://deepmind.google/models/gemini-robotics/",
+        "kind": "developer_primary",
+        "scope": "Modelos de control y tareas demostradas; no autonomía general."
+      },
+      "care": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41812215/",
+        "kind": "secondary_review",
+        "scope": "Revisión de alcance; localizar ensayos originales antes de afirmar eficacia."
+      }
+    }
+  },
+  "policy": {
+    "render": "cpu_first",
+    "voice": "Axel",
+    "subtitle": "Inter Bold 54 logical px at 720x1280; 81 at 1080x1920",
+    "brand_close": "CM_Orbita_de_conocimiento_V1.mp4",
+    "brand_close_seconds": 2.6,
+    "authorization": {
+      "paid_generation": false,
+      "gpu_rental": false,
+      "publication": false
+    },
+    "shared_assets": "private storage only; reuse design components and verified brand close; unique narrative and scenes per episode"
+  },
+  "batches": [
+    {
+      "id": "A",
+      "episode_ids": [
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08"
+      ]
+    },
+    {
+      "id": "B",
+      "episode_ids": [
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13"
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "id": "S04",
+      "title": "¿Cuándo tendremos un robot en casa?",
+      "focus": "Manipulación doméstica y teleoperación",
+      "premise": "Una familia descubre que la ayuda doméstica no equivale a autonomía total.",
+      "source_ids": [
+        "stanford",
+        "deepmind"
+      ],
+      "research_guardrail": "No convertir demostraciones o ensayos en una fecha comercial.",
+      "state": "planned",
+      "research_verified": false
+    },
+    {
+      "id": "S05",
+      "title": "¿Podrán los robots reemplazar a los trabajadores?",
+      "focus": "Automatización de tareas industriales",
+      "premise": "Una trabajadora cambia de función al llegar un robot a su fábrica.",
+      "source_ids": [
+        "bmw",
+        "figure"
+      ],
+      "research_guardrail": "Distinguir tareas automatizadas de empleos eliminados.",
+      "state": "planned",
+      "research_verified": false
+    },
+    {
+      "id": "S06",
+      "title": "¿Por qué China apuesta por los robots humanoides?",
+      "focus": "Industria, capacidades y cadenas de suministro",
+      "premise": "Un pequeño taller del futuro recibe su primer robot de uso general.",
+      "source_ids": [
+        "unitree"
+      ],
+      "research_guardrail": "Las fichas comerciales no prueban cuotas de mercado ni liderazgo; falta corroboración independiente.",
+      "state": "planned",
+      "research_verified": false
+    },
+    {
+      "id": "S07",
+      "title": "¿Podremos enamorarnos de un robot?",
+      "focus": "Interacción social, apego y consentimiento",
+      "premise": "Una persona se enfrenta a la diferencia entre afecto humano y respuesta simulada.",
+      "source_ids": [],
+      "research_guardrail": "No atribuir emociones ni conciencia al robot; investigar evidencia de interacción humano-robot.",
+      "state": "planned",
+      "research_verified": false
+    },
+    {
+      "id": "S08",
+      "title": "¿Podrán los robots cuidar de nuestros mayores?",
+      "focus": "Asistencia social y física, supervisión humana",
+      "premise": "Una persona mayor elige qué tareas delegar y cuáles conservar.",
+      "source_ids": [
+        "care"
+      ],
+      "research_guardrail": "No confundir compañía o asistencia experimental con capacidad clínica o sustitución de cuidadores.",
+      "state": "planned",
+      "research_verified": false
+    },
+    {
+      "id": "S09",
+      "title": "¿Existirán robots indistinguibles de los humanos?",
+      "focus": "Apariencia, movimiento y percepción",
+      "premise": "Una ciudad debate cuándo debe identificarse una máquina.",
+      "source_ids": [],
+      "research_guardrail": "Distinguir parecido visual, interacción y autonomía; investigar evidencia sobre percepción.",
+      "state": "planned",
+      "research_verified": false
+    },
+    {
+      "id": "S10",
+      "title": "¿Podrán los robots aprender por sí solos?",
+      "focus": "Modelos visión-lenguaje-acción y aprendizaje",
+      "premise": "Un robot afronta una tarea que nunca vio antes.",
+      "source_ids": [
+        "deepmind",
+        "stanford"
+      ],
+      "research_guardrail": "Distinguir aprendizaje, entrenamiento y generalización; no prometer autonomía ilimitada.",
+      "state": "planned",
+      "research_verified": false
+    },
+    {
+      "id": "S11",
+      "title": "¿Cuánto costará tener un robot personal?",
+      "focus": "Precio, mantenimiento y coste total",
+      "premise": "Una familia compara comprar, alquilar o compartir un robot.",
+      "source_ids": [
+        "unitree"
+      ],
+      "research_guardrail": "Verificar precios vigentes, moneda, fecha, disponibilidad y costes excluidos; no proyectar precios como certeza.",
+      "state": "planned",
+      "research_verified": false
+    },
+    {
+      "id": "S12",
+      "title": "¿Podrán los robots construir otros robots?",
+      "focus": "Manufactura y autonomía de fabricación",
+      "premise": "Una fábrica automatizada depende de una intervención humana inesperada.",
+      "source_ids": [
+        "bmw",
+        "figure"
+      ],
+      "research_guardrail": "No confundir ensamblaje asistido con autorreplicación autónoma.",
+      "state": "planned",
+      "research_verified": false
+    },
+    {
+      "id": "S13",
+      "title": "¿Cómo será vivir en una sociedad llena de robots?",
+      "focus": "Convivencia, supervisión y responsabilidad",
+      "premise": "Una comunidad decide qué decisiones no quiere delegar.",
+      "source_ids": [
+        "stanford",
+        "deepmind"
+      ],
+      "research_guardrail": "Separar escenario social especulativo de evidencia actual; investigar gobernanza y responsabilidad.",
+      "state": "planned",
+      "research_verified": false
+    }
+  ],
+  "next_series": {
+    "id": "artificial-intelligence",
+    "episode_range": [
+      "S14",
+      "S23"
+    ],
+    "state": "planned",
+    "research": "reuse_existing_vidiq_snapshot"
+  }
+}
