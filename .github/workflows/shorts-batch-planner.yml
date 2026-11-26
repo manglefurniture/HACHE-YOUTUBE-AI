@@ -18,3 +18,5 @@ jobs:
       - run: python scripts/plan_shorts_batch.py --check
       - run: python scripts/plan_shorts_batch.py --batch A --check
       - run: python scripts/plan_shorts_batch.py --batch B --check
+      - run: python tests/test_shorts_visual_identity.py
+      - run: python scripts/check_shorts_visual_identity.py
