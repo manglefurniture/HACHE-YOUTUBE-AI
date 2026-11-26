@@ -12,15 +12,17 @@ Canal editorial original de divulgación científica y ficción especulativa en 
 
 El orden narrativo puede variar para captar atención; la distinción entre los tres niveles debe permanecer clara. Cada pieza debe aportar un enfoque, explicación, historia o reflexión sustancialmente distinto. La identidad visual común no justifica repetir la misma plantilla narrativa con cambios mínimos. No fabricar estudios, citas, resultados, imágenes documentales ni testimonios.
 
-## Temas iniciales aprobados
+## Temas iniciales aprobados (inventario temático histórico)
 
-| ID | Tema/pregunta editorial | Base de investigación |
+| ID temático original | Tema/pregunta editorial | Base de investigación |
 | --- | --- | --- |
 | S01 | ¿Podremos recuperar la visión perdida? | Implantes neuronales |
 | S02 | ¿Podremos vivir 150 años? | Investigación sobre envejecimiento |
 | S03 | ¿Quién controlará los robots de tu casa? | Robótica y teleoperación |
 | S04 | ¿Podremos comunicarnos sin hablar? | Interfaces cerebro-computadora |
 | S05 | ¿Podremos traer de vuelta especies extintas? | Ingeniería genética |
+
+**Numeración de producción vigente:** [catálogo al 26/11/2026](SHORTS-PRODUCTION-STATUS-2026-11-26.md). S01 visión, S02 longevidad, S03 comunicación mental (El último secreto); S04 es el siguiente episodio, pendiente de tema definitivo. Los IDs de la tabla anterior son históricos y no fijan el orden de publicación.
 
 La aprobación es temática, no confirma afirmaciones científicas, orden de publicación, guiones, presupuesto ni publicación. Investigar cada tema antes de escribir. En S01/S02/S04 distinguir experimentos, resultados clínicos y disponibilidad real; no ofrecer consejo médico ni prometer tratamientos. En S05 distinguir una especie extinta de un organismo modificado o sustituto funcional. Estas cautelas son criterios de investigación, no conclusiones ya verificadas.
 
@@ -73,3 +75,7 @@ Consultadas el 24/11/2026. Volver a comprobar antes de publicar y cuando cambien
 - [Avisar sobre el uso de contenido generado por IA generativa](https://support.google.com/youtube/answer/14328491?hl=es): requisitos de comunicación según el material; etiquetar no reduce por sí solo la elegibilidad para monetización.
 
 Este estándar no garantiza monetización ni autoriza gastos, publicación, cambios de permisos o despliegue.
+
+## Actualización operativa tras los primeros capítulos (26/11/2026)
+
+Aplicar las [reglas y versiones de referencia del catálogo vigente](SHORTS-PRODUCTION-STATUS-2026-11-26.md): Axel, cierre oficial Órbita de conocimiento (2,6 s), Inter Bold a escala visual calibrada en móvil, gráficos progresivos, contraste presente/futuro y prioridad de CPU de alta nitidez. Las animaciones Wan y stop motion son opciones condicionadas a calidad; no degradar imágenes ni reabrir montajes aprobados. Registrar música y atribuciones por episodio. Para exportación final 1080×1920, conservar fps de la versión aprobada y verificar sonoridad, picos, subtítulos, decodificación y respaldo. La publicación requiere aprobación humana y registro de metadatos/derechos/divulgación aplicables; los hechos no verificados se distinguen de la confirmación del usuario.
