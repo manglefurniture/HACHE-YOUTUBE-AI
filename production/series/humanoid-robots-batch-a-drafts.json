@@ -134,27 +134,28 @@
       "hypothesis": "Una futura plataforma humanoide podría ofrecer ayuda doméstica acotada si demuestra seguridad, fiabilidad y mecanismos de intervención.",
       "fiction": "En 2045, una familia tiene un robot doméstico que pide confirmación antes de resolver un imprevisto.",
       "script": {
-        "hook": "¿Dejarías a un robot solo en tu cocina?",
-        "fact": "Investigadores de Stanford enseñaron a un prototipo con ruedas y dos brazos a realizar tareas concretas, como cocinar o enjuagar una sartén. Aprendió mediante demostraciones humanas. Pero repetir una tarea entrenada no significa saber resolver todos los imprevistos de una casa.",
+        "hook": "Ya existen robots experimentales capaces de preparar comida.",
+        "fact": "Investigadores de Stanford enseñaron a un prototipo con ruedas y dos brazos a cocinar y enjuagar una sartén mediante demostraciones humanas. Pero dominar una tarea entrenada no significa resolver todos los imprevistos de una casa.",
         "transition": "Imaginemos el año 2045.",
         "fiction": "Clara vuelve del trabajo y encuentra la cena preparada. Su robot ha dejado un vaso roto en el suelo: no sabe si es seguro recogerlo y pide ayuda. Ella confirma la acción. El robot continúa.",
-        "closing": "El verdadero avance no será tener una máquina que lo haga todo, sino una que sepa cuándo detenerse."
+        "closing": "¿Dejarías a un robot encargado de tu casa mientras trabajas? Cuéntanos en los comentarios."
       },
       "visuals": [
-        "Gancho: mano mecánica cerca de vaso, recreación identificada.",
+        "Gancho: esquema de prototipo de investigación con ruedas y dos brazos, recreación identificada; no abrir con escena futura.",
         "Presente: esquema original de plataforma con ruedas, brazos y teleoperación.",
         "Gráfico progresivo: demostración → entrenamiento → tarea concreta.",
         "Futuro: cocina retrofuturista, nueva protagonista, robot identificado como máquina.",
-        "Vaso roto, solicitud de confirmación, resolución segura."
+        "Vaso roto, solicitud de confirmación, resolución segura.",
+        "Pregunta de cierre sobre el dilema del capítulo, antes de Órbita de conocimiento; invitación natural a comentar."
       ],
       "guardrail": "No usar escenas generadas de Stanford como evidencia ni anunciar una fecha de venta.",
-      "script_version": "V1",
+      "script_version": "V2",
       "status": "draft_for_batch_review",
       "target_duration_s": [
         50,
         60
       ],
-      "word_count": 106
+      "word_count": 96
     },
     {
       "id": "S05",
@@ -174,26 +175,27 @@
       "hypothesis": "La automatización podría transformar funciones, con efectos laborales dependientes de decisiones empresariales y sociales.",
       "fiction": "En 2040, una operaria aprende a supervisar una célula industrial automatizada.",
       "script": {
-        "hook": "¿Y si mañana tu compañero de trabajo fuera un robot?",
-        "fact": "En una fábrica de BMW, un humanoide participó en un piloto durante 2025. Según la empresa, movió más de noventa mil componentes de chapa para el proceso de soldadura. No fabricaba coches completos: realizaba una tarea específica. Automatizar una tarea tampoco significa eliminar automáticamente un empleo.",
+        "hook": "Los robots humanoides ya se están probando en fábricas de automóviles.",
+        "fact": "Según BMW, durante un piloto en 2025, un humanoide movió más de noventa mil componentes de chapa para el proceso de soldadura. No fabricaba coches completos: realizaba una tarea específica. Automatizar una tarea tampoco significa eliminar automáticamente un empleo.",
         "transition": "Imaginemos el año 2040.",
         "fiction": "Marina llega a su turno. El robot ocupa la estación donde antes levantaba piezas pesadas. Ella observa las operaciones desde un puesto de supervisión. Pero otro compañero no ha recibido formación para cambiar de función.",
-        "closing": "La tecnología puede cambiar el trabajo. Quién se beneficia de ese cambio sigue siendo una decisión humana."
+        "closing": "¿Crees que estos robots crearán mejores empleos o acabarán sustituyéndonos? Queremos conocer tu opinión."
       },
       "visuals": [
         "Planta contemporánea esquemática, sin logotipos ni afirmación de material real.",
         "Gráfico 90.000 componentes, atribuido a BMW; separar tarea de empleo.",
         "Futuro: fábrica retrofuturista, Marina y monitor.",
-        "Contraste entre supervisión y necesidad de formación."
+        "Contraste entre supervisión y necesidad de formación.",
+        "Pregunta de cierre sobre el dilema del capítulo, antes de Órbita de conocimiento; invitación natural a comentar."
       ],
       "guardrail": "No pronosticar despidos ni afirmar que toda automatización genera nuevos empleos.",
-      "script_version": "V1",
+      "script_version": "V2",
       "status": "draft_for_batch_review",
       "target_duration_s": [
         50,
         60
       ],
-      "word_count": 112
+      "word_count": 103
     },
     {
       "id": "S06",
@@ -221,26 +223,27 @@
       "hypothesis": "Una plataforma de forma humana podría aprovechar entornos diseñados para personas, si resulta rentable y fiable.",
       "fiction": "En 2040, un taller compara la flexibilidad de una plataforma humanoide frente a máquinas especializadas.",
       "script": {
-        "hook": "¿Por qué fabricar un robot con forma humana si una máquina industrial ya hace su trabajo?",
-        "fact": "China impulsa políticas específicas para desarrollar humanoides desde 2023. Y según la Federación Internacional de Robótica, instaló alrededor de trescientos cincuenta y cuatro mil robots industriales en 2025. No eran todos humanoides. La apuesta es explorar máquinas que puedan adaptarse a espacios y herramientas pensados para personas.",
+        "hook": "China lleva años impulsando el desarrollo de robots humanoides.",
+        "fact": "Desde 2023 promueve políticas específicas para esta tecnología. Según la Federación Internacional de Robótica, China instaló alrededor de trescientos cincuenta y cuatro mil robots industriales en 2025. No eran todos humanoides. Una de las apuestas es adaptar máquinas a espacios y herramientas pensados para personas.",
         "transition": "Imaginemos un taller en 2040.",
         "fiction": "Su dueño recibe un robot capaz de cambiar de estación. Lo prueba en varias tareas, pero conserva las máquinas especializadas que siguen siendo más eficientes.",
-        "closing": "Tal vez el futuro no pertenezca al robot más parecido a nosotros, sino al que mejor resuelva cada problema."
+        "closing": "¿Preferirías un robot capaz de hacer muchas tareas o varias máquinas especializadas? Déjanos tu opinión."
       },
       "visuals": [
         "Comparación gráfica entre brazo industrial y humanoide.",
         "Cronología 2023 política / 2025 instalaciones industriales; etiqueta de categoría.",
         "Taller retrofuturista original, banco de trabajo y herramientas.",
-        "Comparación visual de especialización frente a flexibilidad."
+        "Comparación visual de especialización frente a flexibilidad.",
+        "Pregunta de cierre sobre el dilema del capítulo, antes de Órbita de conocimiento; invitación natural a comentar."
       ],
       "guardrail": "No usar bandera o imágenes genéricas para simular una instalación real; no afirmar cuota humanoide.",
-      "script_version": "V1",
+      "script_version": "V2",
       "status": "draft_for_batch_review",
       "target_duration_s": [
         50,
         60
       ],
-      "word_count": 112
+      "word_count": 99
     },
     {
       "id": "S07",
@@ -260,26 +263,27 @@
       "hypothesis": "El diseño de respuestas sociales podría facilitar vínculos humanos unilaterales; la reciprocidad emocional permanece sin demostrar.",
       "fiction": "En 2055, una persona decide conservar el vínculo con otros humanos tras percibir apego hacia un robot.",
       "script": {
-        "hook": "¿Qué sentirías si una máquina siempre supiera cómo consolarte?",
+        "hook": "La forma en que responde un robot puede influir en nuestras emociones.",
         "fact": "En un estudio de interacción entre personas y robots, los participantes mostraron mayor disposición a buscar compañía de una máquina cuando percibían que respondía a sus necesidades. Eso habla de nuestra reacción humana. No demuestra que el robot sienta afecto.",
         "transition": "Imaginemos el año 2055.",
         "fiction": "Daniel conversa cada noche con su robot. Una tarde, le pregunta si lo extrañaría cuando saliera de casa. La máquina responde con las palabras que él espera escuchar. Daniel comprende que esa respuesta no prueba que exista un sentimiento al otro lado. Decide visitar a un amigo.",
-        "closing": "Podemos sentir algo por una máquina. La pregunta es si alguna vez ese sentimiento será recíproco."
+        "closing": "¿Podrías enamorarte de un robot aun sabiendo que quizás no siente lo mismo? Cuéntanos qué piensas."
       },
       "visuals": [
         "Presente: laboratorio social esquemático sin reproducir estudio como hecho visual.",
         "Gráfico: respuesta percibida → reacción humana; sin flecha de sentimiento robótico.",
         "Futuro: Daniel en sala retrofuturista, robot con rasgos mecánicos.",
-        "Salida de casa y encuentro humano, tono reflexivo."
+        "Salida de casa y encuentro humano, tono reflexivo.",
+        "Pregunta de cierre sobre el dilema del capítulo, antes de Órbita de conocimiento; invitación natural a comentar."
       ],
       "guardrail": "Texto completo de R08 bloqueado; mantener afirmación al alcance del resumen, sin cifras ni inferencias románticas.",
-      "script_version": "V1",
+      "script_version": "V2",
       "status": "draft_for_batch_review",
       "target_duration_s": [
         50,
         60
       ],
-      "word_count": 116
+      "word_count": 119
     },
     {
       "id": "S08",
@@ -299,26 +303,43 @@
       "hypothesis": "Un robot podría complementar rutinas y comunicación si cumple requisitos de seguridad, consentimiento y supervisión.",
       "fiction": "En 2045, una mujer mayor elige cuándo usar ayuda tecnológica y cuándo pedir contacto familiar.",
       "script": {
-        "hook": "¿Aceptarías que un robot ayudara a cuidar a tus padres?",
+        "hook": "Los robots sociales ya se han estudiado como apoyo en residencias de mayores.",
         "fact": "Un ensayo en residencias de Inglaterra y Japón estudió al robot social Pepper como apoyo a los cuidados. Treinta y tres personas completaron el estudio. Hubo señales favorables en algunas medidas de bienestar emocional, pero no pruebas suficientes de que una máquina pueda sustituir a quienes cuidan.",
         "transition": "Imaginemos el año 2045.",
         "fiction": "Inés vive en su casa con un asistente robótico. Le recuerda una cita y la ayuda a llamar a su hijo. Cuando llega la hora de cenar, ella apaga el dispositivo y espera a su familia.",
-        "closing": "La tecnología puede ayudarnos a conservar autonomía. Pero cuidar a alguien es mucho más que cumplir una lista de tareas."
+        "closing": "¿Aceptarías que un robot ayudara a cuidar a tus padres? ¿Qué tareas nunca le confiarías? Déjanos tu opinión."
       },
       "visuals": [
         "Presente: esquema de estudio en residencias, indicar 33 participantes.",
         "Robot social conceptual, identificar recreación, sin prometer tratamiento.",
         "Futuro: Inés en casa, llamada familiar, mesa y silla.",
-        "Cierre con encuentro humano, sin representar dependencia como pérdida de dignidad."
+        "Cierre con encuentro humano, sin representar dependencia como pérdida de dignidad.",
+        "Pregunta de cierre sobre el dilema del capítulo, antes de Órbita de conocimiento; invitación natural a comentar."
       ],
       "guardrail": "No consejo médico, dosificación ni predicción de seguridad; no representar una capacidad física como validada.",
-      "script_version": "V1",
+      "script_version": "V2",
       "status": "draft_for_batch_review",
       "target_duration_s": [
         50,
         60
       ],
-      "word_count": 117
+      "word_count": 118
     }
-  ]
+  ],
+  "editorial_structure": {
+    "scope": "S04–S08 únicamente",
+    "approved_date": "2026-11-26",
+    "ordered_script_fields": [
+      "hook",
+      "fact",
+      "transition",
+      "fiction",
+      "closing"
+    ],
+    "hook": "Presente verificable, atractivo; no abrir con escena futura.",
+    "fact": "Evidencia actual y límites.",
+    "transition": "Marcar el paso a ficción especulativa y el año hipotético.",
+    "fiction": "Historia original claramente imaginaria.",
+    "closing": "Pregunta específica y natural que invite a comentar; antes del cierre oficial de marca, sin introducir nuevas afirmaciones."
+  }
 }
