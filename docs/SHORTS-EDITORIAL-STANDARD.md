@@ -22,6 +22,8 @@ El orden narrativo puede variar para captar atención; la distinción entre los 
 | S04 | ¿Podremos comunicarnos sin hablar? | Interfaces cerebro-computadora |
 | S05 | ¿Podremos traer de vuelta especies extintas? | Ingeniería genética |
 
+**S04 — producción cerrada y publicación confirmada el 26/11/2026:** [El último secreto, V2 definitiva y lecciones de producción](S04-EL-ULTIMO-SECRETO-CIERRE-2026-11-26.md). V3 stop motion descartada por revisión humana. Los nombres históricos S02 de sus archivos no cambian el ID editorial ni el capítulo de longevidad.
+
 La aprobación es temática, no confirma afirmaciones científicas, orden de publicación, guiones, presupuesto ni publicación. Investigar cada tema antes de escribir. En S01/S02/S04 distinguir experimentos, resultados clínicos y disponibilidad real; no ofrecer consejo médico ni prometer tratamientos. En S05 distinguir una especie extinta de un organismo modificado o sustituto funcional. Estas cautelas son criterios de investigación, no conclusiones ya verificadas.
 
 ## Credibilidad y cumplimiento
