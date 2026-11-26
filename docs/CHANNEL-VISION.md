@@ -77,3 +77,7 @@ La secuencia original del piloto se conserva para formato largo. Para el lanzami
 **Alcance de la aprobación:** se aprueba la **prueba visual y de movimiento** como punto de partida para nuevos experimentos, **no** se aprueba automáticamente una pieza final publicable ni se reemplazan las referencias cinematográficas ya aprobadas para «Año 2085». La convivencia o sustitución de ambos estilos se decidirá después de pruebas narrativas comparables. Persisten problemas por corregir en manos, manipulación de objetos y consistencia temporal.
 
 **Prueba comprobada:** RTX 4090 (Vast.ai), Wan 2.2 I2V FP8 de dos etapas, 640 × 384, 33 fotogramas, 16 fps, MP4 de 2.0625 s. Documentación técnica y rutas: [smoke test Wan 2.2](VAST-RTX4090-WAN22-I2V-SMOKE-2026-11-23.md). Próximo experimento: una escena más larga (aprox. 5 s) manteniendo estilo, personajes y acciones controladas, con revisión humana antes de publicar.
+
+## Actualización de producción — 26/11/2026
+
+Consultar [catálogo y lecciones de S01, S02 y S03](SHORTS-PRODUCTION-STATUS-2026-11-26.md) para el estado y decisiones más recientes. Axel, Inter Bold y el cierre oficial Órbita de conocimiento ya son referencias aprobadas de los primeros Shorts; se mantienen la distinción documental/ficción retrofuturista y la revisión humana. CPU es una vía válida de publicación si conserva calidad; Wan o stop motion son opcionales, no requisitos ni permiso de alquiler. El siguiente episodio de producción es S04, sin tema definitivo asignado en esta actualización.
