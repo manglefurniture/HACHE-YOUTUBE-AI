@@ -53,9 +53,9 @@ class TimingTests(unittest.TestCase):
 
     def test_clip_small_provider_discrepancy(self):
         data,spec = fixture()
-        data["narration"]["duration_s"]=4.62
+        data["narration"]["duration_s"]=5.04
         _,shots,_=timing.build(data,spec)
-        self.assertEqual(shots[-1]["start_s"],4.62)
+        self.assertEqual(shots[-1]["start_s"],5.04)
 
 
 if __name__ == "__main__":
