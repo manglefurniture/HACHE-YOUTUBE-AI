@@ -9,9 +9,10 @@ Zona horaria America/Cancun. Este documento registra el estado vigente y prevale
 | S01 | El día que volvimos a ver / ¿Podremos recuperar la vista? | V9 CPU, 1080×1920, 52,6 s | Publicación reportada en conversaciones del canal; V8 aprobada y V9 final preparada; ID y archivo exacto subido no verificados |
 | S02 | El primer día de una nueva vida / ¿Podremos vivir 150 años? | V7 Life Is, 1080×1920, 24 fps, 54,17 s | Montaje y portada aprobados; publicación autorizada y registrada el 26/11/2026; ID no verificado |
 | S03 | El último secreto / ¿Podremos comunicarnos sin hablar? | V2, 1080×1920, 30 fps, 54 s | Publicación confirmada por el usuario el 26/11; producción cerrada; V3 descartada |
-| S04 | Siguiente episodio | Sin selección definitiva en esta actualización | Pendiente de investigación y aprobación temática |
+| S04 | La primera mañana / ¿Dejarías tu casa en manos de un robot? | V2 final CPU, 1080×1920, 30 fps, 38,781 s | Publicación confirmada por el usuario el 27/11/2026; cerrado; ID público no verificado |
+| S05 | El cambio de turno | Guion V2 y narración Axel recuperados | Próximo episodio; producción visual pendiente |
 
-La tabla de temas aprobados del 24/11 es un inventario histórico, no un orden de publicación. La decisión posterior del usuario fija S04 como próximo capítulo. Por ello el episodio de comunicación mental pasa del identificador temático inicial S04 al ID de producción S03; el tema de robótica sigue como candidato, no se asigna automáticamente. No renombrar archivos binarios históricos ni confundir los nombres S02 de El último secreto con el S02 de longevidad.
+Actualización 27/11/2026: S04 cerrado; S05 es el siguiente episodio del lote A. La tabla de temas aprobados del 24/11 es un inventario histórico, no un orden de publicación. La decisión posterior del usuario fija S04 como próximo capítulo. Por ello el episodio de comunicación mental pasa del identificador temático inicial S04 al ID de producción S03; el tema de robótica sigue como candidato, no se asigna automáticamente. No renombrar archivos binarios históricos ni confundir los nombres S02 de El último secreto con el S02 de longevidad.
 
 ## S01 — decisiones y continuidad
 
@@ -31,9 +32,17 @@ La tabla de temas aprobados del 24/11 es un inventario histórico, no un orden d
 
 - [Cierre completo y lecciones](S03-EL-ULTIMO-SECRETO-CIERRE-2026-11-26.md). V2 definitiva, V3 stop motion descartada. El usuario confirmó publicación. Separar elenco presente/futuro, no usar ondas de telepatía, mantener 13 planos y 54 s. No regenerar.
 
+## S04 — decisiones y continuidad
+
+- [Checkpoint de voz y sincronización S04–S08](SHORTS-ROBOTICS-BATCH-A-AUDIO-TIMING-2026-11-26.md). Guion V2 y toma original Axel (36,16 s) preservados; descartar visuales preliminares sin borrar archivos. Producir un capítulo completo antes de pasar al siguiente; ElevenLabs solo para narración, imágenes mediante ChatGPT, montaje CPU.
+- V1 con Axel aprobada como respaldo; V2 con 15 planos, transición luminosa a 2045, dramatismo del vaso roto y plano documental de enjuague. El usuario pidió retirar únicamente el efecto animado del agua. V2 final con música ambiental original según registro de producción, aprobada. No reabrir ni regenerar. Recreaciones del presente con colores naturales, futuro retrofuturista consistente, avisos de ficción en transición. No presentar recreaciones como evidencia.
+- Archivo final verificado el 27/11: `S04_V2_final.mp4`, 20.677.252 bytes, SHA-256 `94a8bca089db9950eebc6bbd8fcc4b51086bd6b34414f92a6a5418a86562465d`, H.264/AAC, 1080×1920, 30 fps, duración contenedor 38,781 s, -15,9 LUFS, pico verdadero -3,3 dBFS, decodificación sin errores. MP3 original coincide con hash del checkpoint. Publicación confirmada por usuario el 27/11; URL pública, archivo efectivamente subido y portada usada no verificados independientemente.
+- Paquete de respaldo creado: `S04_respaldo_cierre_20261127.zip`, 51.103.693 bytes, SHA-256 `b58c399df56788147a076ee3709a3b0a1542c3f3a53d7f6bdd93ef6d51c0b1cb`; ZIP íntegro, manifiesto, video final, narración, SRT timing-v2, recursos visuales, cierre y portada propuesta. No incluye proyecto editable ni música aislada; copia persistente externa no confirmada. No guardar binarios ni URLs privadas en GitHub.
+- S05 «El cambio de turno» es el próximo capítulo. Mantener guiones y narraciones S05–S08 ya generados y verificados; no producir episodios en paralelo ni modificar los publicados.
+
 ## Reglas compartidas derivadas de las revisiones
 
-- Voz Axel aprobada en los tres episodios; conservar toma original, medir pausas y respaldar. La elección no autoriza nuevos gastos ni reemplaza comprobación de licencia del plan.
+- Voz Axel aprobada en los cuatro episodios; conservar toma original, medir pausas y respaldar. La elección no autoriza nuevos gastos ni reemplaza comprobación de licencia del plan.
 - Cierre reutilizable oficial «Órbita de conocimiento» `CM_Orbita_de_conocimiento_V1.mp4`, 1080×1920, 30 fps, 78 cuadros, 2,6 s. SHA-256 histórico `39851cd9ad858614fc669b729216badd1fececa8d0895a62e175234128b57a7e`. Recuperado del paquete privado S02_preWan_V5.zip. No crear una marca alternativa, ni añadir número de episodio al cierre. Verificar hash antes de usar y no recodificar innecesariamente. Cierre sin audio propio; respetar mezcla aprobada.
 - Subtítulos: Inter Bold 54 px lógicos en 720×1280, 81 px equivalentes a 1080×1920, no confundir con tamaño nominal ASS; validar muestra raster y teléfono, dos líneas máximo, centrados, crema y énfasis naranja óxido; adaptar contraste sobre gráficos. Mantener SRT aparte y no regenerar tiempos por cambios visuales.
 - Presente documental, personas distintas a las del futuro cuando corresponda; ficción retrofuturista adulta, ilustrada o cinematográfica según capítulo. No usar recreaciones como evidencia. Gráficos científicos aparecen progresivamente según narración.
