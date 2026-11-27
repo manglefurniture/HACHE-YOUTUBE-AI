@@ -2,7 +2,7 @@
   "schema_version": 1,
   "series_id": "humanoid-robots",
   "batch_id": "A",
-  "note": "Anclajes sobre el texto V2 exacto; el script asigna tiempos reales, no estimados. Referencias maestras y comparación histórica siguen pendientes.",
+  "note": "Anclajes sobre el texto V2 exacto; el script asigna tiempos reales, no estimados. Referencias maestras y comparación histórica siguen pendientes. Cinco cortes añadidos tras medir la locución, para resolver planos de más de 5,5 s.",
   "episodes": {
     "S04": [
       {
@@ -15,6 +15,12 @@
         "section": "fact",
         "anchor": "Investigadores de Stanford",
         "visual": "Plataforma móvil de dos brazos sobre ruedas, esquema; distinguir del humanoide bípedo.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "a cocinar y enjuagar",
+        "visual": "Detalle de utensilios y dos brazos realizando tareas concretas; recreación ilustrativa.",
         "technique": "progressive_science_graphic"
       },
       {
@@ -161,6 +167,12 @@
       },
       {
         "section": "fact",
+        "anchor": "trescientos cincuenta",
+        "visual": "Aparece el valor 354 mil con año 2025 y categoría robots industriales, según IFR.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
         "anchor": "No eran todos humanoides",
         "visual": "Diferenciar brazos industriales, otras formas y humanoides.",
         "technique": "progressive_science_graphic"
@@ -225,6 +237,12 @@
         "section": "fact",
         "anchor": "los participantes mostraron",
         "visual": "Aproximación y búsqueda de compañía percibida; sin cifras inventadas.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "cuando percibían",
+        "visual": "Gráfico de respuesta percibida y compañía buscada; no atribuir emociones al robot.",
         "technique": "progressive_science_graphic"
       },
       {
@@ -297,6 +315,12 @@
       },
       {
         "section": "fact",
+        "anchor": "estudió al robot social",
+        "visual": "Esquema de Pepper como robot social de apoyo en residencia; recreación conceptual.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
         "anchor": "Treinta y tres personas",
         "visual": "33 participantes completaron el ensayo, no 33 estudios.",
         "technique": "progressive_science_graphic"
@@ -305,6 +329,12 @@
         "section": "fact",
         "anchor": "Hubo señales favorables",
         "visual": "Bienestar emocional: señales limitadas; no sustitución de cuidadores.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "pero no pruebas",
+        "visual": "Gráfico de límite: apoyo evaluado no equivale a sustituir cuidadores.",
         "technique": "progressive_science_graphic"
       },
       {
