@@ -1,0 +1,459 @@
+{
+  "schema_version": 1,
+  "series_id": "humanoid-robots",
+  "batch_id": "A",
+  "prepared_date": "2026-11-26",
+  "language": "es",
+  "status": "draft_for_batch_review",
+  "vidiq_credits_used": 0,
+  "authorization": {
+    "narration": false,
+    "paid_generation": false,
+    "gpu_rental": false,
+    "publication": false
+  },
+  "source_access_note": "Fuentes públicas consultadas; algunas solo mediante resumen indexado. No hay auditoría de licencias de medios. Los guiones son borradores; duración solo objetivo 50–60 s, medir después de narración.",
+  "sources": [
+    {
+      "id": "R01",
+      "title": "Mobile ALOHA: Learning Bimanual Mobile Manipulation using Low-Cost Whole-Body Teleoperation",
+      "date": "2025 (actas CoRL 2024; preprint 2024)",
+      "url": "https://proceedings.mlr.press/v270/fu25b.html",
+      "type": "primary_experiment",
+      "evidence": "Demostraciones humanas por teleoperación y aprendizaje de tareas específicas; plataforma con ruedas y dos brazos; no humanoide bípedo ni producto de consumo.",
+      "scope": "Resumen de actas y página del proyecto; no se emplea una tasa de éxito agregada."
+    },
+    {
+      "id": "R02",
+      "title": "Mobile ALOHA — proyecto original",
+      "date": "2024",
+      "url": "https://mobile-aloha.github.io/index.html",
+      "type": "primary_project",
+      "evidence": "Demostraciones de manipulación móvil y tareas como enjuagar una sartén o cocinar; distingue teleoperación y ejecución autónoma tras entrenamiento.",
+      "scope": "Material de investigación; no asumir derechos de reutilización de clips."
+    },
+    {
+      "id": "R03",
+      "title": "BMW Group to deploy humanoid robots in production in Germany for the first time",
+      "date": "2026-02-27",
+      "url": "https://newsroom.bmwgroup.com/global/bmw-group-to-deploy-humanoid-robots-in-production-in-germany-for-the-first-time",
+      "type": "company_primary",
+      "evidence": "BMW informa que Figure 02 posicionó piezas de chapa para soldadura durante un piloto en Spartanburg en 2025; movió más de 90.000 componentes y apoyó la producción de más de 30.000 vehículos.",
+      "scope": "Datos declarados por BMW; no equivale a fabricar coches completos ni demuestra eliminación de empleos."
+    },
+    {
+      "id": "R04",
+      "title": "BMW Group advances the use of Physical AI in production with Figure 03 project in Spartanburg",
+      "date": "2026-06-25",
+      "url": "https://www.press.bmwgroup.com/global/article/detail/T0458778EN/bmw-group-advances-the-use-of-physical-ai-in-production-with-figure-03-project-in-spartanburg",
+      "type": "company_primary",
+      "evidence": "Nuevas pruebas de uso logístico; el despliegue anterior se limita a tareas concretas.",
+      "scope": "Anuncio corporativo, no evaluación independiente de impacto laboral."
+    },
+    {
+      "id": "R05",
+      "title": "Interpretación de directrices para el desarrollo innovador de robots humanoides — MIIT",
+      "date": "2023-11-02",
+      "url": "https://www.miit.gov.cn/zwgk/zcjd/art/2023/art_e3f5686c2f0d49f9968b7ae011d558e1.html",
+      "type": "government_primary",
+      "evidence": "El ministerio chino formuló objetivos de desarrollo de tecnologías y ecosistema de humanoides.",
+      "scope": "Objetivos de política pública, no prueba de cumplimiento."
+    },
+    {
+      "id": "R06",
+      "title": "Five Million Robots now Operate in Factories Globally — IFR World Robotics 2026",
+      "date": "2026-09",
+      "url": "https://ifr.org/ifr-press-releases/news/five-million-robots-now-operate-in-factories-globally",
+      "type": "industry_statistics",
+      "evidence": "China instaló aproximadamente 354.000 robots industriales en 2025, 59% del total mundial de nuevas instalaciones.",
+      "scope": "Robots industriales de todas las formas, no recuento de humanoides. Estadística de instalaciones, no producción o ventas."
+    },
+    {
+      "id": "R07",
+      "title": "China releases national standard system for humanoid robotics and embodied AI",
+      "date": "2026-03-02",
+      "url": "https://english.scio.gov.cn/m/chinavoices/2026-03/02/content_118354738.html",
+      "type": "government_publication",
+      "evidence": "Sistema de estándares anunciado para robótica humanoide e IA incorporada, incluyendo seguridad y ética.",
+      "scope": "Anuncio institucional, no garantía de seguridad ni adopción."
+    },
+    {
+      "id": "R08",
+      "title": "What robots can teach us about intimacy: The reassuring effects of robot responsiveness to human disclosure",
+      "date": "2016",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0747563216303910",
+      "type": "primary_experiment_abstract",
+      "evidence": "El estudio 1 vincula la respuesta percibida del robot con mayor disposición de los participantes a buscar su compañía en momentos estresantes.",
+      "scope": "Resumen indexado disponible, texto completo no accesible (403); no demuestra amor romántico ni sentimientos de una máquina."
+    },
+    {
+      "id": "R09",
+      "title": "Role-taking and robotic form: an exploratory study of social connection in human-robot interaction",
+      "date": "2023",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1071581923001039",
+      "type": "primary_experiment_abstract",
+      "evidence": "Experimento de 86 participantes con interlocutores humanos y robots de distintas formas; diferencias en percepción de conexión.",
+      "scope": "Resumen indexado, texto completo bloqueado; no extrapolar a relaciones de larga duración."
+    },
+    {
+      "id": "R10",
+      "title": "The CARESSES Randomised Controlled Trial",
+      "date": "2021",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8062829/",
+      "type": "primary_randomized_trial",
+      "evidence": "Ensayo exploratorio con Pepper en residencias de Inglaterra y Japón; 33 participantes completaron el estudio. Algunas medidas de bienestar emocional mejoraron frente a atención habitual; no diferencia significativa de soledad.",
+      "scope": "Muestra pequeña, intervención social complementaria; no demuestra eficacia general, asistencia física o sustitución profesional."
+    },
+    {
+      "id": "R11",
+      "title": "Psychosocial effects of a humanoid robot on informal caregivers of people with dementia: A randomised controlled trial with nested interviews",
+      "date": "2024 (publicación en línea)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39700737/",
+      "type": "primary_randomized_trial_abstract",
+      "evidence": "Coach Pepper con entrenamiento en tableta comparado con tableta sola; actitudes mayoritariamente positivas, opiniones neutrales sobre carga de cuidado en entrevistas.",
+      "scope": "Solo resumen indexado; no afirmar reducción de carga ni resultados clínicos."
+    }
+  ],
+  "episodes": [
+    {
+      "id": "S04",
+      "title": "¿Cuándo tendremos un robot en casa?",
+      "story_title": "La primera mañana",
+      "future_year": 2045,
+      "hook": "¿Dejarías a un robot solo en tu cocina?",
+      "facts": [
+        {
+          "text": "Mobile ALOHA aprendió tareas concretas a partir de demostraciones humanas y ejecutó algunas autónomamente.",
+          "sources": [
+            "R01",
+            "R02"
+          ],
+          "limit": "Prototipo con ruedas y brazos; no robot humanoide bípedo ni autonomía doméstica general."
+        }
+      ],
+      "hypothesis": "Una futura plataforma humanoide podría ofrecer ayuda doméstica acotada si demuestra seguridad, fiabilidad y mecanismos de intervención.",
+      "fiction": "En 2045, una familia tiene un robot doméstico que pide confirmación antes de resolver un imprevisto.",
+      "script": {
+        "hook": "Ya existen robots experimentales capaces de preparar comida.",
+        "fact": "Investigadores de Stanford enseñaron a un prototipo con ruedas y dos brazos a cocinar y enjuagar una sartén mediante demostraciones humanas. Pero dominar una tarea entrenada no significa resolver todos los imprevistos de una casa.",
+        "transition": "Imaginemos el año 2045.",
+        "fiction": "Nora vuelve del trabajo y encuentra la cena preparada. Su robot ha dejado un vaso roto en el suelo: no sabe si es seguro recogerlo y pide ayuda. Ella confirma la acción. El robot continúa.",
+        "closing": "¿Dejarías a un robot encargado de tu casa mientras trabajas? Cuéntanos en los comentarios."
+      },
+      "visuals": [
+        "Gancho: esquema de prototipo de investigación con ruedas y dos brazos, recreación identificada; no abrir con escena futura.",
+        "Presente: esquema original de plataforma con ruedas, brazos y teleoperación.",
+        "Gráfico progresivo: demostración → entrenamiento → tarea concreta.",
+        "Futuro: cocina retrofuturista, nueva protagonista, robot identificado como máquina.",
+        "Vaso roto, solicitud de confirmación, resolución segura.",
+        "Pregunta de cierre sobre el dilema del capítulo, antes de Órbita de conocimiento; invitación natural a comentar."
+      ],
+      "guardrail": "No usar escenas generadas de Stanford como evidencia ni anunciar una fecha de venta.",
+      "script_version": "V2",
+      "status": "draft_for_batch_review",
+      "target_duration_s": [
+        50,
+        60
+      ],
+      "word_count": 96,
+      "visual_identity": {
+        "human": {
+          "id": "S04-H01",
+          "name": "Nora",
+          "age": 35,
+          "face": "rostro ovalado, nariz recta, pecas suaves",
+          "hair": "cabello castaño corto liso tipo bob",
+          "wardrobe": "delantal azul petróleo sobre ropa informal"
+        },
+        "robot": {
+          "id": "S04-R01",
+          "role": "robot doméstico",
+          "design": "cuerpo compacto crema, cabeza ovalada sin rostro humano, brazos articulados, panel ámbar"
+        },
+        "setting": "cocina familiar luminosa con ventanas amplias",
+        "composition": "plano medio lateral, luz natural cálida",
+        "reference_status": "pending",
+        "historical_visual_review": "pending"
+      }
+    },
+    {
+      "id": "S05",
+      "title": "¿Podrán los robots reemplazar a los trabajadores?",
+      "story_title": "El cambio de turno",
+      "future_year": 2040,
+      "hook": "¿Y si mañana tu compañero de trabajo fuera un robot?",
+      "facts": [
+        {
+          "text": "BMW informó que un piloto de Figure 02 en 2025 movió más de 90.000 componentes de chapa para el proceso de soldadura.",
+          "sources": [
+            "R03"
+          ],
+          "limit": "Declaración empresarial sobre una tarea delimitada, no una medición de pérdidas de empleo."
+        }
+      ],
+      "hypothesis": "La automatización podría transformar funciones, con efectos laborales dependientes de decisiones empresariales y sociales.",
+      "fiction": "En 2040, una operaria aprende a supervisar una célula industrial automatizada.",
+      "script": {
+        "hook": "Los robots humanoides ya se están probando en fábricas de automóviles.",
+        "fact": "Según BMW, durante un piloto en 2025, un humanoide movió más de noventa mil componentes de chapa para el proceso de soldadura. No fabricaba coches completos: realizaba una tarea específica. Automatizar una tarea tampoco significa eliminar automáticamente un empleo.",
+        "transition": "Imaginemos el año 2040.",
+        "fiction": "Marina llega a su turno. El robot ocupa la estación donde antes levantaba piezas pesadas. Ella observa las operaciones desde un puesto de supervisión. Pero otro compañero no ha recibido formación para cambiar de función.",
+        "closing": "¿Crees que estos robots crearán mejores empleos o acabarán sustituyéndonos? Queremos conocer tu opinión."
+      },
+      "visuals": [
+        "Planta contemporánea esquemática, sin logotipos ni afirmación de material real.",
+        "Gráfico 90.000 componentes, atribuido a BMW; separar tarea de empleo.",
+        "Futuro: fábrica retrofuturista, Marina y monitor.",
+        "Contraste entre supervisión y necesidad de formación.",
+        "Pregunta de cierre sobre el dilema del capítulo, antes de Órbita de conocimiento; invitación natural a comentar."
+      ],
+      "guardrail": "No pronosticar despidos ni afirmar que toda automatización genera nuevos empleos.",
+      "script_version": "V2",
+      "status": "draft_for_batch_review",
+      "target_duration_s": [
+        50,
+        60
+      ],
+      "word_count": 103,
+      "visual_identity": {
+        "human": {
+          "id": "S05-H01",
+          "name": "Marina",
+          "age": 45,
+          "face": "rostro cuadrado, pómulos definidos, piel oscura",
+          "hair": "cabello negro corto rizado",
+          "wardrobe": "mono industrial verde oscuro y protección adecuada"
+        },
+        "robot": {
+          "id": "S05-R01",
+          "role": "robot industrial",
+          "design": "estructura alta angular de metal gris y naranja, manos de agarre, visor rectangular"
+        },
+        "setting": "fábrica con líneas de ensamblaje y puesto de supervisión",
+        "composition": "plano general industrial, luz fría direccional",
+        "reference_status": "pending",
+        "historical_visual_review": "pending"
+      }
+    },
+    {
+      "id": "S06",
+      "title": "¿Por qué China apuesta por los robots humanoides?",
+      "story_title": "La herramienta universal",
+      "future_year": 2040,
+      "hook": "¿Por qué fabricar un robot con forma humana si una máquina industrial ya hace su trabajo?",
+      "facts": [
+        {
+          "text": "China publicó directrices específicas para humanoides en 2023.",
+          "sources": [
+            "R05",
+            "R07"
+          ],
+          "limit": "Política y estándares no certifican cumplimiento ni liderazgo humanoide."
+        },
+        {
+          "text": "IFR estima unas 354.000 instalaciones de robots industriales en China en 2025.",
+          "sources": [
+            "R06"
+          ],
+          "limit": "No son 354.000 humanoides."
+        }
+      ],
+      "hypothesis": "Una plataforma de forma humana podría aprovechar entornos diseñados para personas, si resulta rentable y fiable.",
+      "fiction": "En 2040, un taller compara la flexibilidad de una plataforma humanoide frente a máquinas especializadas.",
+      "script": {
+        "hook": "China lleva años impulsando el desarrollo de robots humanoides.",
+        "fact": "Desde 2023 promueve políticas específicas para esta tecnología. Según la Federación Internacional de Robótica, China instaló alrededor de trescientos cincuenta y cuatro mil robots industriales en 2025. No eran todos humanoides. Una de las apuestas es adaptar máquinas a espacios y herramientas pensados para personas.",
+        "transition": "Imaginemos un taller en 2040.",
+        "fiction": "Su dueño recibe un robot capaz de cambiar de estación. Lo prueba en varias tareas, pero conserva las máquinas especializadas que siguen siendo más eficientes.",
+        "closing": "¿Preferirías un robot capaz de hacer muchas tareas o varias máquinas especializadas? Déjanos tu opinión."
+      },
+      "visuals": [
+        "Comparación gráfica entre brazo industrial y humanoide.",
+        "Cronología 2023 política / 2025 instalaciones industriales; etiqueta de categoría.",
+        "Taller retrofuturista original, banco de trabajo y herramientas.",
+        "Comparación visual de especialización frente a flexibilidad.",
+        "Pregunta de cierre sobre el dilema del capítulo, antes de Órbita de conocimiento; invitación natural a comentar."
+      ],
+      "guardrail": "No usar bandera o imágenes genéricas para simular una instalación real; no afirmar cuota humanoide.",
+      "script_version": "V2",
+      "status": "draft_for_batch_review",
+      "target_duration_s": [
+        50,
+        60
+      ],
+      "word_count": 99,
+      "visual_identity": {
+        "human": {
+          "id": "S06-H01",
+          "name": "Wei",
+          "age": 50,
+          "face": "rostro rectangular, mandíbula definida, gafas redondas",
+          "hair": "cabello negro con canas en sienes",
+          "wardrobe": "camisa de trabajo gris y chaleco de taller"
+        },
+        "robot": {
+          "id": "S06-R01",
+          "role": "robot modular de taller",
+          "design": "chasis de proporciones medias, módulos visibles, carcasa verde apagada, sensores circulares"
+        },
+        "setting": "taller chino con bancos, herramientas y máquinas especializadas",
+        "composition": "plano amplio oblicuo, iluminación de banco",
+        "reference_status": "pending",
+        "historical_visual_review": "pending"
+      }
+    },
+    {
+      "id": "S07",
+      "title": "¿Podremos enamorarnos de un robot?",
+      "story_title": "La respuesta perfecta",
+      "future_year": 2055,
+      "hook": "¿Qué sentirías si una máquina siempre supiera cómo consolarte?",
+      "facts": [
+        {
+          "text": "Un experimento encontró mayor disposición humana a buscar compañía de un robot percibido como receptivo.",
+          "sources": [
+            "R08"
+          ],
+          "limit": "Resumen indexado, no evidencia de amor ni de experiencia subjetiva del robot."
+        }
+      ],
+      "hypothesis": "El diseño de respuestas sociales podría facilitar vínculos humanos unilaterales; la reciprocidad emocional permanece sin demostrar.",
+      "fiction": "En 2055, una persona decide conservar el vínculo con otros humanos tras percibir apego hacia un robot.",
+      "script": {
+        "hook": "La forma en que responde un robot puede influir en nuestras emociones.",
+        "fact": "En un estudio de interacción entre personas y robots, los participantes mostraron mayor disposición a buscar compañía de una máquina cuando percibían que respondía a sus necesidades. Eso habla de nuestra reacción humana. No demuestra que el robot sienta afecto.",
+        "transition": "Imaginemos el año 2055.",
+        "fiction": "Daniel conversa cada noche con su robot. Una tarde, le pregunta si lo extrañaría cuando saliera de casa. La máquina responde con las palabras que él espera escuchar. Daniel comprende que esa respuesta no prueba que exista un sentimiento al otro lado. Decide visitar a un amigo.",
+        "closing": "¿Podrías enamorarte de un robot aun sabiendo que quizás no siente lo mismo? Cuéntanos qué piensas."
+      },
+      "visuals": [
+        "Presente: laboratorio social esquemático sin reproducir estudio como hecho visual.",
+        "Gráfico: respuesta percibida → reacción humana; sin flecha de sentimiento robótico.",
+        "Futuro: Daniel en sala retrofuturista, robot con rasgos mecánicos.",
+        "Salida de casa y encuentro humano, tono reflexivo.",
+        "Pregunta de cierre sobre el dilema del capítulo, antes de Órbita de conocimiento; invitación natural a comentar."
+      ],
+      "guardrail": "Texto completo de R08 bloqueado; mantener afirmación al alcance del resumen, sin cifras ni inferencias románticas.",
+      "script_version": "V2",
+      "status": "draft_for_batch_review",
+      "target_duration_s": [
+        50,
+        60
+      ],
+      "word_count": 119,
+      "visual_identity": {
+        "human": {
+          "id": "S07-H01",
+          "name": "Daniel",
+          "age": 28,
+          "face": "rostro alargado, barba corta",
+          "hair": "cabello negro ondulado de longitud media",
+          "wardrobe": "suéter borgoña y pantalón casual"
+        },
+        "robot": {
+          "id": "S07-R01",
+          "role": "robot de interacción social",
+          "design": "silueta esbelta, cabeza lisa con pantalla discreta, acabado azul oscuro, gestos mecánicos"
+        },
+        "setting": "apartamento urbano nocturno, sala íntima",
+        "composition": "plano cercano a la altura de ojos, iluminación nocturna suave",
+        "reference_status": "pending",
+        "historical_visual_review": "pending"
+      }
+    },
+    {
+      "id": "S08",
+      "title": "¿Podrán los robots cuidar de nuestros mayores?",
+      "story_title": "La silla vacía",
+      "future_year": 2045,
+      "hook": "¿Aceptarías que un robot ayudara a cuidar a tus padres?",
+      "facts": [
+        {
+          "text": "El ensayo CARESSES evaluó un robot social Pepper como complemento en residencias y 33 personas completaron el estudio.",
+          "sources": [
+            "R10"
+          ],
+          "limit": "Ensayo exploratorio pequeño; no demuestra que sustituya atención humana ni asistencia física."
+        }
+      ],
+      "hypothesis": "Un robot podría complementar rutinas y comunicación si cumple requisitos de seguridad, consentimiento y supervisión.",
+      "fiction": "En 2045, una mujer mayor elige cuándo usar ayuda tecnológica y cuándo pedir contacto familiar.",
+      "script": {
+        "hook": "Los robots sociales ya se han estudiado como apoyo en residencias de mayores.",
+        "fact": "Un ensayo en residencias de Inglaterra y Japón estudió al robot social Pepper como apoyo a los cuidados. Treinta y tres personas completaron el estudio. Hubo señales favorables en algunas medidas de bienestar emocional, pero no pruebas suficientes de que una máquina pueda sustituir a quienes cuidan.",
+        "transition": "Imaginemos el año 2045.",
+        "fiction": "Inés vive en su casa con un asistente robótico. Le recuerda una cita y la ayuda a llamar a su hijo. Cuando llega la hora de cenar, ella apaga el dispositivo y espera a su familia.",
+        "closing": "¿Aceptarías que un robot ayudara a cuidar a tus padres? ¿Qué tareas nunca le confiarías? Déjanos tu opinión."
+      },
+      "visuals": [
+        "Presente: esquema de estudio en residencias, indicar 33 participantes.",
+        "Robot social conceptual, identificar recreación, sin prometer tratamiento.",
+        "Futuro: Inés en casa, llamada familiar, mesa y silla.",
+        "Cierre con encuentro humano, sin representar dependencia como pérdida de dignidad.",
+        "Pregunta de cierre sobre el dilema del capítulo, antes de Órbita de conocimiento; invitación natural a comentar."
+      ],
+      "guardrail": "No consejo médico, dosificación ni predicción de seguridad; no representar una capacidad física como validada.",
+      "script_version": "V2",
+      "status": "draft_for_batch_review",
+      "target_duration_s": [
+        50,
+        60
+      ],
+      "word_count": 118,
+      "visual_identity": {
+        "human": {
+          "id": "S08-H01",
+          "name": "Inés",
+          "age": 75,
+          "face": "rostro redondo, arrugas naturales, cejas claras",
+          "hair": "cabello plateado recogido",
+          "wardrobe": "cárdigan mostaza y blusa clara"
+        },
+        "robot": {
+          "id": "S08-R01",
+          "role": "asistente de mayores",
+          "design": "silueta baja redondeada, carcasa verde salvia, indicadores luminosos simples y manos blandas conceptuales"
+        },
+        "setting": "casa tranquila con comedor y jardín visible",
+        "composition": "plano medio frontal, luz vespertina difusa",
+        "reference_status": "pending",
+        "historical_visual_review": "pending"
+      }
+    }
+  ],
+  "editorial_structure": {
+    "scope": "S04–S08 únicamente",
+    "approved_date": "2026-11-26",
+    "ordered_script_fields": [
+      "hook",
+      "fact",
+      "transition",
+      "fiction",
+      "closing"
+    ],
+    "hook": "Presente verificable, atractivo; no abrir con escena futura.",
+    "fact": "Evidencia actual y límites.",
+    "transition": "Marcar el paso a ficción especulativa y el año hipotético.",
+    "fiction": "Historia original claramente imaginaria.",
+    "closing": "Pregunta específica y natural que invite a comentar; antes del cierre oficial de marca, sin introducir nuevas afirmaciones."
+  },
+  "visual_diversity_policy": {
+    "scope": "batch A; extend registry to future batches before rendering",
+    "shared_only": [
+      "palette",
+      "retrofuturistic style",
+      "typography",
+      "Axel",
+      "official brand close"
+    ],
+    "rules": [
+      "Unique fictional character and robot IDs per episode; distinct faces, age, hair, clothing, silhouette, setting and compositions.",
+      "Keep a single approved reference per character/robot within an episode; do not reuse it in another episode.",
+      "Compare new reference sheets with prior episodes including S01–S03 before generating scenes; identical asset hashes block reuse; visual similarity review remains mandatory until an image comparator is implemented.",
+      "Present-day scientific recreations are distinct from fictional characters and explicitly labeled; use diagrams or licensed evidence.",
+      "Store reference assets privately with hashes; never use private Lucia assets."
+    ],
+    "preflight": "metadata validation only; actual image similarity and historical comparison not yet implemented",
+    "prior_catalog_review_required": true
+  }
+}
