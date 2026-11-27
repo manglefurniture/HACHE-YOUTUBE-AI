@@ -1,0 +1,390 @@
+{
+  "schema_version": 1,
+  "series_id": "humanoid-robots",
+  "batch_id": "A",
+  "note": "Anclajes sobre el texto V2 exacto; el script asigna tiempos reales, no estimados. Referencias maestras y comparación histórica siguen pendientes. Cinco cortes añadidos tras medir la locución, para resolver planos de más de 5,5 s.",
+  "episodes": {
+    "S04": [
+      {
+        "section": "hook",
+        "anchor": "Ya existen",
+        "visual": "Presente: diagrama original de prototipo móvil con dos brazos preparando una tarea de cocina; rótulo recreación ilustrativa.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fact",
+        "anchor": "Investigadores de Stanford",
+        "visual": "Plataforma móvil de dos brazos sobre ruedas, esquema; distinguir del humanoide bípedo.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "a cocinar y enjuagar",
+        "visual": "Detalle de utensilios y dos brazos realizando tareas concretas; recreación ilustrativa.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "mediante demostraciones humanas",
+        "visual": "Flujo visual demostración humana, aprendizaje, ejecución de tarea delimitada.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "Pero dominar",
+        "visual": "Dos paneles: tarea conocida frente a imprevisto; sin afirmar seguridad general.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "transition",
+        "anchor": "Imaginemos el año 2045",
+        "visual": "Puente visual original de presente a futuro, rótulo «FICCIÓN ESPECULATIVA» y año narrado; no presentarlo como pronóstico.",
+        "technique": "transition_year"
+      },
+      {
+        "section": "fiction",
+        "anchor": "Nora vuelve",
+        "visual": "Futuro, Nora S04-H01 entra en su cocina, robot S04-R01 y cena preparada.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fiction",
+        "anchor": "Su robot ha dejado",
+        "visual": "Vaso roto, encuadre bajo y pinzas del robot detenidas a distancia.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fiction",
+        "anchor": "no sabe si",
+        "visual": "Robot solicita confirmación a Nora, panel visual simple sin texto generado.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fiction",
+        "anchor": "Ella confirma",
+        "visual": "Nora confirma, robot mantiene distancia segura; escena ficticia.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "closing",
+        "anchor": "¿Dejarías a un robot",
+        "visual": "Nora y el robot en cocina, composición libre de la zona de subtítulos.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "closing",
+        "anchor": "Cuéntanos",
+        "visual": "Plano final de pregunta visual, mantener ambiente y estilo del capítulo.",
+        "technique": "cpu_camera_motion"
+      }
+    ],
+    "S05": [
+      {
+        "section": "hook",
+        "anchor": "Los robots humanoides",
+        "visual": "Presente: ilustración original de célula de ensamblaje, recreación identificada.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fact",
+        "anchor": "Según BMW",
+        "visual": "Ficha gráfica BMW, piloto 2025; no logos ni footage falso.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "más de noventa mil",
+        "visual": "Contador de componentes, etiqueta «según BMW»; no contar automóviles.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "No fabricaba",
+        "visual": "Separar tarea de componentes y automóvil completo.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "Automatizar una tarea",
+        "visual": "Gráfico tarea frente a puesto, sin predicción de despidos.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "transition",
+        "anchor": "Imaginemos el año 2040",
+        "visual": "Puente visual original de presente a futuro, rótulo «FICCIÓN ESPECULATIVA» y año narrado; no presentarlo como pronóstico.",
+        "technique": "transition_year"
+      },
+      {
+        "section": "fiction",
+        "anchor": "Marina llega",
+        "visual": "Marina S05-H01 en vestuario industrial y robot S05-R01 en estación; protección adecuada.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fiction",
+        "anchor": "Ella observa",
+        "visual": "Marina supervisa desde monitor, plano lateral con expresión concentrada.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fiction",
+        "anchor": "Pero otro compañero",
+        "visual": "Otro trabajador adulto distinto observa la formación, composición independiente.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "closing",
+        "anchor": "¿Crees que estos robots",
+        "visual": "Marina al frente, robot al fondo, pregunta sobre empleo.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "closing",
+        "anchor": "Queremos conocer",
+        "visual": "Cierre visual sobrio con ambas ocupaciones en la fábrica.",
+        "technique": "cpu_camera_motion"
+      }
+    ],
+    "S06": [
+      {
+        "section": "hook",
+        "anchor": "China lleva años",
+        "visual": "Presente: gráfico editorial de robótica, no simular una instalación real.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fact",
+        "anchor": "Desde 2023",
+        "visual": "Cronología de directrices 2023, fuente MIIT.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "Según la Federación",
+        "visual": "Gráfico de 354 mil instalaciones industriales en China en 2025; categoría explícita.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "trescientos cincuenta",
+        "visual": "Aparece el valor 354 mil con año 2025 y categoría robots industriales, según IFR.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "No eran todos humanoides",
+        "visual": "Diferenciar brazos industriales, otras formas y humanoides.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "Una de las apuestas",
+        "visual": "Diagrama humanoide y herramientas pensadas para personas.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "transition",
+        "anchor": "Imaginemos un taller en 2040",
+        "visual": "Puente visual original de presente a futuro, rótulo «FICCIÓN ESPECULATIVA» y año narrado; no presentarlo como pronóstico.",
+        "technique": "transition_year"
+      },
+      {
+        "section": "fiction",
+        "anchor": "Su dueño recibe",
+        "visual": "Wei S06-H01 recibe robot modular S06-R01 en taller original.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fiction",
+        "anchor": "Lo prueba",
+        "visual": "Robot prueba una estación; banco y herramientas claramente visibles.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fiction",
+        "anchor": "pero conserva",
+        "visual": "Wei junto a máquina especializada, contraste de funciones.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "closing",
+        "anchor": "¿Preferirías un robot",
+        "visual": "Dos opciones visuales equilibradas, robot general y máquinas especializadas.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "closing",
+        "anchor": "Déjanos",
+        "visual": "Mantener comparación visual con espacio para subtítulo.",
+        "technique": "cpu_camera_motion"
+      }
+    ],
+    "S07": [
+      {
+        "section": "hook",
+        "anchor": "La forma en que responde",
+        "visual": "Presente: esquema de interacción humana y robot, no representar participantes reales.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fact",
+        "anchor": "En un estudio",
+        "visual": "Diagrama de investigación: intercambio humano–máquina.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "los participantes mostraron",
+        "visual": "Aproximación y búsqueda de compañía percibida; sin cifras inventadas.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "cuando percibían",
+        "visual": "Gráfico de respuesta percibida y compañía buscada; no atribuir emociones al robot.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "Eso habla",
+        "visual": "Distinguir respuesta humana de sentimientos no demostrados del robot.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "transition",
+        "anchor": "Imaginemos el año 2055",
+        "visual": "Puente visual original de presente a futuro, rótulo «FICCIÓN ESPECULATIVA» y año narrado; no presentarlo como pronóstico.",
+        "technique": "transition_year"
+      },
+      {
+        "section": "fiction",
+        "anchor": "Daniel conversa",
+        "visual": "Daniel S07-H01 con robot social S07-R01 en apartamento nocturno, mirada reflexiva.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fiction",
+        "anchor": "Una tarde",
+        "visual": "Daniel pregunta si el robot lo extrañaría; plano medio lateral.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fiction",
+        "anchor": "La máquina responde",
+        "visual": "Pantalla discreta, respuesta de máquina, sin simular emociones humanas.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fiction",
+        "anchor": "Daniel comprende",
+        "visual": "Primer plano de Daniel reflexionando; robot visible, mecánico.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fiction",
+        "anchor": "Decide visitar",
+        "visual": "Daniel sale para reunirse con un amigo, escena urbana cálida.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "closing",
+        "anchor": "¿Podrías enamorarte",
+        "visual": "Encuadre del apartamento y el robot, contraste entre presencia y afecto.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "closing",
+        "anchor": "Cuéntanos",
+        "visual": "Sostener el dilema sin dramatizar sufrimiento.",
+        "technique": "cpu_camera_motion"
+      }
+    ],
+    "S08": [
+      {
+        "section": "hook",
+        "anchor": "Los robots sociales",
+        "visual": "Presente: gráfico editorial sobre robots sociales y residencias; recreación identificada.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fact",
+        "anchor": "Un ensayo en residencias",
+        "visual": "Mapa esquemático Inglaterra y Japón, estudio CARESSES, robot social identificado como ilustración.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "estudió al robot social",
+        "visual": "Esquema de Pepper como robot social de apoyo en residencia; recreación conceptual.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "Treinta y tres personas",
+        "visual": "33 participantes completaron el ensayo, no 33 estudios.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "Hubo señales favorables",
+        "visual": "Bienestar emocional: señales limitadas; no sustitución de cuidadores.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "fact",
+        "anchor": "pero no pruebas",
+        "visual": "Gráfico de límite: apoyo evaluado no equivale a sustituir cuidadores.",
+        "technique": "progressive_science_graphic"
+      },
+      {
+        "section": "transition",
+        "anchor": "Imaginemos el año 2045",
+        "visual": "Puente visual original de presente a futuro, rótulo «FICCIÓN ESPECULATIVA» y año narrado; no presentarlo como pronóstico.",
+        "technique": "transition_year"
+      },
+      {
+        "section": "fiction",
+        "anchor": "Inés vive",
+        "visual": "Inés S08-H01 en casa con asistente S08-R01, plano luminoso y digno.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fiction",
+        "anchor": "Le recuerda",
+        "visual": "Asistente facilita recordatorio de cita y llamada a su hijo, sin consejo médico.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fiction",
+        "anchor": "Cuando llega la hora",
+        "visual": "Inés elige apagar el dispositivo, prepara la mesa.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "fiction",
+        "anchor": "y espera a su familia",
+        "visual": "Silla y mesa, Inés mira hacia la entrada, agencia personal.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "closing",
+        "anchor": "¿Aceptarías que un robot",
+        "visual": "Inés y su asistente en casa, pregunta sobre apoyo.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "closing",
+        "anchor": "¿Qué tareas nunca",
+        "visual": "Familia en escena, contraste de apoyo y relación humana.",
+        "technique": "cpu_camera_motion"
+      },
+      {
+        "section": "closing",
+        "anchor": "Déjanos",
+        "visual": "Plano tranquilo final, espacio para subtítulos.",
+        "technique": "cpu_camera_motion"
+      }
+    ]
+  }
+}

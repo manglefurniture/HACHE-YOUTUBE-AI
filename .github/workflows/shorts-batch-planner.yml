@@ -24,3 +24,4 @@ jobs:
       - run: python scripts/prepare_shorts_batch.py --check
       - run: python scripts/prepare_shorts_batch.py --output "$RUNNER_TEMP/shorts-batch-a"
       - run: python scripts/prepare_shorts_batch.py --output "$RUNNER_TEMP/shorts-batch-a"
+      - run: python tests/test_build_shorts_timing.py
