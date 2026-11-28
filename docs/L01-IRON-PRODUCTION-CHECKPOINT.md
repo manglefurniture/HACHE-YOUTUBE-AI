@@ -1,0 +1,85 @@
+# L01 — IRON: el día que compramos nuestro primer robot
+**Checkpoint v1 — 2026-11-28 (America/Cancun).** Investigación base cerrada a esta fecha; estructura y producción modular aprobadas. Guion maestro pendiente. No hay narración ni imágenes ni montaje L01 aprobados. Este documento es fuente de verdad para retomar L01; no cambia los Shorts ni autoriza publicación, gastos o despliegue.
+
+## Decisiones fijadas
+- Primer documental largo de Crónicas del Mañana, separado de S01–S05 y cualquier experimento paralelo. ID L01; título narrativo provisional «El día que compramos nuestro primer robot». Título público por aprobar: preferir «¿Comprar un robot humanoide en 2027?» a una promesa de disponibilidad doméstica.
+- Duración objetivo 12–15 min, estructura de referencia 15:00; no añadir relleno. Guion maestro original, aprox. 1.800–2.200 palabras ajustadas a voz y pausas. Ciencia real → extrapolación condicionada → relato original de 2045 rotulado como ficción. La fecha 2045 es narrativa, no pronóstico.
+- Formato horizontal 1920×1080, 16:9, 30 fps, H.264/AAC. Montaje y animación CPU exclusivamente, sin alquiler de GPU ni Wan. Imágenes originales generadas en ChatGPT por bloques; ElevenLabs exclusivamente para narración Axel, previa aprobación de guion de cada bloque y licencia/créditos. Estimación inicial 110–160 recursos, no cuota obligatoria.
+- Presente documental natural, gráficos por capas crema #F2E5CB, verde petróleo #205352, naranja óxido #C35F30; futuro retrofuturista adulto, continuidad de personajes y ambiente. No reutilizar encuadres de Shorts como plantilla; no representar imágenes IA como evidencia.
+- Inter Bold centrado, máximo dos líneas, tamaño adaptado mediante prueba horizontal (no copiar 81 px vertical automáticamente); SRT/ASS revisados. Cierre oficial Órbita de conocimiento de 2,6 s, adaptar a 16:9 sin deformar ni reemplazar marca; verificar fuente original y aprobar adaptación. Referencias: [visión](CHANNEL-VISION.md), [estándar](SHORTS-EDITORIAL-STANDARD.md), [catálogo 26/11](SHORTS-PRODUCTION-STATUS-2026-11-26.md). Los criterios específicos L01 prevalecen sobre parámetros verticales.
+- No reabrir S01–S05, no modificar infraestructura ni publicación. No usar activos privados de Lucía.
+
+## Dossier de investigación congelado (fecha de consulta: 28/11/2026)
+Clasificación: H = evento documentado, E = especificación o capacidad declarada por fabricante (no ensayo independiente), A = anuncio/meta futura, I = inferencia editorial, F = ficción. Una demostración no prueba autonomía universal, seguridad certificada o rentabilidad. No convertir anuncios en hechos consumados. No usar cifras de generaciones previas para el modelo 2026 sin atribución precisa.
+
+| ID | Afirmación utilizable | Clase | Evidencia / límite | Bloque |
+|---|---|---|---|---|
+| C01 | XPeng presentó el primer IRON en noviembre de 2024. | H | R01; antecedente, no modelo comercial actual. | B02 |
+| C02 | En AI Day 2025 mostró el interior mecánico de la pierna tras dudas públicas sobre su aspecto. | H | R02; vídeo del fabricante; no prueba que todas las acciones sean autónomas. | B01–02 |
+| C03 | La línea dedicada se activó en septiembre de 2026; se mostró una unidad salida de ella. | H/E | R03; distingue preproducción de fabricación masiva. | B02 |
+| C04 | El 25/11/2026 se presentó públicamente la versión de producción en Guangzhou; habló con micrófono y respondió preguntas según reportero presente. | H | R04, R05; modo de supervisión no auditado. No afirmar ausencia de teleoperación sin prueba. | B01–02 |
+| C05 | La carrocería de producción es neutra; no confundir con versiones diferenciadas de 2025. | E | R05, declaraciones de ejecutivos. | B02–03 |
+| C06 | XPeng declara 76 grados de libertad, manos de 21 grados cada una y más de 1.500 puntos táctiles. | E | R03, R04, R06. Explicar movilidad y retroalimentación, no equivalencia a destreza humana. | B03 |
+| C07 | Tres chips Turing, hasta 2.250 TOPS según fabricante; arquitectura física VLA 3.0 vincula planificación, decisión y control motor. | E | R03, R04, R06. TOPS no mide inteligencia, seguridad ni precisión general. Gráfico conceptual, no plano de ingeniería. | B03 |
+| C08 | Visión 3D, tacto, ajuste de fuerza, navegación, órdenes de voz/app, recarga y vigilancia del estado son funciones descritas. | E | R04, R06; no garantía de autonomía universal. | B03–04 |
+| C09 | La empresa anuncia batería de estado sólido; 20 min de carga para 90 min de uso, según cobertura presencial. | E | R05; condiciones de prueba, ciclos y autonomía real variable no establecidos. No confundir disponibilidad objetivo 24 h con 24 h sin recargar. | B03 |
+| C10 | Se anuncian detección de colisiones, límites de torque, parada de emergencia y control de equilibrio. | E | R06; no afirmar certificación, inocuidad con niños o seguridad doméstica probada. | B04 |
+| C11 | El 27/11/2026 IRON participó como presentador y recibió visitantes en el salón del automóvil de Guangzhou. | H | R08, R09; actividad acotada. | B04 |
+| C12 | Enero de 2027 es la nueva meta de fabricación en masa; Q1 entrenamiento como asistente en tiendas XPeng; Q2 lanzamiento público objetivo. | A | R04, R06; sustituye objetivos previos del comunicado de septiembre. No implica ventas realizadas, entregas ni mercado mexicano confirmado. | B05 |
+| C13 | Brian Gu indicó que el precio podría acercarse a la mediana de un EV. | A | R07; no hay precio oficial. R07 informa rango de vehículos, no del robot. No usar USD 18–44 mil como precio de IRON; no convertir a MXN como precio confirmado. | B05 |
+| C14 | Venta de hardware, suscripciones de software y ecosistema de habilidades son parte de la estrategia anunciada. | A | R06; sin tarifas ni condiciones finales. | B05–06 |
+| C15 | Digit ya cuenta con acuerdos de uso logístico con GXO; expansión anunciada para 2027. | H/A | R10; separar uso operativo de expansión futura. | B05 |
+| C16 | Figure reportó despliegue de F.02 en BMW y llegada de F.03 en 2026. | H/E | R11, R12; casos corporativos de tareas delimitadas, no competencia de precio ni rendimiento comparable. | B05 |
+| C17 | IFR señala que fiabilidad, ciclo de trabajo, eficiencia, energía, mantenimiento, seguridad y caso económico condicionan adopción. | H/I | R13–14; inferencia: comprar cuerpo no equivale a comprar trabajador autónomo. | B04–06 |
+| C18 | Disponibilidad doméstica, efectos en empleo y economía, regulación, responsabilidad, privacidad y asequibilidad son inciertos. | I | R06, R07, R13–14; análisis por escenarios, no predicción cuantitativa. | B06 |
+| C19 | Familia de 2045 que adquiere un robot: historia original, personajes y dilema pendientes de guion. | F | No presentar como hecho ni como promesa de XPeng; robot futuro genérico. | B07–08 |
+
+Excluir hasta verificación específica: altura/peso exactos del modelo comercial, número de asistentes, idiomas hablados, química exacta de batería, costes de mantenimiento, cifras de productividad, corte de verduras/otras tareas como capacidad general, fecha doméstica 2028–29, sustitución masiva de empleos. La investigación base se considera cerrada para escribir guion; si surgen novedades antes de publicar, añadir adenda fechada y revisar solo afirmaciones afectadas, sin reescribir silenciosamente este corte.
+
+### Registro de fuentes (URLs, fechas de publicación y alcance)
+- R01 XPeng, 06/11/2024, primera presentación: https://www.xpeng.com/news/019301d2135392fa562d8a0282200016
+- R02 XPeng, vídeo oficial AI Day 2025, corte de cubierta: https://www.youtube.com/watch?v=m_Ag_SgsHVg
+- R03 XPeng, septiembre 2026, línea y especificaciones: https://www.xpeng.com/pressroom/news/01a080371029a057bc8e8a02a2c6012b
+- R04 XPeng, 25/11/2026, VLA 3.0, especificaciones y calendario: https://www.xpeng.com/news/01a212b0d830a1e838d68a02a2110174
+- R05 Humanoids Daily, Pontus Armini, 25/11/2026, reportaje presencial y detalles atribuidos: https://www.humanoidsdaily.com/news/xpeng-details-mass-production-iron-humanoid-at-ai-day-2026-confirms-unisex-form-factor-and-vla-3-0
+- R06 XPeng vía GlobeNewswire, 26/11/2026, control, sensores, calendario y comercialización: https://www.globenewswire.com/de/news-release/2026/11/26/3410647/0/en/xpeng-achieves-new-milestone-in-humanoid-robotics-as-iron-brings-human-centric-intelligence-into-the-mass-production-era.html
+- R07 Bloomberg, 25–26/11/2026, entrevista Brian Gu; corroboración en republicación autorizada/atribuida a Bloomberg: https://bloomberg.com/news/articles/2026-11-26/xpeng-says-its-humanoid-robot-will-cost-the-same-as-an-ev ; https://www.freemalaysiatoday.com/category/business/2026/11/26/xpeng-says-its-humanoid-robot-will-cost-the-same-as-an-ev
+- R08 XPeng vía comunicado, 27/11/2026, Auto Guangzhou: https://via.ritzau.dk/pressemeddelelse/15315769/xpeng?lang=en&publisherId=90446
+- R09 Gasgoo, 27/11/2026, ocho robots en salón y calendario: https://autonews.gasgoo.com/articles/icv/xpeng-showcases-eight-iron-robots-at-auto-guangzhou-announces-hong-kong-rd-center-2126267263124426752
+- R10 Agility/GXO, 26/10/2026, expansión y antecedente de 2024: https://www.agilityrobotics.com/content/gxo-and-agility-robotics-expand-partnership-to-accelerate-deployment-of-humanoids-in-u-s-operations
+- R11 Figure, 19/11/2025, resultados declarados de F.02 en BMW: https://www.figure.ai/news/production-at-bmw
+- R12 Figure, 30/06/2026, F.03 llega a BMW: https://www.figure.ai/news/f-03-at-bmw
+- R13 IFR, 08/01/2026, tendencias y requisitos de fiabilidad: https://ifr.org/news/top-5-global-robotics-trends-2026/
+- R14 IFR, octubre 2026, retos de robots de servicio y humanoides: https://ifr.org/ifr-press-releases/news/record-4-million-robots-work-in-factories-around-the-globe
+
+## Inventario de material documental (localizado; todavía no descargado/licenciado)
+- R02 vídeo original 2025; R03 fotografías de línea; R04 imágenes de presentación; R05 fotografías de robot con micrófono; R06 kit de prensa enlazado en el comunicado; R08/R09 imágenes del salón; R10–12 imágenes de otros robots. Son referencias de investigación, no permiso de reutilización. No confundir versiones: identificar fecha, generación, procedencia y encuadre.
+- Para cada recurso candidato: asset ID, URL exacta, autor, fecha, licencia/permiso comercial o motivo de exclusión, clasificación (archivo real/recreación/esquema/ficción), bloque/plano, ruta privada, SHA-256, versión. No descargar ni republicar material sin revisar derechos. Usar gráficos propios y recreaciones claramente identificadas cuando no haya permiso. No copiar artículos, logos o material audiovisual como decoración. En descripción pública incluir fuentes, créditos y divulgación IA según reglas vigentes.
+- No hay audio Axel nuevo, imágenes generadas ni MP4 L01 a esta fecha. No reutilizar audio de otros episodios. No hay copias Drive/laptop de L01 verificadas; crearlas al producir. GitHub público solo texto y scripts sin secretos ni binarios privados. Preservar fuentes mediante ficha original y, si licencia permite, copia privada con hash; no prometer inmutabilidad de páginas externas.
+
+## Guion maestro y tiempos de referencia
+| Bloque | Ventana | Objetivo narrativo | Estado |
+|---|---|---|---|
+| B01 | 00:00–00:45 | Gancho 2025→2026; pregunta ¿cuándo se convierte en producto útil? | Pendiente |
+| B02 | 00:45–02:30 | Historia de IRON 2024–26, de prototipo a línea. | Pendiente |
+| B03 | 02:30–05:00 | Cuerpo, tacto, inteligencia, control y energía; diagramas progresivos. | Pendiente |
+| B04 | 05:00–07:00 | Evidencia de demostraciones vs pruebas reales, seguridad y límites. | Pendiente |
+| B05 | 07:00–09:00 | Precio sin cifra confirmada, calendario, Figure y Digit. | Pendiente |
+| B06 | 09:00–11:00 | Coste total, trabajo, privacidad, responsabilidad y supervisión. | Pendiente |
+| B07 | 11:00–14:00 | Crónica original 2045, ficción explícita en transición; dilema humano. | Pendiente |
+| B08 | 14:00–15:00 | Reflexión y cierre oficial adaptado. | Pendiente |
+
+Los tiempos se ajustan tras grabar Axel; preservar continuidad, sin ocho intros/outros ni recapitulaciones redundantes. Guion maestro debe fijar cada enlace entre bloques antes de producir. No crear imágenes antes de aprobación de guion y narración del bloque.
+
+## Protocolo operativo y persistencia
+1. Guion maestro V1 con referencias C/R, marcado de hecho/anuncio/inferencia/ficción, argumento y transiciones. Usuario aprueba antes de audio.
+2. Por bloque B01→B08: guion parcial aprobado → audio original Axel aprobado y respaldado (ID y parámetros, duración, SHA-256) → storyboard sincronizado (timecode de inicio/fin, plano, texto/voz, asset ID, tipo de movimiento y rótulo de fuente) → imágenes por tandas aprobadas → render CPU de prueba → montaje bloque aprobado. No avanzar al siguiente bloque sin cerrar anterior. No sustituir tomas aprobadas sin autorización.
+3. CPU: composición por capas, paralaje, paneos, cámara lenta virtual, profundidad, gráficos progresivos, movimientos articulados sencillos. Probar a resolución final, evitar zoom repetitivo/deformaciones. No llamar stop motion a un zoom. Diseñar variedad de plano, ritmo y legibilidad; 16:9 desde el origen, no recorte de 9:16.
+4. Cada bloque guarda voz limpia, música/efectos separados, SRT/ASS con tiempos locales, imágenes maestras, proyecto/script de render y MP4 de revisión. Usar parámetros homogéneos, preservar frames/tiempos y evitar reencode acumulativo. Al integrar: desplazamiento de timecodes, transiciones y mezcla global, ajuste de audio, música con licencia y atribución, revisión en móvil/TV, fotogramas, sincronía, decodificación, cortes, zonas seguras y créditos. Referencia sonoridad -16 LUFS/pico -1 dBTP, calibrar documental completo. Exportar final solo tras revisión; publicar solo autorización explícita.
+5. Rutas privadas propuestas (crear y verificar durante producción): «Crónicas del Mañana/L01 - El primer robot/00 - Guion maestro», «01 - Apertura» … «08 - Reflexión final», «09 - Montaje definitivo». En cada bloque subcarpetas guion, voz, storyboard, assets, animación, render, revisión. Respaldo Drive y laptop Hache, comprobación de hash y apertura; registrar rutas reales cuando existan. GitHub: checkpoint raíz, guion maestro versionado, manifiesto por bloque y changelog de decisiones. Un archivo aprobado no se sobrescribe; incrementar versión y conservar original. Guardar commit, hashes, estado, última aprobación, siguiente paso y bloqueos al cerrar cada bloque. No guardar credenciales ni enlaces privados de descarga en repo público.
+6. Preparar miniatura, descripción, capítulos, fuentes y derechos; revisar políticas de YouTube y declaración de IA. No autorizar gasto ni publicar por deducción.
+
+## Estado y recuperación
+- Investigación: cerrada a fecha de corte, no auditoría independiente de pruebas ni derechos de material. Estructura modular: aprobada en conversación del 28/11/2026. Guion maestro: pendiente. B01–08: no iniciados. Recursos binarios: ninguno generado. Publicación: no autorizada.
+- Siguiente acción única: redactar guion maestro completo, 12–15 min, con IDs C/R y transición 2045; presentarlo para aprobación. No generar audio/imágenes hasta entonces.
+- Para retomar: «Retoma L01 de Crónicas del Mañana desde docs/L01-IRON-PRODUCTION-CHECKPOINT.md del repositorio manglefurniture/HACHE-YOUTUBE-AI. Lee el checkpoint en main o, si el PR sigue abierto, en su rama; verifica el commit y el último manifiesto de bloque. Conserva versiones, fuentes, narrativa, materiales aprobados y CPU 16:9. Continúa solo desde el siguiente paso registrado. No reinicies investigación, no generes recursos duplicados ni modifiques Shorts. Si hay novedad relevante, adenda fechada; no alterar decisiones aprobadas sin autorización.»
