@@ -166,3 +166,9 @@ Los tiempos se ajustan tras grabar Axel; preservar continuidad, sin ocho intros/
 
 ## B02 — Narración Axel V1: ejecución autorizada (28/11/2026)
 - Usuario autorizó una única toma al coste estimado. Texto literal del guion maestro V1 (blob `356df9264ffd537b1e98a27a36a13fdbd362bf41`), B02, 253 palabras. Voz Axel-Natural y Narrativo, modelo eleven_v4; una generación iniciada correctamente, sin variantes. Cargo reportado: 1.823 créditos (estimación detallada 1822,6212 créditos; 0,3384 USD de referencia). Identificador lógico L01-B02-Axel-V1. Reproductor presentado al usuario; estado al primer control: procesando sin fallos. No regenerar. Duración y respaldo original pendientes de confirmación. B01 V3 intacto. No iniciar storyboard/imágenes hasta aprobación del audio.
+
+
+## B02 — Narración aprobada, respaldo personal y storyboard V1 (28/11/2026)
+- Usuario respondió «Aprobada y descargada para respaldo». ElevenLabs confirmó una única generación completada sin fallos, Axel-Natural y Narrativo, eleven_v4, duración 99,12 s, coste autorizado sin variación. Original congelado, no regenerar. Descarga/respaldo informado por usuario; ubicación, hash y archivo binario no verificados aún. Sin nuevas generaciones ni cargos.
+- Storyboard horizontal propuesto en [L01-B02-STORYBOARD-V1.md](L01-B02-STORYBOARD-V1.md), commit `a0a8063301b1dff3fed51d7e797443467ddff1cf`. 23 planos, cinco tandas, 99,12 s, CPU. Timecodes orientativos, pendientes de cotejo con MP3. Estándar B01 V3 conservado; variar encuadres, distinguir generaciones y corte de tela, documentar referencias reales y derechos. No se han generado imágenes B02. B01 sigue cerrado e intacto.
+- Siguiente paso: aprobación del storyboard B02, luego contraste de referencias de 2024 y producción de primera tanda A (P01–P03). Recuperar el MP3 existente para sincronizar y respaldar. PR #54 permanece abierto, sin merge.
