@@ -92,3 +92,8 @@ Los tiempos se ajustan tras grabar Axel; preservar continuidad, sin ocho intros/
 - Trazabilidad revisada contra C01–C19 y R01–R14 del dossier. Se conservan distinciones de hecho, fabricante, anuncio, ejemplo hipotético y ficción. Título público, pronunciación, guion y tratamiento visual pendientes de aprobación. No generar recursos todavía.
 - La redacción queda cerrada como propuesta, no como guion aprobado. La puerta de revisión humana sigue vigente. No se ha sintetizado voz ni consumido créditos; no hay material binario nuevo para respaldar.
 - Recuperación: la instrucción previamente guardada sigue siendo válida; consultar este checkpoint actualizado y abrir el guion maestro antes de cualquier trabajo. Mientras PR #54 siga abierto, usar su rama y verificar el último commit; tras merge, usar main.
+
+
+## Aprobación editorial — 28/11/2026
+- El usuario respondió «Aprobado.» al guion maestro V1 presentado con 2.141 palabras y ocho bloques. Guion V1 completo aprobado; se conserva exactamente su contenido y blob `356df9264ffd537b1e98a27a36a13fdbd362bf41`. Esta entrada prevalece sobre estados pendientes anteriores y sobre la etiqueta histórica de la propuesta V1.
+- Siguiente paso: B01, narración Axel de 103 palabras. Verificar identidad y parámetros de la voz aprobada antes de sintetizar; preparar una sola toma y presentarla para aprobación. No comenzar imágenes antes de cerrar la voz; no iniciar B02 antes de cerrar B01. Título comercial, derechos de archivo y adaptación del cierre aún pendientes. No hay autorización de publicación ni alquiler GPU.
