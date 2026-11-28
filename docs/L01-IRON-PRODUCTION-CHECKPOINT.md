@@ -117,3 +117,8 @@ Los tiempos se ajustan tras grabar Axel; preservar continuidad, sin ocho intros/
 - Usuario aprobó explícitamente narración B01 V1 de Axel (35,52 s) y solicitó conservar audio original; posteriormente aprobó el storyboard («Si el story está perfecto...»). Estas aprobaciones prevalecen sobre estados históricos pendientes.
 - Storyboard aprobado archivado en [L01-B01-STORYBOARD-V1.md](L01-B01-STORYBOARD-V1.md), commit `2f083f120c2ccd08661c478e48fd8c213c53675b`. Diez planos P01–P10, 35,52 s de referencia, 16:9, 1080p, 30 fps, CPU. Timecodes estimados proporcionalmente, no alineación medida; ajustar al original sin cambiar guion, voz ni concepto visual. Grafía correcta XPeng/IRON en subtítulos.
 - Siguiente paso: recuperar y respaldar audio original sin regenerar, verificar hash y tiempos; producir primera tanda de imágenes maestras del B01 conforme a storyboard, con revisión de derechos y recreaciones identificadas. No generar en ElevenLabs, no alquilar GPU ni avanzar al B02. No se han generado imágenes aún. PR #54 abierto; usar su rama hasta merge.
+
+
+## B01 — Respaldo de narración confirmado por el usuario (28/11/2026)
+- El usuario informa que tiene el audio B01 V1 respaldado en su celular. Original de Axel aprobado, duración reportada 35,52 s; no regenerar ni modificar. Copia del teléfono confirmada por el usuario, no inspeccionada ni cotejada por hash. No se presupone respaldo en Drive o laptop Hache.
+- Para sincronización y montaje, recuperar el MP3 existente desde el teléfono o ElevenLabs; verificar archivo, duración y SHA-256. La existencia de copia personal permite seguir con imágenes maestras del storyboard aprobado, sin generar narración adicional. Mantener B02 en espera.
