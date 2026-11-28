@@ -1,5 +1,5 @@
 # L01 — IRON: el día que compramos nuestro primer robot
-**Checkpoint v1 — 2026-11-28 (America/Cancun).** Investigación base cerrada a esta fecha; estructura y producción modular aprobadas. Guion maestro pendiente. No hay narración ni imágenes ni montaje L01 aprobados. Este documento es fuente de verdad para retomar L01; no cambia los Shorts ni autoriza publicación, gastos o despliegue.
+**Checkpoint v2 — 2026-11-28 (America/Cancun).** Investigación base cerrada a esta fecha; estructura y producción modular aprobadas. [Guion maestro V1](L01-IRON-GUION-MAESTRO-V1.md) redactado y archivado, pendiente de aprobación editorial. No hay narración ni imágenes ni montaje L01 aprobados. Este documento es fuente de verdad para retomar L01; no cambia los Shorts ni autoriza publicación, gastos o despliegue.
 
 ## Decisiones fijadas
 - Primer documental largo de Crónicas del Mañana, separado de S01–S05 y cualquier experimento paralelo. ID L01; título narrativo provisional «El día que compramos nuestro primer robot». Título público por aprobar: preferir «¿Comprar un robot humanoide en 2027?» a una promesa de disponibilidad doméstica.
@@ -60,14 +60,14 @@ Excluir hasta verificación específica: altura/peso exactos del modelo comercia
 ## Guion maestro y tiempos de referencia
 | Bloque | Ventana | Objetivo narrativo | Estado |
 |---|---|---|---|
-| B01 | 00:00–00:45 | Gancho 2025→2026; pregunta ¿cuándo se convierte en producto útil? | Pendiente |
-| B02 | 00:45–02:30 | Historia de IRON 2024–26, de prototipo a línea. | Pendiente |
-| B03 | 02:30–05:00 | Cuerpo, tacto, inteligencia, control y energía; diagramas progresivos. | Pendiente |
-| B04 | 05:00–07:00 | Evidencia de demostraciones vs pruebas reales, seguridad y límites. | Pendiente |
-| B05 | 07:00–09:00 | Precio sin cifra confirmada, calendario, Figure y Digit. | Pendiente |
-| B06 | 09:00–11:00 | Coste total, trabajo, privacidad, responsabilidad y supervisión. | Pendiente |
-| B07 | 11:00–14:00 | Crónica original 2045, ficción explícita en transición; dilema humano. | Pendiente |
-| B08 | 14:00–15:00 | Reflexión y cierre oficial adaptado. | Pendiente |
+| B01 | 00:00–00:45 | Gancho 2025→2026; pregunta ¿cuándo se convierte en producto útil? | Guion V1 redactado; aprobación pendiente |
+| B02 | 00:45–02:30 | Historia de IRON 2024–26, de prototipo a línea. | Guion V1 redactado; aprobación pendiente |
+| B03 | 02:30–05:00 | Cuerpo, tacto, inteligencia, control y energía; diagramas progresivos. | Guion V1 redactado; aprobación pendiente |
+| B04 | 05:00–07:00 | Evidencia de demostraciones vs pruebas reales, seguridad y límites. | Guion V1 redactado; aprobación pendiente |
+| B05 | 07:00–09:00 | Precio sin cifra confirmada, calendario, Figure y Digit. | Guion V1 redactado; aprobación pendiente |
+| B06 | 09:00–11:00 | Coste total, trabajo, privacidad, responsabilidad y supervisión. | Guion V1 redactado; aprobación pendiente |
+| B07 | 11:00–14:00 | Crónica original 2045, ficción explícita en transición; dilema humano. | Guion V1 redactado; aprobación pendiente |
+| B08 | 14:00–15:00 | Reflexión y cierre oficial adaptado. | Guion V1 redactado; aprobación pendiente |
 
 Los tiempos se ajustan tras grabar Axel; preservar continuidad, sin ocho intros/outros ni recapitulaciones redundantes. Guion maestro debe fijar cada enlace entre bloques antes de producir. No crear imágenes antes de aprobación de guion y narración del bloque.
 
@@ -80,6 +80,15 @@ Los tiempos se ajustan tras grabar Axel; preservar continuidad, sin ocho intros/
 6. Preparar miniatura, descripción, capítulos, fuentes y derechos; revisar políticas de YouTube y declaración de IA. No autorizar gasto ni publicar por deducción.
 
 ## Estado y recuperación
-- Investigación: cerrada a fecha de corte, no auditoría independiente de pruebas ni derechos de material. Estructura modular: aprobada en conversación del 28/11/2026. Guion maestro: pendiente. B01–08: no iniciados. Recursos binarios: ninguno generado. Publicación: no autorizada.
-- Siguiente acción única: redactar guion maestro completo, 12–15 min, con IDs C/R y transición 2045; presentarlo para aprobación. No generar audio/imágenes hasta entonces.
+- Investigación: cerrada a fecha de corte, no auditoría independiente de pruebas ni derechos de material. Estructura modular: aprobada en conversación del 28/11/2026. Guion maestro V1: redactado y archivado, pendiente de aprobación. B01–08: texto narrativo redactado; voz, storyboard sincronizado, imágenes y montaje no iniciados. Recursos binarios: ninguno generado. Publicación: no autorizada.
+- Siguiente acción única: revisar y aprobar [guion maestro V1](L01-IRON-GUION-MAESTRO-V1.md). Solo después, con autorización de producción, sintetizar y aprobar narración Axel de B01. No generar imágenes hasta aprobar audio B01.
 - Para retomar: «Retoma L01 de Crónicas del Mañana desde docs/L01-IRON-PRODUCTION-CHECKPOINT.md del repositorio manglefurniture/HACHE-YOUTUBE-AI. Lee el checkpoint en main o, si el PR sigue abierto, en su rama; verifica el commit y el último manifiesto de bloque. Conserva versiones, fuentes, narrativa, materiales aprobados y CPU 16:9. Continúa solo desde el siguiente paso registrado. No reinicies investigación, no generes recursos duplicados ni modifiques Shorts. Si hay novedad relevante, adenda fechada; no alterar decisiones aprobadas sin autorización.»
+
+
+## Cierre de redacción — Guion maestro V1 (28/11/2026)
+- Archivo canónico: [L01-IRON-GUION-MAESTRO-V1.md](L01-IRON-GUION-MAESTRO-V1.md). Commit inicial del guion: `f429d306c401624f756f3b83e952a53aa1f8d793`. La investigación original se conserva sin modificar afirmaciones ni fuentes.
+- 2.141 palabras narradas (B01 103; B02 253; B03 373; B04 287; B05 278; B06 292; B07 422; B08 133). Ventanas de referencia de 15:00; a 135–145 palabras/min son 14,8–15,9 min de voz, antes de pausas y cierre. La duración definitiva puede superar ligeramente 15 min; confirmar con narración real sin acelerar voz ni añadir relleno. Si es necesario recortar, aprobar V2; no sobrescribir V1.
+- Relato original de B07: Rafael, padre mayor, e Inés, hija adulta, acuerdan límites de privacidad con un humanoide doméstico ficticio. Ambientación 2045 señalizada como ficción, regreso a 2026 en B08. Es una decisión creativa de la propuesta V1, no un hecho ni una aprobación del usuario.
+- Trazabilidad revisada contra C01–C19 y R01–R14 del dossier. Se conservan distinciones de hecho, fabricante, anuncio, ejemplo hipotético y ficción. Título público, pronunciación, guion y tratamiento visual pendientes de aprobación. No generar recursos todavía.
+- La redacción queda cerrada como propuesta, no como guion aprobado. La puerta de revisión humana sigue vigente. No se ha sintetizado voz ni consumido créditos; no hay material binario nuevo para respaldar.
+- Recuperación: la instrucción previamente guardada sigue siendo válida; consultar este checkpoint actualizado y abrir el guion maestro antes de cualquier trabajo. Mientras PR #54 siga abierto, usar su rama y verificar el último commit; tras merge, usar main.
